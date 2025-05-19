@@ -9,59 +9,51 @@
       <publicationStmt>
         <publisher>TEI Consortium</publisher>
         <availability status="free">
-          <licence target="http://creativecommons.org/licenses/by-sa/3.0/"> Distributed under a
-            Creative Commons
-            Attribution-ShareAlike 3.0 Unported License </licence>
+          <licence target="http://creativecommons.org/licenses/by-sa/3.0/"> Distributed under a Creative Commons Attribution-ShareAlike 3.0 Unported License </licence>
           <licence target="http://www.opensource.org/licenses/BSD-2-Clause">
             <p>Copyright 2013 TEI Consortium.</p>
             <p>All rights reserved.</p>
-            <p>Redistribution and use in source and binary forms, with or without modification, are
-              permitted provided that
-              the following conditions are met:</p>
+            <p>Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:</p>
             <list>
-              <item>Redistributions of source code must retain the above copyright notice, this list
-                of conditions and the
-                following disclaimer.</item>
-              <item>Redistributions in binary form must reproduce the above copyright notice, this
-                list of conditions and
-                the following disclaimer in the documentation and/or other materials provided with
-                the
-                distribution.</item>
+              <item>Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</item>
+              <item>Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</item>
             </list>
-            <p>This software is provided by the copyright holders and contributors "as is" and any
-              express or implied
-              warranties, including, but not limited to, the implied warranties of merchantability
-              and fitness for a
-              particular purpose are disclaimed. In no event shall the copyright holder or
-              contributors be liable for any
-              direct, indirect, incidental, special, exemplary, or consequential damages (including,
-              but not limited to,
-              procurement of substitute goods or services; loss of use, data, or profits; or
-              business interruption) however
-              caused and on any theory of liability, whether in contract, strict liability, or tort
-              (including negligence
-              or otherwise) arising in any way out of the use of this software, even if advised of
-              the possibility of such
-              damage.</p>
+            <p>This software is provided by the copyright holders and contributors "as is" and any express or implied warranties, including, but not limited to, the implied warranties of merchantability and fitness for a particular purpose are disclaimed. In no event shall the copyright holder or contributors be liable for any direct, indirect, incidental, special, exemplary, or consequential damages (including, but not limited to, procurement of substitute goods or services; loss of use, data, or profits; or business interruption) however caused and on any theory of liability, whether in contract, strict liability, or tort (including negligence or otherwise) arising in any way out of the use of this software, even if advised of the possibility of such damage.</p>
           </licence>
-          <p>TEI material can be licensed differently depending on the use you intend to make of it.
-            Hence it is made available under both the CC+BY and BSD-2 licences. The CC+BY licence is
-            generally appropriate for usages which treat TEI content as data or documentation. The
-            BSD-2 licence is generally appropriate for usage of TEI content in a software
-            environment. For further information or clarification, please contact the <ref
-              target="mailto:info@tei-c.org">TEI Consortium</ref>. </p>
+          <p>
+            TEI material can be licensed differently depending on the use you intend to make of it. Hence it is made available under both the CC+BY and BSD-2 licences. The CC+BY licence is generally appropriate for usages which treat TEI content as data or documentation. The BSD-2 licence is generally appropriate for usage of TEI content in a software environment. For further information or clarification, please contact the
+            <ref target="mailto:info@tei-c.org">TEI Consortium</ref>
+            .
+          </p>
         </availability>
       </publicationStmt>
       <sourceDesc>
-        <p>Created from scratch by James Cummings, but looking at previous tei_minimal and tei_bare
-          exemplars by SPQR and
-          LR.</p>
+        <p>Created from scratch by James Cummings, but looking at previous tei_minimal and tei_bare exemplars by SPQR and LR.</p>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
       <appInfo>
         <application ident="RomaJS" version="1.1.2" when="2025-05-15T15:03:14.087Z">
-          <desc>File edited with <ref target="https://github.com/TEIC/romajs">RomaJS</ref></desc>
+          <desc>
+            File edited with
+            <ref target="https://github.com/TEIC/romajs">RomaJS</ref>
+          </desc>
+        </application>
+      </appInfo>
+      <appInfo>
+        <application ident="RomaJS" version="1.1.2" when="2025-05-19T16:43:00.525Z">
+          <desc>
+            File edited with
+            <ref target="https://github.com/TEIC/romajs">RomaJS</ref>
+          </desc>
+        </application>
+      </appInfo>
+      <appInfo>
+        <application ident="RomaJS" version="1.1.2" when="2025-05-19T16:58:17.280Z">
+          <desc>
+            File edited with
+            <ref target="https://github.com/TEIC/romajs">RomaJS</ref>
+          </desc>
         </application>
       </appInfo>
     </encodingDesc>
@@ -69,101 +61,76 @@
   <text>
     <body>
       <head>A Minimal TEI Customization</head>
-
-      <p>This TEI ODD defines a TEI customization that is as minimal as possible and the schema
-        generated from it will validate a document that is minimally valid against the TEI scheme.
-        It includes only the ten required elements: <list rend="numbered">
-          <item><gi>teiHeader</gi> from the header module to store required metadata</item>
-          <item><gi>fileDesc</gi> from the header module to record information about this file</item>
-          <item><gi>titleStmt</gi> from the header module to record information about the title</item>
-          <item><gi>publicationStmt</gi> from the header module to detail how it is published</item>
-          <item><gi>sourceDesc</gi> from the header module to record where it is from</item>
-          <item><gi>p</gi> from the core module for use in the header and the body</item>
-          <item><gi>title</gi> from the core module for use in the titleStmt</item>
-          <item><gi>TEI</gi> from the textstructure module because what is a TEI file without that?</item>
-          <item><gi>text</gi> from the textstructure module to hold some text</item>
-          <item><gi>body</gi> from the textstructure module as a place to put that text</item>
+      <p>
+        This TEI ODD defines a TEI customization that is as minimal as possible and the schema generated from it will validate a document that is minimally valid against the TEI scheme. It includes only the ten required elements:
+        <list rend="numbered">
+          <item>
+            <gi>teiHeader</gi>
+            from the header module to store required metadata
+          </item>
+          <item>
+            <gi>fileDesc</gi>
+            from the header module to record information about this file
+          </item>
+          <item>
+            <gi>titleStmt</gi>
+            from the header module to record information about the title
+          </item>
+          <item>
+            <gi>publicationStmt</gi>
+            from the header module to detail how it is published
+          </item>
+          <item>
+            <gi>sourceDesc</gi>
+            from the header module to record where it is from
+          </item>
+          <item>
+            <gi>p</gi>
+            from the core module for use in the header and the body
+          </item>
+          <item>
+            <gi>title</gi>
+            from the core module for use in the titleStmt
+          </item>
+          <item>
+            <gi>TEI</gi>
+            from the textstructure module because what is a TEI file without that?
+          </item>
+          <item>
+            <gi>text</gi>
+            from the textstructure module to hold some text
+          </item>
+          <item>
+            <gi>body</gi>
+            from the textstructure module as a place to put that text
+          </item>
         </list>
       </p>
-      <schemaSpec ident="tei_frame" start="TEI" prefix="tei_" targetLang="en" docLang="en">
-
+      <schemaSpec ident="frame" start="TEI" prefix="tei_" targetLang="en" docLang="en">
         <!-- required minimal header elements -->
         <moduleRef key="corpus" />
-        <moduleRef key="header" />
-
-        <!-- required core elements (p and title for use in titleStmt) -->
-        <moduleRef key="core" />
-
-        <!-- required textstructure elements (TEI, text, and body) -->
-        <moduleRef key="textstructure" />
-
-        <!-- required module tei instantiates lots of classes used for further expansion of this odd -->
+        <moduleRef key="header" /> <!-- required core elements (p and title for use in titleStmt) -->
+        <moduleRef key="core" /> <!-- required textstructure elements (TEI, text, and body) -->
+        <moduleRef key="textstructure" /> <!-- required module tei instantiates lots of classes used for further expansion of this odd -->
         <moduleRef key="tei" />
-
-
         <moduleRef key="tagdocs" />
         <moduleRef key="namesdates" />
-
         <moduleRef key="analysis" include="s" />
         <moduleRef key="linking" include="standOff" />
-        <moduleSpec ident="tei_frame" mode="add" />
-        <elementSpec ident="frame" ns="http://github.com/projekt-UA/TEI-frame" mode="add"
-          module="tei_frame">
-          <desc versionDate="2025-05-15" xml:lang="en">Specify a frame element in a text.</desc>
-          <classes>
-            <memberOf key="att.typed" />
-            <memberOf key="att.cmc" />
-            <memberOf key="att.global" />
-            <memberOf key="model.segLike" />
-          </classes>
-          <content>
-            <macroRef key="macro.paraContent" />
-          </content>
-          <attList>
-            <attDef ident="role" usage="req" ns="http://github.com/projekt-UA/TEI-frame">
-              <datatype>
-                <dataRef key="teidata.enumerated" />
-              </datatype>
-              <valList type="closed">
-                <valItem ident="blame" />
-                <valItem ident="problem" />
-                <valItem ident="cause" />
-                <valItem ident="explanation" />
-                <valItem ident="prospect" />
-                <valItem ident="treatment" />
-              </valList>
-            </attDef>
-            <attDef ident="name" usage="req" ns="http://github.com/projekt-UA/TEI-frame">
-              <datatype>
-                <dataRef name="string" />
-              </datatype>
-            </attDef>
-          </attList>
-        </elementSpec>
-        <moduleSpec ident="tei_frame" mode="add" />
-        <elementSpec ident="attitude" ns="http://github.com/projekt-UA/TEI-frame" mode="add"
-          module="tei_frame">
+        <moduleSpec ident="frame" mode="add" />
+        <elementSpec ident="attitude" ns="http://github.com/projekt-UA/TEI-frame" mode="add" module="frame">
           <altIdent>att</altIdent>
-          <desc versionDate="2025-05-15" xml:lang="en">Specify expressions that express attitudes.</desc>
+          <desc versionDate="2025-05-15" xml:lang="en">specify expressions that express attitudes.</desc>
           <classes>
             <memberOf key="att.global" />
             <memberOf key="att.typed" />
+            <memberOf key="att.attitude" />
             <memberOf key="model.segLike" />
           </classes>
           <content>
             <macroRef key="macro.paraContent" />
           </content>
           <attList>
-            <attDef ident="holder" usage="req" ns="http://github.com/projekt-UA/TEI-frame">
-              <datatype>
-                <dataRef name="string" />
-              </datatype>
-            </attDef>
-            <attDef ident="target" usage="req" ns="http://github.com/projekt-UA/TEI-frame">
-              <datatype>
-                <dataRef name="string" />
-              </datatype>
-            </attDef>
             <attDef ident="frame" usage="opt" ns="http://github.com/projekt-UA/TEI-frame">
               <datatype>
                 <dataRef name="string" />
@@ -172,6 +139,145 @@
             </attDef>
           </attList>
         </elementSpec>
+        <elementSpec ident="problem" ns="http://github.com/projekt-UA/TEI-frame" mode="add" module="frame">
+          <desc versionDate="2025-05-19" xml:lang="en">specifies the problem(s) of a frame.</desc>
+          <classes>
+            <memberOf key="att.global" />
+            <memberOf key="att.typed" />
+            <memberOf key="att.frameRole" />
+            <memberOf key="model.frameRole" />
+          </classes>
+          <content>
+            <empty />
+          </content>
+        </elementSpec>
+        <elementSpec ident="subProblem" ns="http://github.com/projekt-UA/TEI-frame" mode="add" module="frame">
+          <desc versionDate="2025-05-19" xml:lang="en">specifies the problem(s) of a frame.</desc>
+          <classes>
+            <memberOf key="att.global" />
+            <memberOf key="att.typed" />
+            <memberOf key="att.frameRole" />
+            <memberOf key="model.frameRole" />
+          </classes>
+          <content>
+            <empty />
+          </content>
+        </elementSpec>
+        <elementSpec ident="blame" ns="http://github.com/projekt-UA/TEI-frame" mode="add" module="frame">
+          <desc versionDate="2025-05-19" xml:lang="en">specifies the problem(s) of a frame.</desc>
+          <classes>
+            <memberOf key="att.global" />
+            <memberOf key="att.typed" />
+            <memberOf key="att.frameRole" />
+            <memberOf key="att.attitude" />
+            <memberOf key="model.frameRole" />
+          </classes>
+          <content>
+            <empty />
+          </content>
+        </elementSpec>
+        <elementSpec ident="cause" ns="http://github.com/projekt-UA/TEI-frame" mode="add" module="frame">
+          <desc versionDate="2025-05-19" xml:lang="en">specifies the problem(s) of a frame.</desc>
+          <classes>
+            <memberOf key="att.global" />
+            <memberOf key="att.typed" />
+            <memberOf key="att.frameRole" />
+            <memberOf key="att.causation" />
+            <memberOf key="model.frameRole" />
+          </classes>
+          <content>
+            <empty />
+          </content>
+        </elementSpec>
+        <elementSpec ident="prospect" ns="http://github.com/projekt-UA/TEI-frame" mode="add" module="frame">
+          <desc versionDate="2025-05-19" xml:lang="en">specifies the problem(s) of a frame.</desc>
+          <classes>
+            <memberOf key="att.global" />
+            <memberOf key="att.typed" />
+            <memberOf key="att.frameRole" />
+            <memberOf key="att.causation" />
+            <memberOf key="model.frameRole" />
+          </classes>
+          <content>
+            <empty />
+          </content>
+        </elementSpec>
+        <elementSpec ident="treatment" ns="http://github.com/projekt-UA/TEI-frame" mode="add" module="frame">
+          <desc versionDate="2025-05-19" xml:lang="en">specifies the problem(s) of a frame.</desc>
+          <classes>
+            <memberOf key="att.global" />
+            <memberOf key="att.typed" />
+            <memberOf key="att.frameRole" />
+            <memberOf key="model.frameRole" />
+          </classes>
+          <content>
+            <empty />
+          </content>
+        </elementSpec>
+        <elementSpec ident="frameSet" ns="http://github.com/projekt-UA/TEI-frame" mode="add" module="frame">
+          <classes>
+            <memberOf key="att.global" />
+            <memberOf key="att.typed" />
+            <memberOf key="model.segLike" />
+          </classes>
+          <content>
+            <sequence maxOccurs="-1" minOccurs="1">
+              <classRef key="model.frameRole" />
+            </sequence>
+            <macroRef key="macro.paraContent" />
+          </content>
+          <desc versionDate="2025-05-19" xml:lang="en">specifies that the text segment belongs to one or more frame roles.</desc>
+        </elementSpec>
+        <classSpec ident="att.frameRole" type="atts" mode="add" module="frame">
+          <desc versionDate="2025-05-19" xml:lang="en">specifies the basic attribute set for frame roles.</desc>
+          <classes />
+          <attList>
+            <attDef ident="name">
+              <datatype>
+                <dataRef name="string" />
+              </datatype>
+            </attDef>
+            <attDef ident="category">
+              <datatype>
+                <dataRef name="string" />
+              </datatype>
+              <valDesc versionDate="2025-05-19" xml:lang="en">Labels delimited by commas.</valDesc>
+            </attDef>
+          </attList>
+        </classSpec>
+        <classSpec ident="att.causation" type="atts" mode="add" module="frame">
+          <classes />
+          <attList>
+            <attDef ident="causative">
+              <datatype>
+                <dataRef name="boolean" />
+                <valDesc versionDate="2025-05-19" xml:lang="en">true if the frame is causative. Defaults to true.</valDesc>
+              </datatype>
+            </attDef>
+          </attList>
+          <desc versionDate="2025-05-19" xml:lang="en">specifies the existence of (spatio-temporal) causation.</desc>
+        </classSpec>
+        <classSpec ident="att.attitude" type="atts" mode="add" module="frame">
+          <classes />
+          <attList>
+            <attDef ident="from">
+              <datatype>
+                <dataRef name="string" />
+              </datatype>
+              <valDesc versionDate="2025-05-19" xml:lang="en">An entity. Defaults to the writer/speaker of the text.</valDesc>
+            </attDef>
+            <attDef ident="to" usage="req">
+              <datatype>
+                <dataRef name="string" />
+              </datatype>
+              <valDesc versionDate="2025-05-19" xml:lang="en">An entity.</valDesc>
+            </attDef>
+          </attList>
+        </classSpec>
+        <classSpec ident="model.frameRole" type="model" mode="add" module="frame">
+          <desc versionDate="2025-05-19" xml:lang="en">groups empty elements that represent frame roles.</desc>
+          <classes />
+        </classSpec>
       </schemaSpec>
     </body>
   </text>

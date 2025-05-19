@@ -5,12 +5,12 @@
          xmlns="http://relaxng.org/ns/structure/1.0"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2025-05-15T15:03:25Z. . 
+Schema generated from ODD source 2025-05-19T17:35:23Z. . 
 TEI Edition: P5 Version 4.9.0. Last updated on 24th January 2025, revision f73186978 
 TEI Edition Location: https://www.tei-c.org/Vault/P5/4.9.0/ 
   
 --><!--This material is dual-licensed.
-[http://creativecommons.org/licenses/by-sa/3.0/] Distributed under a Creative Commons Attribution-ShareAlike 3.0 Unported License  [http://www.opensource.org/licenses/BSD-2-Clause] Copyright 2013 TEI Consortium. All rights reserved. Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met: Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution. This software is provided by the copyright holders and contributors "as is" and any express or implied warranties, including, but not limited to, the implied warranties of merchantability and fitness for a particular purpose are disclaimed. In no event shall the copyright holder or contributors be liable for any direct, indirect, incidental, special, exemplary, or consequential damages (including, but not limited to, procurement of substitute goods or services; loss of use, data, or profits; or business interruption) however caused and on any theory of liability, whether in contract, strict liability, or tort (including negligence or otherwise) arising in any way out of the use of this software, even if advised of the possibility of such damage. TEI material can be licensed differently depending on the use you intend to make of it. Hence it is made available under both the CC+BY and BSD-2 licences. The CC+BY licence is generally appropriate for usages which treat TEI content as data or documentation. The BSD-2 licence is generally appropriate for usage of TEI content in a software environment. For further information or clarification, please contact the  TEI Consortium .-->
+[http://creativecommons.org/licenses/by-sa/3.0/] Distributed under a Creative Commons Attribution-ShareAlike 3.0 Unported License  [http://www.opensource.org/licenses/BSD-2-Clause] Copyright 2013 TEI Consortium. All rights reserved. Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met: Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution. This software is provided by the copyright holders and contributors "as is" and any express or implied warranties, including, but not limited to, the implied warranties of merchantability and fitness for a particular purpose are disclaimed. In no event shall the copyright holder or contributors be liable for any direct, indirect, incidental, special, exemplary, or consequential damages (including, but not limited to, procurement of substitute goods or services; loss of use, data, or profits; or business interruption) however caused and on any theory of liability, whether in contract, strict liability, or tort (including negligence or otherwise) arising in any way out of the use of this software, even if advised of the possibility of such damage. TEI material can be licensed differently depending on the use you intend to make of it. Hence it is made available under both the CC+BY and BSD-2 licences. The CC+BY licence is generally appropriate for usages which treat TEI content as data or documentation. The BSD-2 licence is generally appropriate for usage of TEI content in a software environment. For further information or clarification, please contact the  TEI Consortium  .-->
    <define name="tei_macro.paraContent">
       <zeroOrMore>
          <choice>
@@ -131,7 +131,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5/4.9.0/
          </zeroOrMore>
       </element>
       <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-               id="d37225895e66000-constraint">
+               id="d44899699e66013-constraint">
          <rule context="tei:content">
             <report test="descendant::*[not(namespace-uri(.) =               ('http://relaxng.org/ns/compatibility/annotations/1.0', 'http://relaxng.org/ns/structure/1.0', 'http://www.tei-c.org/ns/1.0'))]">content descendants must be in the
               namespaces
@@ -202,7 +202,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5/4.9.0/
          </zeroOrMore>
       </element>
       <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-               id="d37225895e67599-constraint">
+               id="d44899699e67612-constraint">
          <rule context="tei:datatype">
             <report test="descendant::*[not(namespace-uri(.) =               ('http://relaxng.org/ns/structure/1.0', 'http://www.tei-c.org/ns/1.0'))]">datatype descendants must be in the
               namespaces
@@ -389,7 +389,7 @@ Suggested values include: 1] human; 2] template; 3] system; 4] bot; 5] unspecifi
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="tei_frame-att.cmc-generatedBy-CMC_generatedBy_within_post-constraint-rule-1">
+            id="frame-att.cmc-generatedBy-CMC_generatedBy_within_post-constraint-rule-1">
       <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -491,7 +491,7 @@ Suggested values include: 1] human; 2] template; 3] system; 4] bot; 5] unspecifi
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="tei_frame-att.datable.w3c-att-datable-w3c-when-constraint-rule-2">
+            id="frame-att.datable.w3c-att-datable-w3c-when-constraint-rule-2">
       <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -501,7 +501,7 @@ Suggested values include: 1] human; 2] template; 3] system; 4] bot; 5] unspecifi
       </sch:rule>
    </pattern>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="tei_frame-att.datable.w3c-att-datable-w3c-from-constraint-rule-3">
+            id="frame-att.datable.w3c-att-datable-w3c-from-constraint-rule-3">
       <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -511,7 +511,7 @@ Suggested values include: 1] human; 2] template; 3] system; 4] bot; 5] unspecifi
       </sch:rule>
    </pattern>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="tei_frame-att.datable.w3c-att-datable-w3c-to-constraint-rule-4">
+            id="frame-att.datable.w3c-att-datable-w3c-to-constraint-rule-4">
       <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -823,7 +823,7 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</a:documentati
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="tei_frame-att.global.source-source-only_1_ODD_source-constraint-rule-5">
+            id="frame-att.global.source-source-only_1_ODD_source-constraint-rule-5">
       <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -952,7 +952,7 @@ Suggested values include: 1] m (metre); 2] kg (kilogram); 3] s (second); 4] Hz (
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="tei_frame-att.measurement-att-measurement-unitRef-constraint-rule-6">
+            id="frame-att.measurement-att-measurement-unitRef-constraint-rule-6">
       <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -1041,7 +1041,7 @@ Suggested values include: 1] top; 2] bottom; 3] margin; 4] opposite; 5] overleaf
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="tei_frame-att.pointing-targetLang-targetLang-constraint-rule-7">
+            id="frame-att.pointing-targetLang-targetLang-constraint-rule-7">
       <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -1215,7 +1215,7 @@ Suggested values include: 1] sole; 2] major; 3] minor</a:documentation>
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="tei_frame-att.spanning-spanTo-spanTo-points-to-following-constraint-rule-8">
+            id="frame-att.spanning-spanTo-spanTo-points-to-following-constraint-rule-8">
       <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -1259,7 +1259,7 @@ Suggested values include: 1] sole; 2] major; 3] minor</a:documentation>
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="tei_frame-att.styleDef-schemeVersion-schemeVersionRequiresScheme-constraint-rule-9">
+            id="frame-att.styleDef-schemeVersion-schemeVersionRequiresScheme-constraint-rule-9">
       <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -1295,7 +1295,7 @@ Suggested values include: 1] sole; 2] major; 3] minor</a:documentation>
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="tei_frame-att.typed-subtypeTyped-constraint-rule-10">
+            id="frame-att.typed-subtypeTyped-constraint-rule-10">
       <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -1818,31 +1818,31 @@ Sample values include: 1] duplicate; 2] duplicate-partial; 3] excessStart; 4] ex
    <define name="tei_model.segLike">
       <choice>
          <ref name="tei_s"/>
-         <ref name="tei_frame"/>
          <ref name="tei_attitude"/>
+         <ref name="tei_frameSet"/>
       </choice>
    </define>
    <define name="tei_model.segLike_alternation">
       <choice>
          <ref name="tei_s"/>
-         <ref name="tei_frame"/>
          <ref name="tei_attitude"/>
+         <ref name="tei_frameSet"/>
       </choice>
    </define>
    <define name="tei_model.segLike_sequence">
       <ref name="tei_s"/>
-      <ref name="tei_frame"/>
       <ref name="tei_attitude"/>
+      <ref name="tei_frameSet"/>
    </define>
    <define name="tei_model.segLike_sequenceOptional">
       <optional>
          <ref name="tei_s"/>
       </optional>
       <optional>
-         <ref name="tei_frame"/>
+         <ref name="tei_attitude"/>
       </optional>
       <optional>
-         <ref name="tei_attitude"/>
+         <ref name="tei_frameSet"/>
       </optional>
    </define>
    <define name="tei_model.segLike_sequenceOptionalRepeatable">
@@ -1850,10 +1850,10 @@ Sample values include: 1] duplicate; 2] duplicate-partial; 3] excessStart; 4] ex
          <ref name="tei_s"/>
       </zeroOrMore>
       <zeroOrMore>
-         <ref name="tei_frame"/>
+         <ref name="tei_attitude"/>
       </zeroOrMore>
       <zeroOrMore>
-         <ref name="tei_attitude"/>
+         <ref name="tei_frameSet"/>
       </zeroOrMore>
    </define>
    <define name="tei_model.segLike_sequenceRepeatable">
@@ -1861,10 +1861,10 @@ Sample values include: 1] duplicate; 2] duplicate-partial; 3] excessStart; 4] ex
          <ref name="tei_s"/>
       </oneOrMore>
       <oneOrMore>
-         <ref name="tei_frame"/>
+         <ref name="tei_attitude"/>
       </oneOrMore>
       <oneOrMore>
-         <ref name="tei_attitude"/>
+         <ref name="tei_frameSet"/>
       </oneOrMore>
    </define>
    <define name="tei_model.hiLike">
@@ -4449,7 +4449,7 @@ Sample values include: 1] duplicate; 2] duplicate-partial; 3] excessStart; 4] ex
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="tei_frame-att.calendarSystem-calendar-calendar_attr_on_empty_element-constraint-rule-11">
+            id="frame-att.calendarSystem-calendar-calendar_attr_on_empty_element-constraint-rule-11">
       <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -4508,7 +4508,7 @@ Suggested values include: 1] page; 2] column; 3] line; 4] book; 5] poem; 6] cant
          <ref name="tei_macro.paraContent"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="tei_frame-p-abstractModel-structure-p-in-ab-or-p-constraint-rule-12">
+                  id="frame-p-abstractModel-structure-p-in-ab-or-p-constraint-rule-12">
             <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       context="tei:p">
@@ -4519,7 +4519,7 @@ Suggested values include: 1] page; 2] column; 3] line; 4] book; 5] poem; 6] cant
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="tei_frame-p-abstractModel-structure-p-in-l-constraint-rule-13">
+                  id="frame-p-abstractModel-structure-p-in-l-constraint-rule-13">
             <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       context="tei:l//tei:p">
@@ -4737,7 +4737,7 @@ Suggested values include: 1] spoken (spoken); 2] thought (thought); 3] written (
          <ref name="tei_macro.limitedContent"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="tei_frame-desc-deprecationInfo-only-in-deprecated-constraint-rule-14">
+                  id="frame-desc-deprecationInfo-only-in-deprecated-constraint-rule-14">
             <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       context="tei:desc[ @type eq 'deprecationInfo']">
@@ -4838,7 +4838,7 @@ Suggested values include: 1] deprecationInfo (deprecation information)</a:docume
          </optional> 
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="tei_frame-rt-target-rt-target-not-span-constraint-rule-15">
+                  id="frame-rt-target-rt-target-not-span-constraint-rule-15">
             <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       context="tei:rt/@target">
@@ -4855,7 +4855,7 @@ Suggested values include: 1] deprecationInfo (deprecation information)</a:docume
          </optional> 
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="tei_frame-rt-from-rt-from-constraint-rule-16">
+                  id="frame-rt-from-rt-from-constraint-rule-16">
             <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       context="tei:rt/@from">
@@ -4872,7 +4872,7 @@ Suggested values include: 1] deprecationInfo (deprecation information)</a:docume
          </optional> 
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="tei_frame-rt-to-rt-to-constraint-rule-17">
+                  id="frame-rt-to-rt-to-constraint-rule-17">
             <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       context="tei:rt/@to">
@@ -5340,7 +5340,7 @@ Sample values include: 1] suspension (suspension); 2] contraction (contraction);
          <empty/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="tei_frame-ptr-ptrAtts-constraint-rule-18">
+                  id="frame-ptr-ptrAtts-constraint-rule-18">
             <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       context="tei:ptr">
@@ -5363,7 +5363,7 @@ Sample values include: 1] suspension (suspension); 2] contraction (contraction);
          <ref name="tei_macro.paraContent"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="tei_frame-ref-refAtts-constraint-rule-19">
+                  id="frame-ref-refAtts-constraint-rule-19">
             <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       context="tei:ref">
@@ -5429,7 +5429,7 @@ Sample values include: 1] suspension (suspension); 2] contraction (contraction);
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="tei_frame-list-gloss-list-must-have-labels-constraint-rule-20">
+                  id="frame-list-gloss-list-must-have-labels-constraint-rule-20">
             <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       context="tei:list[@type='gloss']">
@@ -6142,7 +6142,7 @@ Sample values include: 1] main; 2] sub (subordinate); 3] alt (alternate); 4] sho
          </optional>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="tei_frame-relatedItem-targetorcontent1-constraint-rule-21">
+                  id="frame-relatedItem-targetorcontent1-constraint-rule-21">
             <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       context="tei:relatedItem">
@@ -6177,7 +6177,7 @@ Sample values include: 1] main; 2] sub (subordinate); 3] alt (alternate); 4] sho
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="tei_frame-l-abstractModel-structure-l-in-l-constraint-rule-22">
+                  id="frame-l-abstractModel-structure-l-in-l-constraint-rule-22">
             <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       context="tei:l">
@@ -6226,7 +6226,7 @@ Sample values include: 1] main; 2] sub (subordinate); 3] alt (alternate); 4] sho
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="tei_frame-lg-atleast1oflggapl-constraint-rule-23">
+                  id="frame-lg-atleast1oflggapl-constraint-rule-23">
             <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       context="tei:lg">
@@ -6235,7 +6235,7 @@ Sample values include: 1] main; 2] sub (subordinate); 3] alt (alternate); 4] sho
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="tei_frame-lg-abstractModel-structure-lg-in-l-constraint-rule-24">
+                  id="frame-lg-abstractModel-structure-lg-in-l-constraint-rule-24">
             <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       context="tei:lg">
@@ -7289,7 +7289,7 @@ Suggested values include: 1] ISBN; 2] ISSN; 3] DOI; 4] URI; 5] VIAF; 6] ESTC; 7]
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="tei_frame-quotation-quotationContents-constraint-rule-25">
+                  id="frame-quotation-quotationContents-constraint-rule-25">
             <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
@@ -7574,7 +7574,7 @@ Sample values include: 1] first-line; 2] first-letter; 3] before; 4] after</a:do
          </attribute>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="tei_frame-citeStructure-match-citestructure-outer-match-constraint-rule-26">
+                  id="frame-citeStructure-match-citestructure-outer-match-constraint-rule-26">
             <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
@@ -7584,7 +7584,7 @@ Sample values include: 1] first-line; 2] first-letter; 3] before; 4] after</a:do
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="tei_frame-citeStructure-match-citestructure-inner-match-constraint-rule-27">
+                  id="frame-citeStructure-match-citestructure-inner-match-constraint-rule-27">
             <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
@@ -8557,7 +8557,7 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="tei_frame-div-abstractModel-structure-div-in-l-constraint-rule-28">
+                  id="frame-div-abstractModel-structure-div-in-l-constraint-rule-28">
             <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       context="tei:l//tei:div">
@@ -8568,7 +8568,7 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="tei_frame-div-abstractModel-structure-div-in-ab-or-p-constraint-rule-29">
+                  id="frame-div-abstractModel-structure-div-in-ab-or-p-constraint-rule-29">
             <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       context="tei:div">
@@ -9467,7 +9467,7 @@ Suggested values include: 1] main (main); 2] sub (subordinate); 3] alt (alternat
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="tei_frame-att.repeatable-MINandMAXoccurs-constraint-rule-30">
+            id="frame-att.repeatable-MINandMAXoccurs-constraint-rule-30">
       <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -9553,7 +9553,7 @@ Suggested values include: 1] main (main); 2] sub (subordinate); 3] alt (alternat
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="tei_frame-att.identified-spec-in-module-constraint-rule-32">
+            id="frame-att.identified-spec-in-module-constraint-rule-32">
       <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -9577,7 +9577,7 @@ should correspond to an existing module, via a moduleSpec or
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="tei_frame-att.deprecated-validUntil-deprecation-two-month-warning-constraint-rule-33">
+            id="frame-att.deprecated-validUntil-deprecation-two-month-warning-constraint-rule-33">
       <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -9597,7 +9597,7 @@ should correspond to an existing module, via a moduleSpec or
           </sch:rule>
    </pattern>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="tei_frame-att.deprecated-validUntil-deprecation-should-be-explained-constraint-rule-34">
+            id="frame-att.deprecated-validUntil-deprecation-should-be-explained-constraint-rule-34">
       <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -9900,7 +9900,7 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
          </optional>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="tei_frame-moduleRef-modref-constraint-rule-37">
+                  id="frame-moduleRef-modref-constraint-rule-37">
             <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
@@ -9921,7 +9921,7 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
          </optional>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="tei_frame-moduleRef-prefix-not-same-prefix-constraint-rule-38">
+                  id="frame-moduleRef-prefix-not-same-prefix-constraint-rule-38">
             <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
@@ -9933,7 +9933,7 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="tei_frame-moduleRef-prefix-not-except-and-include-constraint-rule-39">
+                  id="frame-moduleRef-prefix-not-except-and-include-constraint-rule-39">
             <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
@@ -10176,7 +10176,7 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="tei_frame-elementSpec-child-constraint-based-on-mode-constraint-rule-40">
+                  id="frame-elementSpec-child-constraint-based-on-mode-constraint-rule-40">
             <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
@@ -10354,7 +10354,7 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="tei_frame-dataSpec-no_elements_in_data_content-constraint-rule-42">
+                  id="frame-dataSpec-no_elements_in_data_content-constraint-rule-42">
             <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
@@ -10435,7 +10435,7 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="tei_frame-listRef-TagDocsNestinglistRef-constraint-rule-43">
+                  id="frame-listRef-TagDocsNestinglistRef-constraint-rule-43">
             <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
@@ -10445,7 +10445,7 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="tei_frame-listRef-TagDocslistRefChildren-constraint-rule-44">
+                  id="frame-listRef-TagDocslistRefChildren-constraint-rule-44">
             <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
@@ -10613,7 +10613,7 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="tei_frame-model-no_dup_default_models-constraint-rule-45">
+                  id="frame-model-no_dup_default_models-constraint-rule-45">
             <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
@@ -10627,7 +10627,7 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="tei_frame-model-no_dup_models-constraint-rule-46">
+                  id="frame-model-no_dup_models-constraint-rule-46">
             <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
@@ -10753,7 +10753,7 @@ Sample values include: 1] web; 2] print; 3] plain</a:documentation>
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="tei_frame-modelSequence-no_outputs_nor_predicates_4_my_kids-constraint-rule-47">
+                  id="frame-modelSequence-no_outputs_nor_predicates_4_my_kids-constraint-rule-47">
             <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
@@ -10970,7 +10970,7 @@ Suggested values include: 1] alternate; 2] default; 3] height; 4] id; 5] label; 
          </oneOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="tei_frame-sequence-sequencechilden-constraint-rule-48">
+                  id="frame-sequence-sequencechilden-constraint-rule-48">
             <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
@@ -11000,7 +11000,7 @@ Suggested values include: 1] alternate; 2] default; 3] height; 4] id; 5] label; 
          </oneOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="tei_frame-alternate-alternatechilden-constraint-rule-49">
+                  id="frame-alternate-alternatechilden-constraint-rule-49">
             <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
@@ -11030,7 +11030,7 @@ Suggested values include: 1] alternate; 2] default; 3] height; 4] id; 5] label; 
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="tei_frame-constraintDecl-one-constraintDecl-per-scheme-constraint-rule-50">
+                  id="frame-constraintDecl-one-constraintDecl-per-scheme-constraint-rule-50">
             <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
@@ -11124,7 +11124,7 @@ Suggested values include: 1] exslt; 2] stx; 3] xslt; 4] xslt2; 5] xslt3; 6] xpat
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="tei_frame-constraintSpec-empty-based-on-mode-constraint-rule-52">
+                  id="frame-constraintSpec-empty-based-on-mode-constraint-rule-52">
             <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
@@ -11146,7 +11146,7 @@ Suggested values include: 1] exslt; 2] stx; 3] xslt; 4] xslt2; 5] xslt3; 6] xpat
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="tei_frame-constraintSpec-sch_no_more-constraint-rule-55">
+                  id="frame-constraintSpec-sch_no_more-constraint-rule-55">
             <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
@@ -11159,7 +11159,7 @@ Suggested values include: 1] exslt; 2] stx; 3] xslt; 4] xslt2; 5] xslt3; 6] xpat
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="tei_frame-constraintSpec-isosch-constraint-rule-56">
+                  id="frame-constraintSpec-isosch-constraint-rule-56">
             <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
@@ -11171,7 +11171,7 @@ Suggested values include: 1] exslt; 2] stx; 3] xslt; 4] xslt2; 5] xslt3; 6] xpat
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="tei_frame-constraintSpec-context-required-constraint-rule-57">
+                  id="frame-constraintSpec-context-required-constraint-rule-57">
             <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
@@ -11186,7 +11186,7 @@ Suggested values include: 1] exslt; 2] stx; 3] xslt; 4] xslt2; 5] xslt3; 6] xpat
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="tei_frame-constraintSpec-unique-constraintSpec-ident-constraint-rule-58">
+                  id="frame-constraintSpec-unique-constraintSpec-ident-constraint-rule-58">
             <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
@@ -11230,7 +11230,7 @@ Suggested values include: 1] schematron (ISO Schematron)</a:documentation>
          </optional>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="tei_frame-constraintSpec-scheme-usage_based_on_mode-constraint-rule-61">
+                  id="frame-constraintSpec-scheme-usage_based_on_mode-constraint-rule-61">
             <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
@@ -11311,7 +11311,7 @@ Suggested values include: 1] schematron (ISO Schematron)</a:documentation>
                  uri="http://www.tei-c.org/ns/Examples"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="tei_frame-attDef-attDefContents-constraint-rule-62">
+                  id="frame-attDef-attDefContents-constraint-rule-62">
             <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron" context="tei:attDef">
                <sch:assert test="ancestor::teix:egXML[ @valid eq 'feasible']                        or @mode eq 'change'                        or @mode eq 'delete'                        or tei:datatype                        or tei:valList[ @type eq 'closed']">
           Attribute: the definition of the @<sch:value-of select="@ident"/> attribute in the
@@ -11324,7 +11324,7 @@ Suggested values include: 1] schematron (ISO Schematron)</a:documentation>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="tei_frame-attDef-noDefault4Required-constraint-rule-63">
+                  id="frame-attDef-noDefault4Required-constraint-rule-63">
             <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:attDef[@usage eq 'req']">
                <sch:report test="tei:defaultVal">Since the @<sch:value-of select="@ident"/> attribute is required, it will always be specified. Thus the default value (of "<sch:value-of select="normalize-space(tei:defaultVal)"/>") will never be used. Either change the definition of the attribute so it is not required ("rec" or "opt"), or remove the defaultVal element.</sch:report>
@@ -11332,7 +11332,7 @@ Suggested values include: 1] schematron (ISO Schematron)</a:documentation>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="tei_frame-attDef-defaultIsInClosedList-twoOrMore-constraint-rule-64">
+                  id="frame-attDef-defaultIsInClosedList-twoOrMore-constraint-rule-64">
             <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:attDef[     tei:defaultVal                                      and tei:valList[ @type eq 'closed']                                      and tei:datatype[ @maxOccurs &gt; 1  or  @minOccurs &gt; 1  or  @maxOccurs eq 'unbounded']                                    ]">
                <sch:assert test="tokenize(normalize-space(tei:defaultVal),' ') = tei:valList/tei:valItem/@ident">In the <sch:value-of select="local-name(ancestor::*[@ident][1])"/> defining
@@ -11343,7 +11343,7 @@ Suggested values include: 1] schematron (ISO Schematron)</a:documentation>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="tei_frame-attDef-defaultIsInClosedList-one-constraint-rule-65">
+                  id="frame-attDef-defaultIsInClosedList-one-constraint-rule-65">
             <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:attDef[     tei:defaultVal                                      and tei:valList[ @type eq 'closed']                                      and tei:datatype[                                             not(@maxOccurs)                                         or  ( if ( @maxOccurs castable as xs:integer ) then ( @maxOccurs cast as xs:integer eq 1 ) else false() )                                                      ]                                    ]">
                <sch:assert test="string(tei:defaultVal) = tei:valList/tei:valItem/@ident">In the <sch:value-of select="local-name(ancestor::*[@ident][1])"/> defining
@@ -11434,7 +11434,7 @@ Suggested values include: 1] schematron (ISO Schematron)</a:documentation>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="tei_frame-dataRef-restrictDataFacet-constraint-rule-66">
+                  id="frame-dataRef-restrictDataFacet-constraint-rule-66">
             <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
@@ -11446,7 +11446,7 @@ Suggested values include: 1] schematron (ISO Schematron)</a:documentation>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="tei_frame-dataRef-restrictAttResctrictionName-constraint-rule-67">
+                  id="frame-dataRef-restrictAttResctrictionName-constraint-rule-67">
             <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
@@ -13207,7 +13207,7 @@ Sample values include: 1] e (e); 2] he (he); 3] she (she); 4] they (they)</a:doc
          </optional>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="tei_frame-relation-ref-or-key-or-name-constraint-rule-68">
+                  id="frame-relation-ref-or-key-or-name-constraint-rule-68">
             <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
@@ -13217,7 +13217,7 @@ Sample values include: 1] e (e); 2] he (he); 3] she (she); 4] they (they)</a:doc
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="tei_frame-relation-active-mutual-constraint-rule-69">
+                  id="frame-relation-active-mutual-constraint-rule-69">
             <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
@@ -13227,7 +13227,7 @@ Sample values include: 1] e (e); 2] he (he); 3] she (she); 4] they (they)</a:doc
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="tei_frame-relation-active-passive-constraint-rule-70">
+                  id="frame-relation-active-passive-constraint-rule-70">
             <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
@@ -13696,7 +13696,7 @@ Sample values include: 1] atBirth; 2] atDeath; 3] dependent; 4] inherited; 5] in
          <ref name="tei_macro.phraseSeq"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="tei_frame-s-noNestedS-constraint-rule-71">
+                  id="frame-s-noNestedS-constraint-rule-71">
             <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       context="tei:s">
@@ -13825,7 +13825,7 @@ Sample values include: 1] atBirth; 2] atDeath; 3] dependent; 4] inherited; 5] in
          </oneOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="tei_frame-standOff-nested_standOff_should_be_typed-constraint-rule-72">
+                  id="frame-standOff-nested_standOff_should_be_typed-constraint-rule-72">
             <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
@@ -13842,51 +13842,13 @@ Sample values include: 1] atBirth; 2] atDeath; 3] dependent; 4] inherited; 5] in
          <empty/>
       </element>
    </define>
-   <define name="tei_frame">
-      <element name="frame" ns="http://github.com/projekt-UA/TEI-frame">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Specify a frame element in a text.</a:documentation>
-         <ref name="tei_macro.paraContent"/>
-         <ref name="tei_att.typed.attributes"/>
-         <ref name="tei_att.cmc.attributes"/>
-         <ref name="tei_att.global.attributes"/>
-         <attribute name="role" ns="http://github.com/projekt-UA/TEI-frame">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-            <choice>
-               <value>blame</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-               <value>problem</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-               <value>cause</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-               <value>explanation</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-               <value>prospect</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-               <value>treatment</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-            </choice>
-         </attribute>
-         <attribute name="name" ns="http://github.com/projekt-UA/TEI-frame">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-            <data type="string"/>
-         </attribute>
-         <empty/>
-      </element>
-   </define>
    <define name="tei_attitude">
       <element name="att" ns="http://github.com/projekt-UA/TEI-frame">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Specify expressions that express attitudes.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specify expressions that express attitudes.</a:documentation>
          <ref name="tei_macro.paraContent"/>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.typed.attributes"/>
-         <attribute name="holder" ns="http://github.com/projekt-UA/TEI-frame">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-            <data type="string"/>
-         </attribute>
-         <attribute name="target" ns="http://github.com/projekt-UA/TEI-frame">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-            <data type="string"/>
-         </attribute>
+         <ref name="tei_att.attitude.attributes"/>
          <optional>
             <attribute name="frame" ns="http://github.com/projekt-UA/TEI-frame">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
@@ -13895,6 +13857,139 @@ Sample values include: 1] atBirth; 2] atDeath; 3] dependent; 4] inherited; 5] in
          </optional>
          <empty/>
       </element>
+   </define>
+   <define name="tei_problem">
+      <element name="problem" ns="http://github.com/projekt-UA/TEI-frame">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies the problem(s) of a frame.</a:documentation>
+         <empty/>
+         <ref name="tei_att.global.attributes"/>
+         <ref name="tei_att.typed.attributes"/>
+         <ref name="tei_att.frameRole.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_subProblem">
+      <element name="subProblem" ns="http://github.com/projekt-UA/TEI-frame">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies the problem(s) of a frame.</a:documentation>
+         <empty/>
+         <ref name="tei_att.global.attributes"/>
+         <ref name="tei_att.typed.attributes"/>
+         <ref name="tei_att.frameRole.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_blame">
+      <element name="blame" ns="http://github.com/projekt-UA/TEI-frame">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies the problem(s) of a frame.</a:documentation>
+         <empty/>
+         <ref name="tei_att.global.attributes"/>
+         <ref name="tei_att.typed.attributes"/>
+         <ref name="tei_att.frameRole.attributes"/>
+         <ref name="tei_att.attitude.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_cause">
+      <element name="cause" ns="http://github.com/projekt-UA/TEI-frame">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies the problem(s) of a frame.</a:documentation>
+         <empty/>
+         <ref name="tei_att.global.attributes"/>
+         <ref name="tei_att.typed.attributes"/>
+         <ref name="tei_att.frameRole.attributes"/>
+         <ref name="tei_att.causation.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_prospect">
+      <element name="prospect" ns="http://github.com/projekt-UA/TEI-frame">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies the problem(s) of a frame.</a:documentation>
+         <empty/>
+         <ref name="tei_att.global.attributes"/>
+         <ref name="tei_att.typed.attributes"/>
+         <ref name="tei_att.frameRole.attributes"/>
+         <ref name="tei_att.causation.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_treatment">
+      <element name="treatment" ns="http://github.com/projekt-UA/TEI-frame">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies the problem(s) of a frame.</a:documentation>
+         <empty/>
+         <ref name="tei_att.global.attributes"/>
+         <ref name="tei_att.typed.attributes"/>
+         <ref name="tei_att.frameRole.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_frameSet">
+      <element name="frameSet" ns="http://github.com/projekt-UA/TEI-frame">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies that the text segment belongs to one or more frame roles.</a:documentation>
+         <oneOrMore>
+            <ref name="tei_model.frameRole"/>
+         </oneOrMore>
+         <ref name="tei_macro.paraContent"/>
+         <ref name="tei_att.global.attributes"/>
+         <ref name="tei_att.typed.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_att.frameRole.attributes">
+      <ref name="tei_att.frameRole.attribute.name"/>
+      <ref name="tei_att.frameRole.attribute.category"/>
+   </define>
+   <define name="tei_att.frameRole.attribute.name">
+      <optional>
+         <attribute name="name">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <data type="string"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tei_att.frameRole.attribute.category">
+      <optional>
+         <attribute name="category">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <data type="string"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tei_att.causation.attributes">
+      <ref name="tei_att.causation.attribute.causative"/>
+   </define>
+   <define name="tei_att.causation.attribute.causative">
+      <optional>
+         <attribute name="causative">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <data type="boolean"/>true if the frame is causative. Defaults to true.</attribute>
+      </optional>
+   </define>
+   <define name="tei_att.attitude.attributes">
+      <ref name="tei_att.attitude.attribute.from"/>
+      <ref name="tei_att.attitude.attribute.to"/>
+   </define>
+   <define name="tei_att.attitude.attribute.from">
+      <optional>
+         <attribute name="from">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <data type="string"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tei_att.attitude.attribute.to">
+      <attribute name="to">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <data type="string"/>
+      </attribute>
+   </define>
+   <define name="tei_model.frameRole">
+      <choice>
+         <ref name="tei_problem"/>
+         <ref name="tei_subProblem"/>
+         <ref name="tei_blame"/>
+         <ref name="tei_cause"/>
+         <ref name="tei_prospect"/>
+         <ref name="tei_treatment"/>
+      </choice>
    </define>
    <start>
       <choice>
