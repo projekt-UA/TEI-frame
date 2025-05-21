@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -109,6 +109,9 @@
         </list>
       </p>
       <schemaSpec ident="frame" start="TEI" prefix="tei_" targetLang="en" docLang="en">
+        <constraintDecl scheme="schematron" queryBinding="xslt3">
+          <sch:ns prefix="tei" uri="http://www.tei-c.org/ns/1.0" />
+        </constraintDecl>
         <!-- required minimal header elements -->
         <moduleRef key="corpus" />
         <moduleRef key="header" /> <!-- required core elements (p and title for use in titleStmt) -->
@@ -152,7 +155,7 @@
             <memberOf key="model.frameRole" />
           </classes>
           <content>
-            <empty />
+            <macroRef key="macro.paraContent" />
           </content>
         </elementSpec>
         <elementSpec ident="subProblem" ns="http://github.com/projekt-UA/TEI-frame" mode="add" module="frame">
@@ -165,7 +168,7 @@
             <memberOf key="model.frameRole" />
           </classes>
           <content>
-            <empty />
+            <macroRef key="macro.paraContent" />
           </content>
         </elementSpec>
         <elementSpec ident="blame" ns="http://github.com/projekt-UA/TEI-frame" mode="add" module="frame">
@@ -179,7 +182,7 @@
             <memberOf key="model.frameRole" />
           </classes>
           <content>
-            <empty />
+            <macroRef key="macro.paraContent" />
           </content>
         </elementSpec>
         <elementSpec ident="cause" ns="http://github.com/projekt-UA/TEI-frame" mode="add" module="frame">
@@ -193,7 +196,7 @@
             <memberOf key="model.frameRole" />
           </classes>
           <content>
-            <empty />
+            <macroRef key="macro.paraContent" />
           </content>
         </elementSpec>
         <elementSpec ident="prospect" ns="http://github.com/projekt-UA/TEI-frame" mode="add" module="frame">
@@ -207,7 +210,7 @@
             <memberOf key="model.frameRole" />
           </classes>
           <content>
-            <empty />
+            <macroRef key="macro.paraContent" />
           </content>
         </elementSpec>
         <elementSpec ident="treatment" ns="http://github.com/projekt-UA/TEI-frame" mode="add" module="frame">
@@ -220,7 +223,7 @@
             <memberOf key="model.frameRole" />
           </classes>
           <content>
-            <empty />
+            <macroRef key="macro.paraContent" />
           </content>
         </elementSpec>
         <elementSpec ident="frameSet" ns="http://github.com/projekt-UA/TEI-frame" mode="add" module="frame">
@@ -290,6 +293,13 @@
           <desc versionDate="2025-05-19" xml:lang="en">groups empty elements that represent frame roles.</desc>
           <classes />
         </classSpec>
+        <constraintSpec ident="frameSet-frameRole-empty" scheme="schematron">
+          <constraint>
+            <sch:rule context="tei:frameSet/(tei:problem | tei:blame | tei:cause | tei:prospect | tei:treatment)">
+              <sch:assert test="not(node())">A frame role in a frameSet should contain nothing.</sch:assert>
+            </sch:rule>
+          </constraint>
+        </constraintSpec>
       </schemaSpec>
     </body>
   </text>
