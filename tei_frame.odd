@@ -287,6 +287,16 @@
               </datatype>
               <valDesc versionDate="2025-05-19" xml:lang="en">An entity.</valDesc>
             </attDef>
+            <attDef ident="pol" usage="opt" ns="http://github.com/projekt-UA/TEI-frame">
+              <datatype>
+                <dataRef key="teidata.enumerated" />
+              </datatype>
+              <valList type="closed">
+                <valItem ident="+" />
+                <valItem ident="-" />
+                <valItem ident="0" />
+              </valList>
+            </attDef>
           </attList>
         </classSpec>
         <classSpec ident="model.frameRole" type="model" mode="add" module="frame">
