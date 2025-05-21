@@ -123,6 +123,7 @@
         <elementSpec ident="attitude" ns="http://github.com/projekt-UA/TEI-frame" mode="add" module="frame">
           <altIdent>att</altIdent>
           <desc versionDate="2025-05-15" xml:lang="en">specify expressions that express attitudes.</desc>
+          <desc versionDate="2025-05-15" xml:lang="ja">態度表現をマークします。</desc>
           <classes>
             <memberOf key="att.global" />
             <memberOf key="att.typed" />
@@ -143,6 +144,7 @@
         </elementSpec>
         <elementSpec ident="problem" ns="http://github.com/projekt-UA/TEI-frame" mode="add" module="frame">
           <desc versionDate="2025-05-19" xml:lang="en">specifies one of the problems of a frame.</desc>
+          <desc versionDate="2025-05-19" xml:lang="ja">フレームの構成要素として，問題とする事象マークします。</desc>
           <classes>
             <memberOf key="att.global" />
             <memberOf key="att.typed" />
@@ -155,6 +157,7 @@
         </elementSpec>
         <elementSpec ident="subProblem" ns="http://github.com/projekt-UA/TEI-frame" mode="add" module="frame">
           <desc versionDate="2025-05-19" xml:lang="en">specifies one of the sub-problems of a frame.</desc>
+          <desc versionDate="2025-05-19" xml:lang="ja">フレームの構成要素として，サブ問題をマークします。</desc>
           <classes>
             <memberOf key="att.global" />
             <memberOf key="att.typed" />
@@ -167,6 +170,7 @@
         </elementSpec>
         <elementSpec ident="blame" ns="http://github.com/projekt-UA/TEI-frame" mode="add" module="frame">
           <desc versionDate="2025-05-19" xml:lang="en">specifies a blame of a frame.</desc>
+          <desc versionDate="2025-05-19" xml:lang="jp">フレームの構成要素として，責任の帰着をマークします。</desc>
           <classes>
             <memberOf key="att.global" />
             <memberOf key="att.typed" />
@@ -180,6 +184,7 @@
         </elementSpec>
         <elementSpec ident="cause" ns="http://github.com/projekt-UA/TEI-frame" mode="add" module="frame">
           <desc versionDate="2025-05-19" xml:lang="en">specifies a cause of a frame.</desc>
+          <desc versionDate="2025-05-19" xml:lang="jp">フレームの構成要素として，問題の原因をマークします。</desc>
           <classes>
             <memberOf key="att.global" />
             <memberOf key="att.typed" />
@@ -193,6 +198,7 @@
         </elementSpec>
         <elementSpec ident="prospect" ns="http://github.com/projekt-UA/TEI-frame" mode="add" module="frame">
           <desc versionDate="2025-05-19" xml:lang="en">specifies one of the prospects of a frame.</desc>
+          <desc versionDate="2025-05-19" xml:lang="jp">フレームの構成要素として，問題とする事象の発展の見込みをマークします。</desc>
           <classes>
             <memberOf key="att.global" />
             <memberOf key="att.typed" />
@@ -206,6 +212,7 @@
         </elementSpec>
         <elementSpec ident="treatment" ns="http://github.com/projekt-UA/TEI-frame" mode="add" module="frame">
           <desc versionDate="2025-05-19" xml:lang="en">specifies a proposal of treatment of a frame.</desc>
+          <desc versionDate="2025-05-19" xml:lang="jp">フレームの構成要素として，問題に対する解決策をマークします。</desc>
           <classes>
             <memberOf key="att.global" />
             <memberOf key="att.typed" />
@@ -218,6 +225,7 @@
         </elementSpec>
         <elementSpec ident="frameSet" ns="http://github.com/projekt-UA/TEI-frame" mode="add" module="frame">
           <desc versionDate="2025-05-19" xml:lang="en">specifies that the text segment belongs to one or more frame roles.</desc>
+          <desc versionDate="2025-05-19" xml:lang="en">（相異なりうる）フレームの複数の役割に該当する同一のテキストの箇所に対してまとめて役割のアノテーションをするためのものです。当該箇所をこのタグで囲み，このタグの内側に空の役割タグを加えることで，加えられた全ての役割タグが当該箇所に関連付けられます。</desc>
           <classes>
             <memberOf key="att.global" />
             <memberOf key="att.typed" />
@@ -232,6 +240,7 @@
         </elementSpec>
         <classSpec ident="att.frameRole" type="atts" mode="add" module="frame">
           <desc versionDate="2025-05-19" xml:lang="en">defines common attributes for frame roles.</desc>
+          <desc versionDate="2025-05-19" xml:lang="en">フレーム役割に共通の属性を定義します。</desc>
           <classes />
           <attList>
             <attDef ident="name">
@@ -244,6 +253,7 @@
                 <dataRef name="string" />
               </datatype>
               <valDesc versionDate="2025-05-19" xml:lang="en">Labels delimited by commas.</valDesc>
+              <valDesc versionDate="2025-05-19" xml:lang="jp">ラベルを`,`で区切ったものです。</valDesc>
             </attDef>
           </attList>
         </classSpec>
