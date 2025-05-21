@@ -217,18 +217,18 @@
           </content>
         </elementSpec>
         <elementSpec ident="frameSet" ns="http://github.com/projekt-UA/TEI-frame" mode="add" module="frame">
+          <desc versionDate="2025-05-19" xml:lang="en">specifies that the text segment belongs to one or more frame roles.</desc>
           <classes>
             <memberOf key="att.global" />
             <memberOf key="att.typed" />
             <memberOf key="model.segLike" />
           </classes>
           <content>
-            <sequence maxOccurs="-1" minOccurs="1">
-              <classRef key="model.frameRole" />
+            <sequence>
+              <classRef key="model.frameRole" minOccurs="1" maxOccurs="unbounded" />
+              <macroRef key="macro.paraContent" />
             </sequence>
-            <macroRef key="macro.paraContent" />
           </content>
-          <desc versionDate="2025-05-19" xml:lang="en">specifies that the text segment belongs to one or more frame roles.</desc>
         </elementSpec>
         <classSpec ident="att.frameRole" type="atts" mode="add" module="frame">
           <desc versionDate="2025-05-19" xml:lang="en">specifies the basic attribute set for frame roles.</desc>
@@ -248,16 +248,16 @@
           </attList>
         </classSpec>
         <classSpec ident="att.causation" type="atts" mode="add" module="frame">
+          <desc versionDate="2025-05-19" xml:lang="en">specifies the existence of (spatio-temporal) causation.</desc>
           <classes />
           <attList>
             <attDef ident="causative">
               <datatype>
                 <dataRef name="boolean" />
-                <valDesc versionDate="2025-05-19" xml:lang="en">true if the frame is causative. Defaults to true.</valDesc>
               </datatype>
+              <valDesc versionDate="2025-05-19" xml:lang="en">true if the frame is causative. Defaults to true.</valDesc>
             </attDef>
           </attList>
-          <desc versionDate="2025-05-19" xml:lang="en">specifies the existence of (spatio-temporal) causation.</desc>
         </classSpec>
         <classSpec ident="att.attitude" type="atts" mode="add" module="frame">
           <classes />
