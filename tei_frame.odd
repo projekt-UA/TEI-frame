@@ -243,12 +243,12 @@
           <desc versionDate="2025-05-19" xml:lang="en">フレーム役割に共通の属性を定義します。</desc>
           <classes />
           <attList>
-            <attDef ident="name">
+            <attDef ident="name" ns="http://github.com/projekt-UA/TEI-frame">
               <datatype>
                 <dataRef name="string" />
               </datatype>
             </attDef>
-            <attDef ident="category">
+            <attDef ident="category" ns="http://github.com/projekt-UA/TEI-frame">
               <datatype>
                 <dataRef name="string" />
               </datatype>
@@ -261,7 +261,7 @@
           <desc versionDate="2025-05-19" xml:lang="en">specifies the existence of (spatio-temporal) causation.</desc>
           <classes />
           <attList>
-            <attDef ident="causative">
+            <attDef ident="causative" ns="http://github.com/projekt-UA/TEI-frame">
               <datatype>
                 <dataRef name="boolean" />
               </datatype>
@@ -272,13 +272,13 @@
         <classSpec ident="att.attitude" type="atts" mode="add" module="frame">
           <classes />
           <attList>
-            <attDef ident="from">
+            <attDef ident="from" ns="http://github.com/projekt-UA/TEI-frame">
               <datatype>
                 <dataRef name="string" />
               </datatype>
               <valDesc versionDate="2025-05-19" xml:lang="en">An entity. Defaults to the writer/speaker of the text.</valDesc>
             </attDef>
-            <attDef ident="to" usage="req">
+            <attDef ident="to" usage="req" ns="http://github.com/projekt-UA/TEI-frame">
               <datatype>
                 <dataRef name="string" />
               </datatype>
