@@ -153,6 +153,7 @@
             <memberOf key="att.typed" />
             <memberOf key="att.frameRole" />
             <memberOf key="model.frameRole" />
+            <memberOf key="model.segLike" />
           </classes>
           <content>
             <macroRef key="macro.paraContent" />
@@ -166,6 +167,7 @@
             <memberOf key="att.typed" />
             <memberOf key="att.frameRole" />
             <memberOf key="model.frameRole" />
+            <memberOf key="model.segLike" />
           </classes>
           <content>
             <macroRef key="macro.paraContent" />
@@ -180,6 +182,7 @@
             <memberOf key="att.frameRole" />
             <memberOf key="att.attitude" />
             <memberOf key="model.frameRole" />
+            <memberOf key="model.segLike" />
           </classes>
           <content>
             <macroRef key="macro.paraContent" />
@@ -194,6 +197,7 @@
             <memberOf key="att.frameRole" />
             <memberOf key="att.causation" />
             <memberOf key="model.frameRole" />
+            <memberOf key="model.segLike" />
           </classes>
           <content>
             <macroRef key="macro.paraContent" />
@@ -208,6 +212,7 @@
             <memberOf key="att.frameRole" />
             <memberOf key="att.causation" />
             <memberOf key="model.frameRole" />
+            <memberOf key="model.segLike" />
           </classes>
           <content>
             <macroRef key="macro.paraContent" />
@@ -221,6 +226,7 @@
             <memberOf key="att.typed" />
             <memberOf key="att.frameRole" />
             <memberOf key="model.frameRole" />
+            <memberOf key="model.segLike" />
           </classes>
           <content>
             <macroRef key="macro.paraContent" />
