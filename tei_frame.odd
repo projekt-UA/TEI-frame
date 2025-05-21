@@ -142,7 +142,7 @@
           </attList>
         </elementSpec>
         <elementSpec ident="problem" ns="http://github.com/projekt-UA/TEI-frame" mode="add" module="frame">
-          <desc versionDate="2025-05-19" xml:lang="en">specifies the problem(s) of a frame.</desc>
+          <desc versionDate="2025-05-19" xml:lang="en">specifies one of the problems of a frame.</desc>
           <classes>
             <memberOf key="att.global" />
             <memberOf key="att.typed" />
@@ -154,7 +154,7 @@
           </content>
         </elementSpec>
         <elementSpec ident="subProblem" ns="http://github.com/projekt-UA/TEI-frame" mode="add" module="frame">
-          <desc versionDate="2025-05-19" xml:lang="en">specifies the problem(s) of a frame.</desc>
+          <desc versionDate="2025-05-19" xml:lang="en">specifies one of the sub-problems of a frame.</desc>
           <classes>
             <memberOf key="att.global" />
             <memberOf key="att.typed" />
@@ -166,7 +166,7 @@
           </content>
         </elementSpec>
         <elementSpec ident="blame" ns="http://github.com/projekt-UA/TEI-frame" mode="add" module="frame">
-          <desc versionDate="2025-05-19" xml:lang="en">specifies the problem(s) of a frame.</desc>
+          <desc versionDate="2025-05-19" xml:lang="en">specifies a blame of a frame.</desc>
           <classes>
             <memberOf key="att.global" />
             <memberOf key="att.typed" />
@@ -179,7 +179,7 @@
           </content>
         </elementSpec>
         <elementSpec ident="cause" ns="http://github.com/projekt-UA/TEI-frame" mode="add" module="frame">
-          <desc versionDate="2025-05-19" xml:lang="en">specifies the problem(s) of a frame.</desc>
+          <desc versionDate="2025-05-19" xml:lang="en">specifies a cause of a frame.</desc>
           <classes>
             <memberOf key="att.global" />
             <memberOf key="att.typed" />
@@ -192,7 +192,7 @@
           </content>
         </elementSpec>
         <elementSpec ident="prospect" ns="http://github.com/projekt-UA/TEI-frame" mode="add" module="frame">
-          <desc versionDate="2025-05-19" xml:lang="en">specifies the problem(s) of a frame.</desc>
+          <desc versionDate="2025-05-19" xml:lang="en">specifies one of the prospects of a frame.</desc>
           <classes>
             <memberOf key="att.global" />
             <memberOf key="att.typed" />
@@ -205,7 +205,7 @@
           </content>
         </elementSpec>
         <elementSpec ident="treatment" ns="http://github.com/projekt-UA/TEI-frame" mode="add" module="frame">
-          <desc versionDate="2025-05-19" xml:lang="en">specifies the problem(s) of a frame.</desc>
+          <desc versionDate="2025-05-19" xml:lang="en">specifies a proposal of treatment of a frame.</desc>
           <classes>
             <memberOf key="att.global" />
             <memberOf key="att.typed" />
@@ -231,7 +231,7 @@
           </content>
         </elementSpec>
         <classSpec ident="att.frameRole" type="atts" mode="add" module="frame">
-          <desc versionDate="2025-05-19" xml:lang="en">specifies the basic attribute set for frame roles.</desc>
+          <desc versionDate="2025-05-19" xml:lang="en">defines common attributes for frame roles.</desc>
           <classes />
           <attList>
             <attDef ident="name">
