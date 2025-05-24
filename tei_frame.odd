@@ -276,7 +276,7 @@
               <datatype>
                 <dataRef name="string" />
               </datatype>
-              <valdesc versionDate="2025-05-24" xml:lang="en">An entity.
+              <valDesc versionDate="2025-05-24" xml:lang="en">An entity.
               </valDesc>
             </attDef>
           </attList>
