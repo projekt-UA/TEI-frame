@@ -22,11 +22,7 @@
             </list>
             <p>This software is provided by the copyright holders and contributors "as is" and any express or implied warranties, including, but not limited to, the implied warranties of merchantability and fitness for a particular purpose are disclaimed. In no event shall the copyright holder or contributors be liable for any direct, indirect, incidental, special, exemplary, or consequential damages (including, but not limited to, procurement of substitute goods or services; loss of use, data, or profits; or business interruption) however caused and on any theory of liability, whether in contract, strict liability, or tort (including negligence or otherwise) arising in any way out of the use of this software, even if advised of the possibility of such damage.</p>
           </licence>
-          <p>
-            TEI material can be licensed differently depending on the use you intend to make of it. Hence it is made available under both the CC+BY and BSD-2 licences. The CC+BY licence is generally appropriate for usages which treat TEI content as data or documentation. The BSD-2 licence is generally appropriate for usage of TEI content in a software environment. For further information or clarification, please contact the
-            <ref target="mailto:info@tei-c.org">TEI Consortium</ref>
-            .
-          </p>
+          <p> TEI material can be licensed differently depending on the use you intend to make of it. Hence it is made available under both the CC+BY and BSD-2 licences. The CC+BY licence is generally appropriate for usages which treat TEI content as data or documentation. The BSD-2 licence is generally appropriate for usage of TEI content in a software environment. For further information or clarification, please contact the <ref target="mailto:info@tei-c.org">TEI Consortium</ref> . </p>
         </availability>
       </publicationStmt>
       <sourceDesc>
@@ -36,25 +32,19 @@
     <encodingDesc>
       <appInfo>
         <application ident="RomaJS" version="1.1.2" when="2025-05-15T15:03:14.087Z">
-          <desc>
-            File edited with
-            <ref target="https://github.com/TEIC/romajs">RomaJS</ref>
+          <desc> File edited with <ref target="https://github.com/TEIC/romajs">RomaJS</ref>
           </desc>
         </application>
       </appInfo>
       <appInfo>
         <application ident="RomaJS" version="1.1.2" when="2025-05-19T16:43:00.525Z">
-          <desc>
-            File edited with
-            <ref target="https://github.com/TEIC/romajs">RomaJS</ref>
+          <desc> File edited with <ref target="https://github.com/TEIC/romajs">RomaJS</ref>
           </desc>
         </application>
       </appInfo>
       <appInfo>
         <application ident="RomaJS" version="1.1.2" when="2025-05-19T16:58:17.280Z">
-          <desc>
-            File edited with
-            <ref target="https://github.com/TEIC/romajs">RomaJS</ref>
+          <desc> File edited with <ref target="https://github.com/TEIC/romajs">RomaJS</ref>
           </desc>
         </application>
       </appInfo>
@@ -63,49 +53,27 @@
   <text>
     <body>
       <head>A Minimal TEI Customization</head>
-      <p>
-        This TEI ODD defines a TEI customization that is as minimal as possible and the schema generated from it will validate a document that is minimally valid against the TEI scheme. It includes only the ten required elements:
-        <list rend="numbered">
+      <p> This TEI ODD defines a TEI customization that is as minimal as possible and the schema generated from it will validate a document that is minimally valid against the TEI scheme. It includes only the ten required elements: <list rend="numbered">
           <item>
-            <gi>teiHeader</gi>
-            from the header module to store required metadata
-          </item>
+            <gi>teiHeader</gi> from the header module to store required metadata </item>
           <item>
-            <gi>fileDesc</gi>
-            from the header module to record information about this file
-          </item>
+            <gi>fileDesc</gi> from the header module to record information about this file </item>
           <item>
-            <gi>titleStmt</gi>
-            from the header module to record information about the title
-          </item>
+            <gi>titleStmt</gi> from the header module to record information about the title </item>
           <item>
-            <gi>publicationStmt</gi>
-            from the header module to detail how it is published
-          </item>
+            <gi>publicationStmt</gi> from the header module to detail how it is published </item>
           <item>
-            <gi>sourceDesc</gi>
-            from the header module to record where it is from
-          </item>
+            <gi>sourceDesc</gi> from the header module to record where it is from </item>
           <item>
-            <gi>p</gi>
-            from the core module for use in the header and the body
-          </item>
+            <gi>p</gi> from the core module for use in the header and the body </item>
           <item>
-            <gi>title</gi>
-            from the core module for use in the titleStmt
-          </item>
+            <gi>title</gi> from the core module for use in the titleStmt </item>
           <item>
-            <gi>TEI</gi>
-            from the textstructure module because what is a TEI file without that?
-          </item>
+            <gi>TEI</gi> from the textstructure module because what is a TEI file without that? </item>
           <item>
-            <gi>text</gi>
-            from the textstructure module to hold some text
-          </item>
+            <gi>text</gi> from the textstructure module to hold some text </item>
           <item>
-            <gi>body</gi>
-            from the textstructure module as a place to put that text
-          </item>
+            <gi>body</gi> from the textstructure module as a place to put that text </item>
         </list>
       </p>
       <schemaSpec ident="frame" start="TEI" prefix="tei_" targetLang="en" docLang="en">
@@ -125,8 +93,8 @@
         <moduleSpec ident="frame" mode="add" />
         <elementSpec ident="attitude" ns="http://github.com/projekt-UA/TEI-frame" mode="add" module="frame">
           <altIdent>att</altIdent>
-          <desc versionDate="2025-05-15" xml:lang="en">specify expressions that express attitudes.</desc>
-          <desc versionDate="2025-05-15" xml:lang="ja">態度表現をマークします。</desc>
+          <desc versionDate="2025-05-24" xml:lang="en">specify expressions that express attitudes.</desc>
+          <desc versionDate="2025-05-24" xml:lang="ja">態度表現をマークします。</desc>
           <classes>
             <memberOf key="att.global" />
             <memberOf key="att.typed" />
@@ -138,6 +106,9 @@
           </content>
           <attList>
             <attDef ident="frame" usage="opt" ns="http://github.com/projekt-UA/TEI-frame">
+              <desc versionDate="2025-05-24" xml:lang="en">The frame role that this attitude belongs to. Omittable if it is contained in a frame role annotation.
+              </desc>
+              <desc versionDate="2025-05-24" xml:lang="ja">この態度表現が結び付けられる先のフレーム役割です。フレーム役割の注釈内に含まれる場合，指定の必要はありません。</desc>
               <datatype>
                 <dataRef name="string" />
               </datatype>
@@ -145,9 +116,9 @@
             </attDef>
           </attList>
         </elementSpec>
-        <elementSpec ident="problem" ns="http://github.com/projekt-UA/TEI-frame" mode="add" module="frame">
-          <desc versionDate="2025-05-19" xml:lang="en">specifies one of the problems of a frame.</desc>
-          <desc versionDate="2025-05-19" xml:lang="ja">フレームの構成要素として，問題とする事象マークします。</desc>
+        <elementSpec ident="point" ns="http://github.com/projekt-UA/TEI-frame" mode="add" module="frame">
+          <desc versionDate="2025-05-24" xml:lang="en">specifies one of the points of a frame.</desc>
+          <desc versionDate="2025-05-24" xml:lang="ja">フレームの構成要素として，問題とする事象マークします。</desc>
           <classes>
             <memberOf key="att.global" />
             <memberOf key="att.typed" />
@@ -159,9 +130,9 @@
             <macroRef key="macro.paraContent" />
           </content>
         </elementSpec>
-        <elementSpec ident="subProblem" ns="http://github.com/projekt-UA/TEI-frame" mode="add" module="frame">
-          <desc versionDate="2025-05-19" xml:lang="en">specifies one of the sub-problems of a frame.</desc>
-          <desc versionDate="2025-05-19" xml:lang="ja">フレームの構成要素として，サブ問題をマークします。</desc>
+        <elementSpec ident="subPoint" ns="http://github.com/projekt-UA/TEI-frame" mode="add" module="frame">
+          <desc versionDate="2025-05-24" xml:lang="en">specifies one of the sub-points of a frame.</desc>
+          <desc versionDate="2025-05-24" xml:lang="ja">フレームの構成要素として，サブ問題をマークします。</desc>
           <classes>
             <memberOf key="att.global" />
             <memberOf key="att.typed" />
@@ -174,8 +145,8 @@
           </content>
         </elementSpec>
         <elementSpec ident="blame" ns="http://github.com/projekt-UA/TEI-frame" mode="add" module="frame">
-          <desc versionDate="2025-05-19" xml:lang="en">specifies a blame of a frame.</desc>
-          <desc versionDate="2025-05-19" xml:lang="jp">フレームの構成要素として，責任の帰着をマークします。</desc>
+          <desc versionDate="2025-05-24" xml:lang="en">specifies a blame of a frame.</desc>
+          <desc versionDate="2025-05-24" xml:lang="jp">フレームの構成要素として，責任の帰着をマークします。</desc>
           <classes>
             <memberOf key="att.global" />
             <memberOf key="att.typed" />
@@ -189,8 +160,8 @@
           </content>
         </elementSpec>
         <elementSpec ident="cause" ns="http://github.com/projekt-UA/TEI-frame" mode="add" module="frame">
-          <desc versionDate="2025-05-19" xml:lang="en">specifies a cause of a frame.</desc>
-          <desc versionDate="2025-05-19" xml:lang="jp">フレームの構成要素として，問題の原因をマークします。</desc>
+          <desc versionDate="2025-05-24" xml:lang="en">specifies a cause of a frame.</desc>
+          <desc versionDate="2025-05-24" xml:lang="jp">フレームの構成要素として，問題の原因をマークします。</desc>
           <classes>
             <memberOf key="att.global" />
             <memberOf key="att.typed" />
@@ -204,8 +175,8 @@
           </content>
         </elementSpec>
         <elementSpec ident="prospect" ns="http://github.com/projekt-UA/TEI-frame" mode="add" module="frame">
-          <desc versionDate="2025-05-19" xml:lang="en">specifies one of the prospects of a frame.</desc>
-          <desc versionDate="2025-05-19" xml:lang="jp">フレームの構成要素として，問題とする事象の発展の見込みをマークします。</desc>
+          <desc versionDate="2025-05-24" xml:lang="en">specifies one of the prospects of a frame.</desc>
+          <desc versionDate="2025-05-24" xml:lang="jp">フレームの構成要素として，問題とする事象の発展の見込みをマークします。</desc>
           <classes>
             <memberOf key="att.global" />
             <memberOf key="att.typed" />
@@ -219,8 +190,8 @@
           </content>
         </elementSpec>
         <elementSpec ident="treatment" ns="http://github.com/projekt-UA/TEI-frame" mode="add" module="frame">
-          <desc versionDate="2025-05-19" xml:lang="en">specifies a proposal of treatment of a frame.</desc>
-          <desc versionDate="2025-05-19" xml:lang="jp">フレームの構成要素として，問題に対する解決策をマークします。</desc>
+          <desc versionDate="2025-05-24" xml:lang="en">specifies a proposal of treatment of a frame.</desc>
+          <desc versionDate="2025-05-24" xml:lang="jp">フレームの構成要素として，問題に対する解決策をマークします。</desc>
           <classes>
             <memberOf key="att.global" />
             <memberOf key="att.typed" />
@@ -233,8 +204,8 @@
           </content>
         </elementSpec>
         <elementSpec ident="frameSet" ns="http://github.com/projekt-UA/TEI-frame" mode="add" module="frame">
-          <desc versionDate="2025-05-19" xml:lang="en">specifies that the text segment belongs to one or more frame roles.</desc>
-          <desc versionDate="2025-05-19" xml:lang="en">（相異なりうる）フレームの複数の役割に該当する同一のテキストの箇所に対してまとめて役割のアノテーションをするためのものです。当該箇所をこのタグで囲み，このタグの内側に空の役割タグを加えることで，加えられた全ての役割タグが当該箇所に関連付けられます。</desc>
+          <desc versionDate="2025-05-24" xml:lang="en">specifies that the text segment belongs to one or more frame roles.</desc>
+          <desc versionDate="2025-05-24" xml:lang="ja">複数のフレーム役割が同一のテキストの部分に割り当てられるとき，そのテキストの当該部分を指定するためのものです。当該箇所をこのタグで囲み，このタグの内側に空の役割タグを加えることで，加えられた全ての役割タグが当該箇所に関連付けられます。</desc>
           <classes>
             <memberOf key="att.global" />
             <memberOf key="att.typed" />
@@ -247,52 +218,119 @@
             </sequence>
           </content>
         </elementSpec>
-        <classSpec ident="att.frameRole" type="atts" mode="add" module="frame">
-          <desc versionDate="2025-05-19" xml:lang="en">defines common attributes for frame roles.</desc>
-          <desc versionDate="2025-05-19" xml:lang="en">フレーム役割に共通の属性を定義します。</desc>
+        <elementSpec ident="kw" ns="http://github.com/projekt-UA/TEI-frame" mode="add" module="frame">
+          <desc versionDate="2025-05-24" xml:lang="en">
+            specifies a keyword that represents a category of a frame (role).
+            This can spare the need to explicitly specify the category attribute of a frame role.
+          </desc>
+          <desc versionDate="2025-05-24" xml:lang="ja">
+            フレーム（役割）の範疇を表すキーワードを指定します。
+            これにより，フレーム役割の`category`属性を明示的に指定する必要がなくなります。
+          </desc>
+          <classes>
+            <memberOf key="model.segLike" />
+          </classes>
+          <content>
+            <macroRef key="macro.paraContent" />
+          </content>
+        </elementSpec>
+        <elementSpec ident="from" ns="http://github.com/projekt-UA/TEI-frame" mode="add" module="frame">
+          <desc versionDate="2025-05-24" xml:lang="en">
+            specifies a holder of a frame role or an attitude.
+            This can spare the need to explicitly specify the `from` attribute of a frame role or an attitude.
+          </desc>
+          <desc versionDate="2025-05-24" xml:lang="ja">
+            フレーム役割や態度の保持者を指定します。
+            これにより，フレーム役割や態度の`from`属性を明示的に指定する必要がなくなります。
+          </desc>
+          <classes>
+            <memberOf key="model.segLike" />
+          </classes>
+          <content>
+            <macroRef key="macro.paraContent" />
+          </content>
+        </elementSpec>
+        <elementSpec ident="to" ns="http://github.com/projekt-UA/TEI-frame" mode="add" module="frame">
+          <desc versionDate="2025-05-24" xml:lang="en">
+            specifies a target of an attitude.
+            This can spare the need to explicitly specify the `to` attribute of an attitude.
+          </desc>
+          <desc versionDate="2025-05-24" xml:lang="ja">
+            態度の向け先を指定します。
+            これにより，態度の`to`属性を明示的に指定する必要がなくなります。
+          </desc>
+          <classes>
+            <memberOf key="model.segLike" />
+          </classes>
+          <content>
+            <macroRef key="macro.paraContent" />
+          </content>
+        </elementSpec>
+        <classSpec ident="att.holdable" type="atts" mode="add" module="frame">
+          <desc></desc>
           <classes />
           <attList>
-            <attDef ident="name" ns="http://github.com/projekt-UA/TEI-frame">
+            <attDef ident="from" usage="opt" ns="http://github.com/projekt-UA/TEI-frame">
+              <desc versionDate="2025-05-24" xml:lang="en">The actor that bears the content of this frame role in mimd. It may be explicitly specified in the text.</desc>
+              <desc versionDate="2025-05-24" xml:lang="ja">内容を思っている主体です。テキスト内の語句で推定できる場合，指定の必要はありません。</desc>
               <datatype>
                 <dataRef name="string" />
               </datatype>
+              <valdesc versionDate="2025-05-24" xml:lang="en">An entity.
+              </valDesc>
             </attDef>
-            <attDef ident="category" ns="http://github.com/projekt-UA/TEI-frame">
+          </attList>
+        </classSpec>
+        <classSpec ident="att.frameRole" type="atts" mode="add" module="frame">
+          <desc versionDate="2025-05-24" xml:lang="en">defines common attributes for frame roles.</desc>
+          <desc versionDate="2025-05-24" xml:lang="en">フレーム役割に共通の属性を定義します。</desc>
+          <classes>
+            <memberOf key="att.holdable" />
+          </classes>
+          <attList>
+            <attDef ident="name" usage="req" ns="http://github.com/projekt-UA/TEI-frame">
+              <desc versionDate="2025-05-24" xml:lang="en">The name of the frame role. Unique in the document.</desc>
+              <desc versionDate="2025-05-24" xml:lang="ja">フレームの名前です。この名前は，ドキュメント内において一義的です。
+              </desc>
               <datatype>
                 <dataRef name="string" />
               </datatype>
-              <valDesc versionDate="2025-05-19" xml:lang="en">Labels delimited by commas.</valDesc>
-              <valDesc versionDate="2025-05-19" xml:lang="jp">ラベルを`,`で区切ったものです。</valDesc>
+              <valdesc versionDate="2025-05-24" xml:lang="en">A string that begins with an alphabet and consists of alphabets, numbers, and the underscore.
+              </valDesc>
+              <valdesc versionDate="2025-05-24" xml:lang="jp">アルファベットで始まり，アルファベット，数字，アンダースコアからなる文字列です。
+              </valDesc>
+            </attDef>
+            <attDef ident="category" usage="opt" ns="http://github.com/projekt-UA/TEI-frame">
+              <desc versionDate="2025-05-24" xml:lang="en">The category of the frame role. It may be inferred by keywords within and be spared from explicit specification.</desc>
+              <desc versionDate="2025-05-24" xml:lang="ja">フレームが属する範疇です。テキスト内の語句で推定できる場合，指定の必要はありません。</desc>
+              <datatype>
+                <dataRef name="string" />
+              </datatype>
+              <valdesc versionDate="2025-05-24" xml:lang="en">Labels delimited by commas.
+              </valDesc>
+              <valdesc versionDate="2025-05-24" xml:lang="jp">ラベルの列で，`,`で区切られたものです。
+              </valDesc>
             </attDef>
           </attList>
         </classSpec>
         <classSpec ident="att.causation" type="atts" mode="add" module="frame">
-          <desc versionDate="2025-05-19" xml:lang="en">specifies the existence of (spatio-temporal) causation.</desc>
+          <desc versionDate="2025-05-24" xml:lang="en">specifies the existence of (spatio-temporal) causation.</desc>
           <classes />
           <attList>
-            <attDef ident="causative" ns="http://github.com/projekt-UA/TEI-frame">
+            <attDef ident="causative" usage="opt" ns="http://github.com/projekt-UA/TEI-frame">
               <datatype>
                 <dataRef name="boolean" />
               </datatype>
-              <valDesc versionDate="2025-05-19" xml:lang="en">true if the frame is causative. Defaults to true.</valDesc>
+              <valdesc versionDate="2025-05-24" xml:lang="en">true if the frame is causative. Defaults to true.
+              </valDesc>
             </attDef>
           </attList>
         </classSpec>
         <classSpec ident="att.attitude" type="atts" mode="add" module="frame">
-          <classes />
+          <classes>
+            <memberOf key="att.holdable" />
+          </classes>
           <attList>
-            <attDef ident="from" ns="http://github.com/projekt-UA/TEI-frame">
-              <datatype>
-                <dataRef name="string" />
-              </datatype>
-              <valDesc versionDate="2025-05-19" xml:lang="en">An entity. Defaults to the writer/speaker of the text.</valDesc>
-            </attDef>
-            <attDef ident="to" usage="req" ns="http://github.com/projekt-UA/TEI-frame">
-              <datatype>
-                <dataRef name="string" />
-              </datatype>
-              <valDesc versionDate="2025-05-19" xml:lang="en">An entity.</valDesc>
-            </attDef>
             <attDef ident="pol" usage="opt" ns="http://github.com/projekt-UA/TEI-frame">
               <datatype>
                 <dataRef key="teidata.enumerated" />
@@ -300,18 +338,29 @@
               <valList type="closed">
                 <valItem ident="+" />
                 <valItem ident="-" />
+                <valItem ident="+-" />
+                <valItem ident="-+" />
                 <valItem ident="0" />
               </valList>
+            </attDef>
+            <attDef ident="to" usage="opt" ns="http://github.com/projekt-UA/TEI-frame">
+              <datatype>
+                <dataRef name="string" />
+              </datatype>
+              <valdesc versionDate="2025-05-24" xml:lang="en">The entity that the attitude is directed to. Omittable when specified in text.
+              </valDesc>
+              <valdesc versionDate="2025-05-24" xml:lang="ja">態度の向け先の主体です。テキスト内の語句で推定できる場合，指定の必要はありません。
+              </valDesc>
             </attDef>
           </attList>
         </classSpec>
         <classSpec ident="model.frameRole" type="model" mode="add" module="frame">
-          <desc versionDate="2025-05-19" xml:lang="en">groups empty elements that represent frame roles.</desc>
+          <desc versionDate="2025-05-24" xml:lang="en">groups elements that represent frame roles.</desc>
           <classes />
         </classSpec>
         <constraintSpec ident="frameSet-frameRole-empty" scheme="schematron">
           <constraint>
-            <sch:rule context="tei:frameSet/(tei:problem | tei:blame | tei:cause | tei:prospect | tei:treatment)">
+            <sch:rule context="tei:frameSet/(tei:point | tei:blame | tei:cause | tei:prospect | tei:treatment)">
               <sch:assert test="not(node())">A frame role in a frameSet should contain nothing.</sch:assert>
             </sch:rule>
           </constraint>
