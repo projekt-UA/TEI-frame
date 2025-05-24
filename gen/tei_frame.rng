@@ -5,7 +5,7 @@
          xmlns="http://relaxng.org/ns/structure/1.0"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2025-05-21T16:19:22Z. . 
+Schema generated from ODD source 2025-05-24T20:34:57Z. . 
 TEI Edition: P5 Version 4.9.0. Last updated on 24th January 2025, revision f73186978 
 TEI Edition Location: https://www.tei-c.org/Vault/P5/4.9.0/ 
   
@@ -131,7 +131,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5/4.9.0/
          </zeroOrMore>
       </element>
       <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-               id="d47741342e66015-constraint">
+               id="d59556697e66015-constraint">
          <rule context="tei:content">
             <report test="descendant::*[not(namespace-uri(.) =               ('http://relaxng.org/ns/compatibility/annotations/1.0', 'http://relaxng.org/ns/structure/1.0', 'http://www.tei-c.org/ns/1.0'))]">content descendants must be in the
               namespaces
@@ -202,7 +202,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5/4.9.0/
          </zeroOrMore>
       </element>
       <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-               id="d47741342e67614-constraint">
+               id="d59556697e67614-constraint">
          <rule context="tei:datatype">
             <report test="descendant::*[not(namespace-uri(.) =               ('http://relaxng.org/ns/structure/1.0', 'http://www.tei-c.org/ns/1.0'))]">datatype descendants must be in the
               namespaces
@@ -1819,38 +1819,47 @@ Sample values include: 1] duplicate; 2] duplicate-partial; 3] excessStart; 4] ex
       <choice>
          <ref name="tei_s"/>
          <ref name="tei_attitude"/>
-         <ref name="tei_problem"/>
-         <ref name="tei_subProblem"/>
+         <ref name="tei_point"/>
+         <ref name="tei_subPoint"/>
          <ref name="tei_blame"/>
          <ref name="tei_cause"/>
          <ref name="tei_prospect"/>
          <ref name="tei_treatment"/>
          <ref name="tei_frameSet"/>
+         <ref name="tei_kw"/>
+         <ref name="tei_from"/>
+         <ref name="tei_to"/>
       </choice>
    </define>
    <define name="tei_model.segLike_alternation">
       <choice>
          <ref name="tei_s"/>
          <ref name="tei_attitude"/>
-         <ref name="tei_problem"/>
-         <ref name="tei_subProblem"/>
+         <ref name="tei_point"/>
+         <ref name="tei_subPoint"/>
          <ref name="tei_blame"/>
          <ref name="tei_cause"/>
          <ref name="tei_prospect"/>
          <ref name="tei_treatment"/>
          <ref name="tei_frameSet"/>
+         <ref name="tei_kw"/>
+         <ref name="tei_from"/>
+         <ref name="tei_to"/>
       </choice>
    </define>
    <define name="tei_model.segLike_sequence">
       <ref name="tei_s"/>
       <ref name="tei_attitude"/>
-      <ref name="tei_problem"/>
-      <ref name="tei_subProblem"/>
+      <ref name="tei_point"/>
+      <ref name="tei_subPoint"/>
       <ref name="tei_blame"/>
       <ref name="tei_cause"/>
       <ref name="tei_prospect"/>
       <ref name="tei_treatment"/>
       <ref name="tei_frameSet"/>
+      <ref name="tei_kw"/>
+      <ref name="tei_from"/>
+      <ref name="tei_to"/>
    </define>
    <define name="tei_model.segLike_sequenceOptional">
       <optional>
@@ -1860,10 +1869,10 @@ Sample values include: 1] duplicate; 2] duplicate-partial; 3] excessStart; 4] ex
          <ref name="tei_attitude"/>
       </optional>
       <optional>
-         <ref name="tei_problem"/>
+         <ref name="tei_point"/>
       </optional>
       <optional>
-         <ref name="tei_subProblem"/>
+         <ref name="tei_subPoint"/>
       </optional>
       <optional>
          <ref name="tei_blame"/>
@@ -1879,6 +1888,15 @@ Sample values include: 1] duplicate; 2] duplicate-partial; 3] excessStart; 4] ex
       </optional>
       <optional>
          <ref name="tei_frameSet"/>
+      </optional>
+      <optional>
+         <ref name="tei_kw"/>
+      </optional>
+      <optional>
+         <ref name="tei_from"/>
+      </optional>
+      <optional>
+         <ref name="tei_to"/>
       </optional>
    </define>
    <define name="tei_model.segLike_sequenceOptionalRepeatable">
@@ -1889,10 +1907,10 @@ Sample values include: 1] duplicate; 2] duplicate-partial; 3] excessStart; 4] ex
          <ref name="tei_attitude"/>
       </zeroOrMore>
       <zeroOrMore>
-         <ref name="tei_problem"/>
+         <ref name="tei_point"/>
       </zeroOrMore>
       <zeroOrMore>
-         <ref name="tei_subProblem"/>
+         <ref name="tei_subPoint"/>
       </zeroOrMore>
       <zeroOrMore>
          <ref name="tei_blame"/>
@@ -1908,6 +1926,15 @@ Sample values include: 1] duplicate; 2] duplicate-partial; 3] excessStart; 4] ex
       </zeroOrMore>
       <zeroOrMore>
          <ref name="tei_frameSet"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="tei_kw"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="tei_from"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="tei_to"/>
       </zeroOrMore>
    </define>
    <define name="tei_model.segLike_sequenceRepeatable">
@@ -1918,10 +1945,10 @@ Sample values include: 1] duplicate; 2] duplicate-partial; 3] excessStart; 4] ex
          <ref name="tei_attitude"/>
       </oneOrMore>
       <oneOrMore>
-         <ref name="tei_problem"/>
+         <ref name="tei_point"/>
       </oneOrMore>
       <oneOrMore>
-         <ref name="tei_subProblem"/>
+         <ref name="tei_subPoint"/>
       </oneOrMore>
       <oneOrMore>
          <ref name="tei_blame"/>
@@ -1937,6 +1964,15 @@ Sample values include: 1] duplicate; 2] duplicate-partial; 3] excessStart; 4] ex
       </oneOrMore>
       <oneOrMore>
          <ref name="tei_frameSet"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="tei_kw"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="tei_from"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="tei_to"/>
       </oneOrMore>
    </define>
    <define name="tei_model.hiLike">
@@ -13923,16 +13959,16 @@ Sample values include: 1] atBirth; 2] atDeath; 3] dependent; 4] inherited; 5] in
          <ref name="tei_att.attitude.attributes"/>
          <optional>
             <attribute name="frame" ns="http://github.com/projekt-UA/TEI-frame">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The frame role that this attitude belongs to. Omittable if it is contained in a frame role annotation. </a:documentation>
                <data type="string"/>
             </attribute>
          </optional>
          <empty/>
       </element>
    </define>
-   <define name="tei_problem">
-      <element name="problem" ns="http://github.com/projekt-UA/TEI-frame">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies one of the problems of a frame.</a:documentation>
+   <define name="tei_point">
+      <element name="point" ns="http://github.com/projekt-UA/TEI-frame">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies one of the points of a frame.</a:documentation>
          <ref name="tei_macro.paraContent"/>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.typed.attributes"/>
@@ -13940,9 +13976,9 @@ Sample values include: 1] atBirth; 2] atDeath; 3] dependent; 4] inherited; 5] in
          <empty/>
       </element>
    </define>
-   <define name="tei_subProblem">
-      <element name="subProblem" ns="http://github.com/projekt-UA/TEI-frame">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies one of the sub-problems of a frame.</a:documentation>
+   <define name="tei_subPoint">
+      <element name="subPoint" ns="http://github.com/projekt-UA/TEI-frame">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies one of the sub-points of a frame.</a:documentation>
          <ref name="tei_macro.paraContent"/>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.typed.attributes"/>
@@ -13995,7 +14031,7 @@ Sample values include: 1] atBirth; 2] atDeath; 3] dependent; 4] inherited; 5] in
    </define>
    <define name="tei_frameSet">
       <element name="frameSet" ns="http://github.com/projekt-UA/TEI-frame">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies that the text segment belongs to one or more frame roles.（相異なりうる）フレームの複数の役割に該当する同一のテキストの箇所に対してまとめて役割のアノテーションをするためのものです。当該箇所をこのタグで囲み，このタグの内側に空の役割タグを加えることで，加えられた全ての役割タグが当該箇所に関連付けられます。</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies that the text segment belongs to one or more frame roles.</a:documentation>
          <group>
             <oneOrMore>
                <ref name="tei_model.frameRole"/>
@@ -14007,22 +14043,50 @@ Sample values include: 1] atBirth; 2] atDeath; 3] dependent; 4] inherited; 5] in
          <empty/>
       </element>
    </define>
-   <define name="tei_att.frameRole.attributes">
-      <ref name="tei_att.frameRole.attribute.name"/>
-      <ref name="tei_att.frameRole.attribute.category"/>
+   <define name="tei_kw">
+      <element name="kw" ns="http://github.com/projekt-UA/TEI-frame">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies a keyword that represents a category of a frame (role). This can spare the need to explicitly specify the category attribute of a frame role. </a:documentation>
+         <ref name="tei_macro.paraContent"/>
+      </element>
    </define>
-   <define name="tei_att.frameRole.attribute.name">
+   <define name="tei_from">
+      <element name="from" ns="http://github.com/projekt-UA/TEI-frame">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies a holder of a frame role or an attitude. This can spare the need to explicitly specify the `from` attribute of a frame role or an attitude. </a:documentation>
+         <ref name="tei_macro.paraContent"/>
+      </element>
+   </define>
+   <define name="tei_to">
+      <element name="to" ns="http://github.com/projekt-UA/TEI-frame">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies a target of an attitude. This can spare the need to explicitly specify the `to` attribute of an attitude. </a:documentation>
+         <ref name="tei_macro.paraContent"/>
+      </element>
+   </define>
+   <define name="tei_att.holdable.attributes">
+      <ref name="tei_att.holdable.attribute.from"/>
+   </define>
+   <define name="tei_att.holdable.attribute.from">
       <optional>
-         <attribute name="name" ns="http://github.com/projekt-UA/TEI-frame">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <attribute name="from" ns="http://github.com/projekt-UA/TEI-frame">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The actor that bears the content of this frame role in mimd. It may be explicitly specified in the text.</a:documentation>
             <data type="string"/>
          </attribute>
       </optional>
    </define>
+   <define name="tei_att.frameRole.attributes">
+      <ref name="tei_att.holdable.attributes"/>
+      <ref name="tei_att.frameRole.attribute.name"/>
+      <ref name="tei_att.frameRole.attribute.category"/>
+   </define>
+   <define name="tei_att.frameRole.attribute.name">
+      <attribute name="name" ns="http://github.com/projekt-UA/TEI-frame">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The name of the frame role. Unique in the document.</a:documentation>
+         <data type="string"/>
+      </attribute>
+   </define>
    <define name="tei_att.frameRole.attribute.category">
       <optional>
          <attribute name="category" ns="http://github.com/projekt-UA/TEI-frame">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The category of the frame role. It may be inferred by keywords within and be spared from explicit specification.</a:documentation>
             <data type="string"/>
          </attribute>
       </optional>
@@ -14039,23 +14103,9 @@ Sample values include: 1] atBirth; 2] atDeath; 3] dependent; 4] inherited; 5] in
       </optional>
    </define>
    <define name="tei_att.attitude.attributes">
-      <ref name="tei_att.attitude.attribute.from"/>
-      <ref name="tei_att.attitude.attribute.to"/>
+      <ref name="tei_att.holdable.attributes"/>
       <ref name="tei_att.attitude.attribute.pol"/>
-   </define>
-   <define name="tei_att.attitude.attribute.from">
-      <optional>
-         <attribute name="from" ns="http://github.com/projekt-UA/TEI-frame">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-            <data type="string"/>
-         </attribute>
-      </optional>
-   </define>
-   <define name="tei_att.attitude.attribute.to">
-      <attribute name="to" ns="http://github.com/projekt-UA/TEI-frame">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-         <data type="string"/>
-      </attribute>
+      <ref name="tei_att.attitude.attribute.to"/>
    </define>
    <define name="tei_att.attitude.attribute.pol">
       <optional>
@@ -14066,16 +14116,28 @@ Sample values include: 1] atBirth; 2] atDeath; 3] dependent; 4] inherited; 5] in
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                <value>-</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>+-</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>-+</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                <value>0</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
             </choice>
          </attribute>
       </optional>
    </define>
+   <define name="tei_att.attitude.attribute.to">
+      <optional>
+         <attribute name="to" ns="http://github.com/projekt-UA/TEI-frame">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <data type="string"/>
+         </attribute>
+      </optional>
+   </define>
    <define name="tei_model.frameRole">
       <choice>
-         <ref name="tei_problem"/>
-         <ref name="tei_subProblem"/>
+         <ref name="tei_point"/>
+         <ref name="tei_subPoint"/>
          <ref name="tei_blame"/>
          <ref name="tei_cause"/>
          <ref name="tei_prospect"/>
@@ -14125,7 +14187,7 @@ Sample values include: 1] atBirth; 2] atDeath; 3] dependent; 4] inherited; 5] in
             id="frame-frameSet-frameRole-empty-constraint-rule-73">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                context="tei:frameSet/(tei:problem | tei:blame | tei:cause | tei:prospect | tei:treatment)">
+                context="tei:frameSet/(tei:point | tei:blame | tei:cause | tei:prospect | tei:treatment)">
               <sch:assert test="not(node())">A frame role in a frameSet should contain nothing.</sch:assert>
             </sch:rule>
    </pattern>
