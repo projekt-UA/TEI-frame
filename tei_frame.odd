@@ -243,6 +243,7 @@
           </desc>
           <classes>
             <memberOf key="model.segLike" />
+            <memberOf key="att.categorizable" />
           </classes>
           <content>
             <macroRef key="macro.paraContent" />
@@ -259,6 +260,7 @@
           </desc>
           <classes>
             <memberOf key="model.segLike" />
+            <memberOf key="att.referring" />
           </classes>
           <content>
             <macroRef key="macro.paraContent" />
@@ -275,6 +277,7 @@
           </desc>
           <classes>
             <memberOf key="model.segLike" />
+            <memberOf key="att.referring" />
           </classes>
           <content>
             <macroRef key="macro.paraContent" />
@@ -290,8 +293,7 @@
               <datatype>
                 <dataRef name="string" />
               </datatype>
-              <valDesc versionDate="2025-05-24" xml:lang="en">An entity.
-              </valDesc>
+              <valDesc versionDate="2025-05-24" xml:lang="en">An entity.</valDesc>
             </attDef>
           </attList>
         </classSpec>
@@ -314,6 +316,7 @@
           <desc versionDate="2025-05-24" xml:lang="en">フレーム役割に共通の属性を定義します。</desc>
           <classes>
             <memberOf key="att.holdable" />
+            <memberOf key="att.categorizable" />
           </classes>
           <attList>
             <attDef ident="name" usage="req" ns="http://github.com/projekt-UA/TEI-frame">
@@ -328,6 +331,26 @@
               <valDesc versionDate="2025-05-24" xml:lang="jp">アルファベットで始まり，アルファベット，数字，アンダースコアからなる文字列です。
               </valDesc>
             </attDef>
+          </attList>
+        </classSpec>
+        <classSpec ident="att.referring" type="atts" mode="add" module="frame">
+          <desc versionDate="2025-05-24" xml:lang="en">defines common attributes for referring elements.</desc>
+          <desc versionDate="2025-05-24" xml:lang="ja">参照を表す要素に共通の属性を定義します。</desc>
+          <classes />
+          <attList>
+            <attDef ident="ref" usage="opt" ns="http://github.com/projekt-UA/TEI-frame">> <desc versionDate="2025-05-24" xml:lang="en">The referrent</desc>
+              <desc versionDate="2025-05-24" xml:lang="ja">指示対象です。</desc>
+              <datatype>
+                <dataRef name="string" />
+              </datatype>
+            </attDef>
+          </attList>
+        </classSpec>
+        <classSpec ident="att.categorizable" type="atts" mode="add" module="frame">
+          <desc versionDate="2025-05-24" xml:lang="en">defines common attributes for categorizable elements.</desc>
+          <desc versionDate="2025-05-24" xml:lang="ja">カテゴリ化可能な要素に共通の属性を定義します。</desc>
+          <classes />
+          <attList>
             <attDef ident="category" usage="opt" ns="http://github.com/projekt-UA/TEI-frame">
               <desc versionDate="2025-05-24" xml:lang="en">The category of the frame role. It may be inferred by keywords within and be spared from explicit specification.</desc>
               <desc versionDate="2025-05-24" xml:lang="ja">フレームが属する範疇です。テキスト内の語句で推定できる場合，指定の必要はありません。</desc>
