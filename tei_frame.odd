@@ -98,13 +98,26 @@
           <classes>
             <memberOf key="att.global" />
             <memberOf key="att.typed" />
-            <memberOf key="att.attitude" />
+            <memberOf key="att.holdable" />
+            <memberOf key="att.targetable" />
             <memberOf key="model.segLike" />
           </classes>
           <content>
             <macroRef key="macro.paraContent" />
           </content>
           <attList>
+            <attDef ident="pol" usage="opt" ns="http://github.com/projekt-UA/TEI-frame">
+              <datatype>
+                <dataRef key="teidata.enumerated" />
+              </datatype>
+              <valList type="closed">
+                <valItem ident="+" />
+                <valItem ident="-" />
+                <valItem ident="+-" />
+                <valItem ident="-+" />
+                <valItem ident="0" />
+              </valList>
+            </attDef>
             <attDef ident="frame" usage="opt" ns="http://github.com/projekt-UA/TEI-frame">
               <desc versionDate="2025-05-24" xml:lang="en">The frame role that this attitude belongs to. Omittable if it is contained in a frame role annotation.
               </desc>
@@ -151,7 +164,7 @@
             <memberOf key="att.global" />
             <memberOf key="att.typed" />
             <memberOf key="att.frameRole" />
-            <memberOf key="att.attitude" />
+            <memberOf key="att.targetable" />
             <memberOf key="model.frameRole" />
             <memberOf key="model.segLike" />
           </classes>
@@ -174,8 +187,8 @@
             <macroRef key="macro.paraContent" />
           </content>
         </elementSpec>
-        <elementSpec ident="prospect" ns="http://github.com/projekt-UA/TEI-frame" mode="add" module="frame">
-          <desc versionDate="2025-05-24" xml:lang="en">specifies one of the prospects of a frame.</desc>
+        <elementSpec ident="conseq" ns="http://github.com/projekt-UA/TEI-frame" mode="add" module="frame">
+          <desc versionDate="2025-05-24" xml:lang="en">specifies one of the conseqs of a frame.</desc>
           <desc versionDate="2025-05-24" xml:lang="jp">フレームの構成要素として，問題とする事象の発展の見込みをマークします。</desc>
           <classes>
             <memberOf key="att.global" />
@@ -196,6 +209,7 @@
             <memberOf key="att.global" />
             <memberOf key="att.typed" />
             <memberOf key="att.frameRole" />
+            <memberOf key="att.targetable" />
             <memberOf key="model.frameRole" />
             <memberOf key="model.segLike" />
           </classes>
@@ -281,6 +295,20 @@
             </attDef>
           </attList>
         </classSpec>
+        <classSpec ident="att.targetable" type="atts" mode="add" module="frame">
+          <classes />
+          <attList>
+            <attDef ident="to" usage="opt" ns="http://github.com/projekt-UA/TEI-frame">
+              <datatype>
+                <dataRef name="string" />
+              </datatype>
+              <valdesc versionDate="2025-05-24" xml:lang="en">The entity that the attitude is directed to. Omittable when specified in text.
+              </valDesc>
+              <valdesc versionDate="2025-05-24" xml:lang="ja">態度の向け先の主体です。テキスト内の語句で推定できる場合，指定の必要はありません。
+              </valDesc>
+            </attDef>
+          </attList>
+        </classSpec>
         <classSpec ident="att.frameRole" type="atts" mode="add" module="frame">
           <desc versionDate="2025-05-24" xml:lang="en">defines common attributes for frame roles.</desc>
           <desc versionDate="2025-05-24" xml:lang="en">フレーム役割に共通の属性を定義します。</desc>
@@ -326,41 +354,13 @@
             </attDef>
           </attList>
         </classSpec>
-        <classSpec ident="att.attitude" type="atts" mode="add" module="frame">
-          <classes>
-            <memberOf key="att.holdable" />
-          </classes>
-          <attList>
-            <attDef ident="pol" usage="opt" ns="http://github.com/projekt-UA/TEI-frame">
-              <datatype>
-                <dataRef key="teidata.enumerated" />
-              </datatype>
-              <valList type="closed">
-                <valItem ident="+" />
-                <valItem ident="-" />
-                <valItem ident="+-" />
-                <valItem ident="-+" />
-                <valItem ident="0" />
-              </valList>
-            </attDef>
-            <attDef ident="to" usage="opt" ns="http://github.com/projekt-UA/TEI-frame">
-              <datatype>
-                <dataRef name="string" />
-              </datatype>
-              <valdesc versionDate="2025-05-24" xml:lang="en">The entity that the attitude is directed to. Omittable when specified in text.
-              </valDesc>
-              <valdesc versionDate="2025-05-24" xml:lang="ja">態度の向け先の主体です。テキスト内の語句で推定できる場合，指定の必要はありません。
-              </valDesc>
-            </attDef>
-          </attList>
-        </classSpec>
         <classSpec ident="model.frameRole" type="model" mode="add" module="frame">
           <desc versionDate="2025-05-24" xml:lang="en">groups elements that represent frame roles.</desc>
           <classes />
         </classSpec>
         <constraintSpec ident="frameSet-frameRole-empty" scheme="schematron">
           <constraint>
-            <sch:rule context="tei:frameSet/(tei:point | tei:blame | tei:cause | tei:prospect | tei:treatment)">
+            <sch:rule context="tei:frameSet/(tei:point | tei:blame | tei:cause | tei:conseq | tei:treatment)">
               <sch:assert test="not(node())">A frame role in a frameSet should contain nothing.</sch:assert>
             </sch:rule>
           </constraint>
