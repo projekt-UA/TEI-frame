@@ -5,7 +5,7 @@
          xmlns="http://relaxng.org/ns/structure/1.0"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2025-05-24T20:59:51Z. . 
+Schema generated from ODD source 2025-05-24T21:07:13Z. . 
 TEI Edition: P5 Version 4.9.0. Last updated on 24th January 2025, revision f73186978 
 TEI Edition Location: https://www.tei-c.org/Vault/P5/4.9.0/ 
   
@@ -131,7 +131,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5/4.9.0/
          </zeroOrMore>
       </element>
       <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-               id="d59565225e66015-constraint">
+               id="d59573760e66015-constraint">
          <rule context="tei:content">
             <report test="descendant::*[not(namespace-uri(.) =               ('http://relaxng.org/ns/compatibility/annotations/1.0', 'http://relaxng.org/ns/structure/1.0', 'http://www.tei-c.org/ns/1.0'))]">content descendants must be in the
               namespaces
@@ -202,7 +202,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5/4.9.0/
          </zeroOrMore>
       </element>
       <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-               id="d59565225e67614-constraint">
+               id="d59573760e67614-constraint">
          <rule context="tei:datatype">
             <report test="descendant::*[not(namespace-uri(.) =               ('http://relaxng.org/ns/structure/1.0', 'http://www.tei-c.org/ns/1.0'))]">datatype descendants must be in the
               namespaces
@@ -14066,18 +14066,24 @@ Sample values include: 1] atBirth; 2] atDeath; 3] dependent; 4] inherited; 5] in
       <element name="kw" ns="http://github.com/projekt-UA/TEI-frame">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies a keyword that represents a category of a frame (role). This can spare the need to explicitly specify the category attribute of a frame role. </a:documentation>
          <ref name="tei_macro.paraContent"/>
+         <ref name="tei_att.categorizable.attributes"/>
+         <empty/>
       </element>
    </define>
    <define name="tei_from">
       <element name="from" ns="http://github.com/projekt-UA/TEI-frame">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies a holder of a frame role or an attitude. This can spare the need to explicitly specify the `from` attribute of a frame role or an attitude. </a:documentation>
          <ref name="tei_macro.paraContent"/>
+         <ref name="tei_att.referring.attributes"/>
+         <empty/>
       </element>
    </define>
    <define name="tei_to">
       <element name="to" ns="http://github.com/projekt-UA/TEI-frame">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies a target of an attitude. This can spare the need to explicitly specify the `to` attribute of an attitude. </a:documentation>
          <ref name="tei_macro.paraContent"/>
+         <ref name="tei_att.referring.attributes"/>
+         <empty/>
       </element>
    </define>
    <define name="tei_att.holdable.attributes">
@@ -14104,8 +14110,8 @@ Sample values include: 1] atBirth; 2] atDeath; 3] dependent; 4] inherited; 5] in
    </define>
    <define name="tei_att.frameRole.attributes">
       <ref name="tei_att.holdable.attributes"/>
+      <ref name="tei_att.categorizable.attributes"/>
       <ref name="tei_att.frameRole.attribute.name"/>
-      <ref name="tei_att.frameRole.attribute.category"/>
    </define>
    <define name="tei_att.frameRole.attribute.name">
       <attribute name="name" ns="http://github.com/projekt-UA/TEI-frame">
@@ -14113,7 +14119,21 @@ Sample values include: 1] atBirth; 2] atDeath; 3] dependent; 4] inherited; 5] in
          <data type="string"/>
       </attribute>
    </define>
-   <define name="tei_att.frameRole.attribute.category">
+   <define name="tei_att.referring.attributes">
+      <ref name="tei_att.referring.attribute.ref"/>
+   </define>
+   <define name="tei_att.referring.attribute.ref">
+      <optional>
+         <attribute name="ref" ns="http://github.com/projekt-UA/TEI-frame">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The referrent</a:documentation>
+            <data type="string"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tei_att.categorizable.attributes">
+      <ref name="tei_att.categorizable.attribute.category"/>
+   </define>
+   <define name="tei_att.categorizable.attribute.category">
       <optional>
          <attribute name="category" ns="http://github.com/projekt-UA/TEI-frame">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The category of the frame role. It may be inferred by keywords within and be spared from explicit specification.</a:documentation>
