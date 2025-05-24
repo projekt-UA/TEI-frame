@@ -302,9 +302,9 @@
               <datatype>
                 <dataRef name="string" />
               </datatype>
-              <valdesc versionDate="2025-05-24" xml:lang="en">The entity that the attitude is directed to. Omittable when specified in text.
+              <valDesc versionDate="2025-05-24" xml:lang="en">The entity that the attitude is directed to. Omittable when specified in text.
               </valDesc>
-              <valdesc versionDate="2025-05-24" xml:lang="ja">態度の向け先の主体です。テキスト内の語句で推定できる場合，指定の必要はありません。
+              <valDesc versionDate="2025-05-24" xml:lang="ja">態度の向け先の主体です。テキスト内の語句で推定できる場合，指定の必要はありません。
               </valDesc>
             </attDef>
           </attList>
@@ -323,9 +323,9 @@
               <datatype>
                 <dataRef name="string" />
               </datatype>
-              <valdesc versionDate="2025-05-24" xml:lang="en">A string that begins with an alphabet and consists of alphabets, numbers, and the underscore.
+              <valDesc versionDate="2025-05-24" xml:lang="en">A string that begins with an alphabet and consists of alphabets, numbers, and the underscore.
               </valDesc>
-              <valdesc versionDate="2025-05-24" xml:lang="jp">アルファベットで始まり，アルファベット，数字，アンダースコアからなる文字列です。
+              <valDesc versionDate="2025-05-24" xml:lang="jp">アルファベットで始まり，アルファベット，数字，アンダースコアからなる文字列です。
               </valDesc>
             </attDef>
             <attDef ident="category" usage="opt" ns="http://github.com/projekt-UA/TEI-frame">
@@ -334,9 +334,9 @@
               <datatype>
                 <dataRef name="string" />
               </datatype>
-              <valdesc versionDate="2025-05-24" xml:lang="en">Labels delimited by commas.
+              <valDesc versionDate="2025-05-24" xml:lang="en">Labels delimited by commas.
               </valDesc>
-              <valdesc versionDate="2025-05-24" xml:lang="jp">ラベルの列で，`,`で区切られたものです。
+              <valDesc versionDate="2025-05-24" xml:lang="jp">ラベルの列で，`,`で区切られたものです。
               </valDesc>
             </attDef>
           </attList>
@@ -349,7 +349,7 @@
               <datatype>
                 <dataRef name="boolean" />
               </datatype>
-              <valdesc versionDate="2025-05-24" xml:lang="en">true if the frame is causative. Defaults to true.
+              <valDesc versionDate="2025-05-24" xml:lang="en">true if the frame is causative. Defaults to true.
               </valDesc>
             </attDef>
           </attList>
