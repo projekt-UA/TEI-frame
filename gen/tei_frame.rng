@@ -5,7 +5,7 @@
          xmlns="http://relaxng.org/ns/structure/1.0"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2025-05-24T21:07:13Z. . 
+Schema generated from ODD source 2025-05-25T19:20:34Z. . 
 TEI Edition: P5 Version 4.9.0. Last updated on 24th January 2025, revision f73186978 
 TEI Edition Location: https://www.tei-c.org/Vault/P5/4.9.0/ 
   
@@ -131,7 +131,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5/4.9.0/
          </zeroOrMore>
       </element>
       <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-               id="d59573760e66015-constraint">
+               id="d62727951e66224-constraint">
          <rule context="tei:content">
             <report test="descendant::*[not(namespace-uri(.) =               ('http://relaxng.org/ns/compatibility/annotations/1.0', 'http://relaxng.org/ns/structure/1.0', 'http://www.tei-c.org/ns/1.0'))]">content descendants must be in the
               namespaces
@@ -202,7 +202,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5/4.9.0/
          </zeroOrMore>
       </element>
       <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-               id="d59573760e67614-constraint">
+               id="d62727951e67823-constraint">
          <rule context="tei:datatype">
             <report test="descendant::*[not(namespace-uri(.) =               ('http://relaxng.org/ns/structure/1.0', 'http://www.tei-c.org/ns/1.0'))]">datatype descendants must be in the
               namespaces
@@ -393,6 +393,7 @@ Suggested values include: 1] human; 2] template; 3] system; 4] bot; 5] unspecifi
       <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:eg="http://www.tei-c.org/ns/Examples"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 context="tei:*[@generatedBy]">
             <sch:assert test="ancestor-or-self::tei:post">The @generatedBy attribute is for use within a &lt;post&gt; element.</sch:assert>
@@ -495,6 +496,7 @@ Suggested values include: 1] human; 2] template; 3] system; 4] bot; 5] unspecifi
       <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:eg="http://www.tei-c.org/ns/Examples"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 context="tei:*[@when]">
         <sch:report role="nonfatal" test="@notBefore|@notAfter|@from|@to">The @when attribute cannot be used with any other att.datable.w3c attributes.</sch:report>
@@ -505,6 +507,7 @@ Suggested values include: 1] human; 2] template; 3] system; 4] bot; 5] unspecifi
       <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:eg="http://www.tei-c.org/ns/Examples"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 context="tei:*[@from]">
         <sch:report role="nonfatal" test="@notBefore">The @from and @notBefore attributes cannot be used together.</sch:report>
@@ -515,6 +518,7 @@ Suggested values include: 1] human; 2] template; 3] system; 4] bot; 5] unspecifi
       <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:eg="http://www.tei-c.org/ns/Examples"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 context="tei:*[@to]">
         <sch:report role="nonfatal" test="@notAfter">The @to and @notAfter attributes cannot be used together.</sch:report>
@@ -827,6 +831,7 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</a:documentati
       <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:eg="http://www.tei-c.org/ns/Examples"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 context="tei:*[@source]">
             <sch:let name="srcs" value="tokenize( normalize-space(@source),' ')"/>
@@ -956,6 +961,7 @@ Suggested values include: 1] m (metre); 2] kg (kilogram); 3] s (second); 4] Hz (
       <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:eg="http://www.tei-c.org/ns/Examples"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 context="tei:*[@unitRef]">
         <sch:report role="info" test="@unit">The @unit attribute may be unnecessary when @unitRef is present.</sch:report>
@@ -1045,6 +1051,7 @@ Suggested values include: 1] top; 2] bottom; 3] margin; 4] opposite; 5] overleaf
       <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:eg="http://www.tei-c.org/ns/Examples"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 context="tei:*[not(self::tei:schemaSpec)][@targetLang]">
             <sch:assert test="@target">@targetLang should only be used on <sch:name/> if @target is specified.</sch:assert>
@@ -1219,6 +1226,7 @@ Suggested values include: 1] sole; 2] major; 3] minor</a:documentation>
       <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:eg="http://www.tei-c.org/ns/Examples"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 context="tei:*[ starts-with( @spanTo, '#') ]">
             <sch:assert test="id( substring( @spanTo, 2 ) ) &gt;&gt; .">
@@ -1263,6 +1271,7 @@ Suggested values include: 1] sole; 2] major; 3] minor</a:documentation>
       <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:eg="http://www.tei-c.org/ns/Examples"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 context="tei:*[@schemeVersion]">
             <sch:assert test="@scheme and not(@scheme = 'free')">
@@ -1299,6 +1308,7 @@ Suggested values include: 1] sole; 2] major; 3] minor</a:documentation>
       <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:eg="http://www.tei-c.org/ns/Examples"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 context="tei:*[@subtype]">
         <sch:assert test="@type">The <sch:name/> element should not be categorized in detail with @subtype unless also categorized in general with @type</sch:assert>
@@ -1826,7 +1836,7 @@ Sample values include: 1] duplicate; 2] duplicate-partial; 3] excessStart; 4] ex
          <ref name="tei_conseq"/>
          <ref name="tei_treatment"/>
          <ref name="tei_frameSet"/>
-         <ref name="tei_kw"/>
+         <ref name="tei_keyword"/>
          <ref name="tei_from"/>
          <ref name="tei_to"/>
       </choice>
@@ -1842,7 +1852,7 @@ Sample values include: 1] duplicate; 2] duplicate-partial; 3] excessStart; 4] ex
          <ref name="tei_conseq"/>
          <ref name="tei_treatment"/>
          <ref name="tei_frameSet"/>
-         <ref name="tei_kw"/>
+         <ref name="tei_keyword"/>
          <ref name="tei_from"/>
          <ref name="tei_to"/>
       </choice>
@@ -1857,7 +1867,7 @@ Sample values include: 1] duplicate; 2] duplicate-partial; 3] excessStart; 4] ex
       <ref name="tei_conseq"/>
       <ref name="tei_treatment"/>
       <ref name="tei_frameSet"/>
-      <ref name="tei_kw"/>
+      <ref name="tei_keyword"/>
       <ref name="tei_from"/>
       <ref name="tei_to"/>
    </define>
@@ -1890,7 +1900,7 @@ Sample values include: 1] duplicate; 2] duplicate-partial; 3] excessStart; 4] ex
          <ref name="tei_frameSet"/>
       </optional>
       <optional>
-         <ref name="tei_kw"/>
+         <ref name="tei_keyword"/>
       </optional>
       <optional>
          <ref name="tei_from"/>
@@ -1928,7 +1938,7 @@ Sample values include: 1] duplicate; 2] duplicate-partial; 3] excessStart; 4] ex
          <ref name="tei_frameSet"/>
       </zeroOrMore>
       <zeroOrMore>
-         <ref name="tei_kw"/>
+         <ref name="tei_keyword"/>
       </zeroOrMore>
       <zeroOrMore>
          <ref name="tei_from"/>
@@ -1966,7 +1976,7 @@ Sample values include: 1] duplicate; 2] duplicate-partial; 3] excessStart; 4] ex
          <ref name="tei_frameSet"/>
       </oneOrMore>
       <oneOrMore>
-         <ref name="tei_kw"/>
+         <ref name="tei_keyword"/>
       </oneOrMore>
       <oneOrMore>
          <ref name="tei_from"/>
@@ -4561,6 +4571,7 @@ Sample values include: 1] duplicate; 2] duplicate-partial; 3] excessStart; 4] ex
       <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:eg="http://www.tei-c.org/ns/Examples"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 context="tei:*[@calendar]">
             <sch:assert test="string-length( normalize-space(.) ) gt 0"> @calendar indicates one or more
@@ -4618,6 +4629,7 @@ Suggested values include: 1] page; 2] column; 3] line; 4] book; 5] poem; 6] cant
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="frame-p-abstractModel-structure-p-in-ab-or-p-constraint-rule-12">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:p">
                <sch:report test="(ancestor::tei:ab or ancestor::tei:p) and                        not( ancestor::tei:floatingText                           | parent::tei:exemplum                           | parent::tei:item                           | parent::tei:note                           | parent::tei:q                           | parent::tei:quote                           | parent::tei:remarks                           | parent::tei:said                           | parent::tei:sp                           | parent::tei:stage                           | parent::tei:cell                           | parent::tei:figure )">
@@ -4629,6 +4641,7 @@ Suggested values include: 1] page; 2] column; 3] line; 4] book; 5] poem; 6] cant
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="frame-p-abstractModel-structure-p-in-l-constraint-rule-13">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:l//tei:p">
                <sch:assert test="ancestor::tei:floatingText | parent::tei:figure | parent::tei:note">
@@ -4847,6 +4860,7 @@ Suggested values include: 1] spoken (spoken); 2] thought (thought); 3] written (
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="frame-desc-deprecationInfo-only-in-deprecated-constraint-rule-14">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:desc[ @type eq 'deprecationInfo']">
                <sch:assert test="../@validUntil">Information about a
@@ -4948,6 +4962,7 @@ Suggested values include: 1] deprecationInfo (deprecation information)</a:docume
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="frame-rt-target-rt-target-not-span-constraint-rule-15">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:rt/@target">
                <sch:report test="../@from | ../@to">When target= is present, neither from= nor to= should be.</sch:report>
@@ -4965,6 +4980,7 @@ Suggested values include: 1] deprecationInfo (deprecation information)</a:docume
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="frame-rt-from-rt-from-constraint-rule-16">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:rt/@from">
                <sch:assert test="../@to">When from= is present, the to= attribute of <sch:name/> is required.</sch:assert>
@@ -4982,6 +4998,7 @@ Suggested values include: 1] deprecationInfo (deprecation information)</a:docume
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="frame-rt-to-rt-to-constraint-rule-17">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:rt/@to">
                <sch:assert test="../@from">When to= is present, the from= attribute of <sch:name/> is required.</sch:assert>
@@ -5450,6 +5467,7 @@ Sample values include: 1] suspension (suspension); 2] contraction (contraction);
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="frame-ptr-ptrAtts-constraint-rule-18">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:ptr">
                <sch:report test="@target and @cRef">Only one of the attributes @target and @cRef may be supplied on <sch:name/>.</sch:report>
@@ -5473,6 +5491,7 @@ Sample values include: 1] suspension (suspension); 2] contraction (contraction);
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="frame-ref-refAtts-constraint-rule-19">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:ref">
                <sch:report test="@target and @cRef">Only one of the attributes @target and @cRef may be supplied on <sch:name/>.</sch:report>
@@ -5539,6 +5558,7 @@ Sample values include: 1] suspension (suspension); 2] contraction (contraction);
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="frame-list-gloss-list-must-have-labels-constraint-rule-20">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:list[@type='gloss']">
 	              <sch:assert test="tei:label">The content of a "gloss" list should include a sequence of one or more pairs of a label element followed by an item element</sch:assert>
@@ -6252,6 +6272,7 @@ Sample values include: 1] main; 2] sub (subordinate); 3] alt (alternate); 4] sho
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="frame-relatedItem-targetorcontent1-constraint-rule-21">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:relatedItem">
                <sch:report test="@target and count( child::* ) &gt; 0">If the @target attribute on <sch:name/> is used, the relatedItem element must be empty</sch:report>
@@ -6287,6 +6308,7 @@ Sample values include: 1] main; 2] sub (subordinate); 3] alt (alternate); 4] sho
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="frame-l-abstractModel-structure-l-in-l-constraint-rule-22">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:l">
                <sch:report test="ancestor::tei:l[not(.//tei:note//tei:l[. = current()])]">Abstract model violation: Lines may not contain lines or lg elements.</sch:report>
@@ -6336,6 +6358,7 @@ Sample values include: 1] main; 2] sub (subordinate); 3] alt (alternate); 4] sho
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="frame-lg-atleast1oflggapl-constraint-rule-23">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:lg">
                <sch:assert test="count(descendant::tei:lg|descendant::tei:l|descendant::tei:gap) &gt; 0">An lg element must contain at least one child l, lg, or gap element.</sch:assert>
@@ -6345,6 +6368,7 @@ Sample values include: 1] main; 2] sub (subordinate); 3] alt (alternate); 4] sho
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="frame-lg-abstractModel-structure-lg-in-l-constraint-rule-24">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:lg">
                <sch:report test="ancestor::tei:l[not(.//tei:note//tei:lg[. = current()])]">Abstract model violation: Lines may not contain line groups.</sch:report>
@@ -7400,6 +7424,7 @@ Suggested values include: 1] ISBN; 2] ISSN; 3] DOI; 4] URI; 5] VIAF; 6] ESTC; 7]
                   id="frame-quotation-quotationContents-constraint-rule-25">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:quotation">
                <sch:report test="not( @marks )  and  not( tei:p )">
@@ -7685,6 +7710,7 @@ Sample values include: 1] first-line; 2] first-letter; 3] before; 4] after</a:do
                   id="frame-citeStructure-match-citestructure-outer-match-constraint-rule-26">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:citeStructure[not(parent::tei:citeStructure)]">
                <sch:assert test="starts-with(@match,'/')">An XPath in @match on the outer <sch:name/> must start with '/'.</sch:assert>
@@ -7695,6 +7721,7 @@ Sample values include: 1] first-line; 2] first-letter; 3] before; 4] after</a:do
                   id="frame-citeStructure-match-citestructure-inner-match-constraint-rule-27">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:citeStructure[parent::tei:citeStructure]">
                <sch:assert test="not(starts-with(@match,'/'))">An XPath in @match must not start with '/' except on the outer <sch:name/>.</sch:assert>
@@ -8667,6 +8694,7 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="frame-div-abstractModel-structure-div-in-l-constraint-rule-28">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:l//tei:div">
                <sch:assert test="ancestor::tei:floatingText">
@@ -8678,6 +8706,7 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="frame-div-abstractModel-structure-div-in-ab-or-p-constraint-rule-29">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:div">
                <sch:report test="(ancestor::tei:p or ancestor::tei:ab) and not(ancestor::tei:floatingText)">
@@ -9579,6 +9608,7 @@ Suggested values include: 1] main (main); 2] sub (subordinate); 3] alt (alternat
       <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:eg="http://www.tei-c.org/ns/Examples"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 context="tei:*[ @minOccurs and @maxOccurs ]">
         <sch:let name="min" value="@minOccurs cast as xs:integer"/>
@@ -9589,6 +9619,7 @@ Suggested values include: 1] main (main); 2] sub (subordinate); 3] alt (alternat
       <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:eg="http://www.tei-c.org/ns/Examples"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 context="tei:*[ @minOccurs and not( @maxOccurs ) ]">
         <sch:assert test="@minOccurs cast as xs:integer lt 2">When @maxOccurs is not specified, @minOccurs must be 0 or 1</sch:assert>
@@ -9665,6 +9696,7 @@ Suggested values include: 1] main (main); 2] sub (subordinate); 3] alt (alternat
       <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:eg="http://www.tei-c.org/ns/Examples"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 context="tei:elementSpec[@module]|tei:classSpec[@module]|tei:macroSpec[@module]">
         <sch:assert test="(not(ancestor::tei:schemaSpec | ancestor::tei:TEI | ancestor::tei:teiCorpus)) or (not(@module) or (not(//tei:moduleSpec) and not(//tei:moduleRef)) or (//tei:moduleSpec[@ident = current()/@module]) or (//tei:moduleRef[@key = current()/@module]))">
@@ -9689,6 +9721,7 @@ should correspond to an existing module, via a moduleSpec or
       <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:eg="http://www.tei-c.org/ns/Examples"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 context="tei:*[@validUntil]">
             <sch:let name="advance_warning_period"
@@ -9709,6 +9742,7 @@ should correspond to an existing module, via a moduleSpec or
       <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:eg="http://www.tei-c.org/ns/Examples"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 context="tei:*[@validUntil][ not( self::tei:valDesc | self::tei:valList | self::tei:defaultVal | self::tei:remarks )]">
             <sch:assert test="child::tei:desc[ @type eq 'deprecationInfo']">
@@ -9970,6 +10004,7 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
          <empty/>
          <sch:pattern xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0">
             <sch:rule context="tei:elementRef[ parent::tei:schemaSpec | parent::tei:specGrp ]">
@@ -10011,6 +10046,7 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
                   id="frame-moduleRef-modref-constraint-rule-37">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:moduleRef">
                <sch:report test="* and @key">
@@ -10032,6 +10068,7 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
                   id="frame-moduleRef-prefix-not-same-prefix-constraint-rule-38">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:moduleRef">
                <sch:report test="//*[ not( generate-id(.) eq generate-id( current() ) ) ]/@prefix = @prefix">The prefix attribute
@@ -10044,6 +10081,7 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
                   id="frame-moduleRef-prefix-not-except-and-include-constraint-rule-39">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:moduleRef">
                <sch:report test="@except and @include">It is an error to supply both the @include and @except attributes</sch:report>
@@ -10287,12 +10325,14 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
                   id="frame-elementSpec-child-constraint-based-on-mode-constraint-rule-40">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:elementSpec[ @mode eq 'delete' ]">
                <sch:report test="child::*">This elementSpec element has a mode= of "delete" even though it has child elements. Change the mode= to "add", "change", or "replace", or remove the child elements.</sch:report>
             </sch:rule>
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:elementSpec[ @mode = ('add','change','replace') ]">
                <sch:assert test="child::* | (@* except (@mode, @ident))">This elementSpec element has a mode= of "<sch:value-of select="@mode"/>", but does not have any child elements or schema-changing attributes. Specify child elements, use validUntil=, predeclare=, ns=, or prefix=, or change the mode= to "delete".</sch:assert>
@@ -10465,6 +10505,7 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
                   id="frame-dataSpec-no_elements_in_data_content-constraint-rule-42">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:dataSpec/tei:content"
                       role="warn">
@@ -10546,6 +10587,7 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
                   id="frame-listRef-TagDocsNestinglistRef-constraint-rule-43">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="( tei:classSpec | tei:dataSpec | tei:elementSpec | tei:macroSpec | tei:moduleSpec | tei:schemaSpec | tei:specGrp )/tei:listRef">
                <sch:report test="tei:listRef">In the context of tagset documentation, the listRef element must not self-nest.</sch:report>
@@ -10556,6 +10598,7 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
                   id="frame-listRef-TagDocslistRefChildren-constraint-rule-44">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="( tei:classSpec | tei:dataSpec | tei:elementSpec | tei:macroSpec | tei:moduleSpec | tei:schemaSpec | tei:specGrp )/tei:listRef/tei:ptr | ( tei:classSpec | tei:dataSpec | tei:elementSpec | tei:macroSpec | tei:moduleSpec | tei:schemaSpec | tei:specGrp )/tei:listRef/tei:ref">
                <sch:assert test="@target and not( matches( @target,'\s') )">In the context of tagset documentation, each ptr or ref element inside a listRef must have a target attribute with only 1 pointer as its value.</sch:assert>
@@ -10724,6 +10767,7 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
                   id="frame-model-no_dup_default_models-constraint-rule-45">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:model[ not( parent::tei:modelSequence ) ][ not( @predicate ) ]">
                <sch:let name="output" value="normalize-space( @output )"/>
@@ -10738,6 +10782,7 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
                   id="frame-model-no_dup_models-constraint-rule-46">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:model[ not( parent::tei:modelSequence ) ][ @predicate ]">
                <sch:let name="predicate" value="normalize-space( @predicate )"/>
@@ -10864,6 +10909,7 @@ Sample values include: 1] web; 2] print; 3] plain</a:documentation>
                   id="frame-modelSequence-no_outputs_nor_predicates_4_my_kids-constraint-rule-47">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:modelSequence">
                <sch:report role="warning" test="tei:model[@output]">The 'model' children
@@ -11081,6 +11127,7 @@ Suggested values include: 1] alternate; 2] default; 3] height; 4] id; 5] label; 
                   id="frame-sequence-sequencechilden-constraint-rule-48">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:sequence">
                <sch:assert test="count(*) gt 1">The sequence element must have at least two child elements</sch:assert>
@@ -11111,6 +11158,7 @@ Suggested values include: 1] alternate; 2] default; 3] height; 4] id; 5] label; 
                   id="frame-alternate-alternatechilden-constraint-rule-49">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:alternate">
                <sch:assert test="count(*) gt 1">The alternate element must have at least two child elements</sch:assert>
@@ -11141,6 +11189,7 @@ Suggested values include: 1] alternate; 2] default; 3] height; 4] id; 5] label; 
                   id="frame-constraintDecl-one-constraintDecl-per-scheme-constraint-rule-50">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="/*[ count( //tei:constraintDecl ) gt 1 ]">
                <sch:let name="schemes"
@@ -11235,18 +11284,21 @@ Suggested values include: 1] exslt; 2] stx; 3] xslt; 4] xslt2; 5] xslt3; 6] xpat
                   id="frame-constraintSpec-empty-based-on-mode-constraint-rule-52">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:constraintSpec[ @mode eq 'delete']">
                <sch:report test="child::*">This constraintSpec element has a mode= of "delete" even though it has child elements. Change the mode= to "add", "change", or "replace", or remove the child elements.</sch:report>
             </sch:rule>
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:constraintSpec[ @mode eq 'change']">
                <sch:assert test="child::*">This constraintSpec element has a mode= of "change", but does not have any child elements. Specify child elements, or change the mode= to "delete".</sch:assert>
             </sch:rule>
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:constraintSpec[ @mode = ('add','replace') ]">
                <sch:assert test="child::tei:constraint">This constraintSpec element has a mode= of "<sch:value-of select="@mode"/>", but does not have a child 'constraint' element. Use a child 'constraint' element or change the mode= to "delete" or "change".</sch:assert>
@@ -11257,6 +11309,7 @@ Suggested values include: 1] exslt; 2] stx; 3] xslt; 4] xslt2; 5] xslt3; 6] xpat
                   id="frame-constraintSpec-sch_no_more-constraint-rule-55">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:constraintSpec">
                <sch:report test="tei:constraint/sch1x:* and @scheme = ('isoschematron','schematron')">Rules
@@ -11270,6 +11323,7 @@ Suggested values include: 1] exslt; 2] stx; 3] xslt; 4] xslt2; 5] xslt3; 6] xpat
                   id="frame-constraintSpec-isosch-constraint-rule-56">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:constraintSpec[ @mode = ('add','replace') or not( @mode ) ]">
                <sch:report test="tei:constraint/sch:* and not( @scheme eq 'schematron')">Rules
@@ -11282,6 +11336,7 @@ Suggested values include: 1] exslt; 2] stx; 3] xslt; 4] xslt2; 5] xslt3; 6] xpat
                   id="frame-constraintSpec-context-required-constraint-rule-57">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:constraintSpec[ @scheme eq 'schematron']/tei:constraint[ .//sch:assert | .//sch:report ]">
                <sch:let name="assertsHaveContext"
@@ -11297,6 +11352,7 @@ Suggested values include: 1] exslt; 2] stx; 3] xslt; 4] xslt2; 5] xslt3; 6] xpat
                   id="frame-constraintSpec-unique-constraintSpec-ident-constraint-rule-58">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:constraintSpec[ @mode eq 'add' or not( @mode ) ]">
                <sch:let name="myIdent" value="normalize-space(@ident)"/>
@@ -11341,6 +11397,7 @@ Suggested values include: 1] schematron (ISO Schematron)</a:documentation>
                   id="frame-constraintSpec-scheme-usage_based_on_mode-constraint-rule-61">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:constraintSpec[ @mode = ('add','replace')  or  not( @mode ) ]">
                <sch:assert test="@scheme">The @scheme attribute of &lt;constraintSpec&gt; is required when the @mode is <sch:value-of select="if (@mode) then concat('&#34;',@mode,'&#34;') else 'not specified'"/> (here on "<sch:value-of select="@ident"/>")</sch:assert>
@@ -11413,6 +11470,7 @@ Suggested values include: 1] schematron (ISO Schematron)</a:documentation>
          </group>
          <sch:ns xmlns:xi="http://www.w3.org/2001/XInclude"
                  xmlns="http://www.tei-c.org/ns/1.0"
+                 xmlns:eg="http://www.tei-c.org/ns/Examples"
                  xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                  prefix="teix"
@@ -11545,6 +11603,7 @@ Suggested values include: 1] schematron (ISO Schematron)</a:documentation>
                   id="frame-dataRef-restrictDataFacet-constraint-rule-66">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:dataRef[tei:dataFacet]">
                <sch:assert role="nonfatal" test="@name">Data facets can only be specified for references to datatypes specified by
@@ -11557,6 +11616,7 @@ Suggested values include: 1] schematron (ISO Schematron)</a:documentation>
                   id="frame-dataRef-restrictAttResctrictionName-constraint-rule-67">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:dataRef[@restriction]">
                <sch:assert role="nonfatal" test="@name">Restrictions can only be specified for references to datatypes specified by
@@ -13318,6 +13378,7 @@ Sample values include: 1] e (e); 2] he (he); 3] she (she); 4] they (they)</a:doc
                   id="frame-relation-ref-or-key-or-name-constraint-rule-68">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:relation">
                <sch:assert test="@ref or @key or @name">One of the attributes @name, @ref or @key must be supplied</sch:assert>
@@ -13328,6 +13389,7 @@ Sample values include: 1] e (e); 2] he (he); 3] she (she); 4] they (they)</a:doc
                   id="frame-relation-active-mutual-constraint-rule-69">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:relation">
                <sch:report test="@active and @mutual">Only one of the attributes @active and @mutual may be supplied</sch:report>
@@ -13338,6 +13400,7 @@ Sample values include: 1] e (e); 2] he (he); 3] she (she); 4] they (they)</a:doc
                   id="frame-relation-active-passive-constraint-rule-70">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:relation">
                <sch:report test="@passive and not(@active)">the attribute @passive may be supplied only if the attribute @active is supplied</sch:report>
@@ -13806,6 +13869,7 @@ Sample values include: 1] atBirth; 2] atDeath; 3] dependent; 4] inherited; 5] in
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="frame-s-noNestedS-constraint-rule-71">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:s">
                <sch:report test="tei:s">You may not nest one s element within another: use seg instead</sch:report>
@@ -13936,6 +14000,7 @@ Sample values include: 1] atBirth; 2] atDeath; 3] dependent; 4] inherited; 5] in
                   id="frame-standOff-nested_standOff_should_be_typed-constraint-rule-72">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:standOff">
                <sch:assert test="@type or not(ancestor::tei:standOff)">This
@@ -13952,7 +14017,7 @@ Sample values include: 1] atBirth; 2] atDeath; 3] dependent; 4] inherited; 5] in
    </define>
    <define name="tei_attitude">
       <element name="att" ns="http://github.com/projekt-UA/TEI-frame">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specify expressions that express attitudes.</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies expressions that express attitudes.</a:documentation>
          <ref name="tei_macro.paraContent"/>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.typed.attributes"/>
@@ -13960,7 +14025,7 @@ Sample values include: 1] atBirth; 2] atDeath; 3] dependent; 4] inherited; 5] in
          <ref name="tei_att.targetable.attributes"/>
          <optional>
             <attribute name="pol" ns="http://github.com/projekt-UA/TEI-frame">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The polarity of the attitude. </a:documentation>
                <choice>
                   <value>+</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
@@ -13977,7 +14042,7 @@ Sample values include: 1] atBirth; 2] atDeath; 3] dependent; 4] inherited; 5] in
          </optional>
          <optional>
             <attribute name="frame" ns="http://github.com/projekt-UA/TEI-frame">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The frame role that this attitude belongs to. Omittable if it is contained in a frame role annotation. </a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The frame role that this attitude belongs to. Omittable if it is contained in a frame role tag. </a:documentation>
                <data type="string"/>
             </attribute>
          </optional>
@@ -14062,7 +14127,7 @@ Sample values include: 1] atBirth; 2] atDeath; 3] dependent; 4] inherited; 5] in
          <empty/>
       </element>
    </define>
-   <define name="tei_kw">
+   <define name="tei_keyword">
       <element name="kw" ns="http://github.com/projekt-UA/TEI-frame">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies a keyword that represents a category of a frame (role). This can spare the need to explicitly specify the category attribute of a frame role. </a:documentation>
          <ref name="tei_macro.paraContent"/>
@@ -14135,7 +14200,7 @@ Sample values include: 1] atBirth; 2] atDeath; 3] dependent; 4] inherited; 5] in
    </define>
    <define name="tei_att.categorizable.attribute.category">
       <optional>
-         <attribute name="category" ns="http://github.com/projekt-UA/TEI-frame">
+         <attribute name="cat" ns="http://github.com/projekt-UA/TEI-frame">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The category of the frame role. It may be inferred by keywords within and be spared from explicit specification.</a:documentation>
             <data type="string"/>
          </attribute>
@@ -14168,42 +14233,50 @@ Sample values include: 1] atBirth; 2] atDeath; 3] dependent; 4] inherited; 5] in
       </choice>
    </start>
    <sch:ns xmlns="http://www.tei-c.org/ns/1.0"
+           xmlns:eg="http://www.tei-c.org/ns/Examples"
            xmlns:sch="http://purl.oclc.org/dsdl/schematron"
            prefix="tei"
            uri="http://www.tei-c.org/ns/1.0"/>
    <sch:ns xmlns:rng="http://relaxng.org/ns/structure/1.0"
            xmlns="http://www.tei-c.org/ns/1.0"
+           xmlns:eg="http://www.tei-c.org/ns/Examples"
            xmlns:sch="http://purl.oclc.org/dsdl/schematron"
            prefix="tei"
            uri="http://www.tei-c.org/ns/1.0"/>
    <sch:ns xmlns:rng="http://relaxng.org/ns/structure/1.0"
            xmlns="http://www.tei-c.org/ns/1.0"
+           xmlns:eg="http://www.tei-c.org/ns/Examples"
            xmlns:sch="http://purl.oclc.org/dsdl/schematron"
            prefix="xs"
            uri="http://www.w3.org/2001/XMLSchema"/>
    <sch:ns xmlns:rng="http://relaxng.org/ns/structure/1.0"
            xmlns="http://www.tei-c.org/ns/1.0"
+           xmlns:eg="http://www.tei-c.org/ns/Examples"
            xmlns:sch="http://purl.oclc.org/dsdl/schematron"
            prefix="rng"
            uri="http://relaxng.org/ns/structure/1.0"/>
    <sch:ns xmlns:rng="http://relaxng.org/ns/structure/1.0"
            xmlns="http://www.tei-c.org/ns/1.0"
+           xmlns:eg="http://www.tei-c.org/ns/Examples"
            xmlns:sch="http://purl.oclc.org/dsdl/schematron"
            prefix="rna"
            uri="http://relaxng.org/ns/compatibility/annotations/1.0"/>
    <sch:ns xmlns:rng="http://relaxng.org/ns/structure/1.0"
            xmlns="http://www.tei-c.org/ns/1.0"
+           xmlns:eg="http://www.tei-c.org/ns/Examples"
            xmlns:sch="http://purl.oclc.org/dsdl/schematron"
            prefix="sch"
            uri="http://purl.oclc.org/dsdl/schematron"/>
    <sch:ns xmlns:rng="http://relaxng.org/ns/structure/1.0"
            xmlns="http://www.tei-c.org/ns/1.0"
+           xmlns:eg="http://www.tei-c.org/ns/Examples"
            xmlns:sch="http://purl.oclc.org/dsdl/schematron"
            prefix="sch1x"
            uri="http://www.ascc.net/xml/schematron"/>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="frame-frameSet-frameRole-empty-constraint-rule-73">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:eg="http://www.tei-c.org/ns/Examples"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 context="tei:frameSet/(tei:point | tei:blame | tei:cause | tei:conseq | tei:treatment)">
               <sch:assert test="not(node())">A frame role in a frameSet should contain nothing.</sch:assert>
