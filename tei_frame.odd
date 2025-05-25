@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:eg="http://www.tei-c.org/ns/Examples">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -52,30 +52,58 @@
   </teiHeader>
   <text>
     <body>
-      <head>A Minimal TEI Customization</head>
-      <p> This TEI ODD defines a TEI customization that is as minimal as possible and the schema generated from it will validate a document that is minimally valid against the TEI scheme. It includes only the ten required elements: <list rend="numbered">
+      <head xml:lang="en"><gi>TEI_frame</gi>: a TEI P5 extension for the framing analysis</head>
+      <head xml:lang="ja"><gi>TEI_frame</gi>：フレーム分析のためのTEI P5拡張</head>
+      <p xml:lang="en">This TEI ODD defines a TEI extension that enables the framing analysis following the formulation by Entman (1993).</p>
+      <p xml:lang="ja">このTEI ODDは，Entman (1993) によって定式化された形でのフレーム分析を可能とするように，TEI P5を拡張したものです。</p>
+
+      <p xml:lang="en">The framing analysis is a text/media analysis that delineates the narrative strutures and biases underlying a journalistic text that can influence readers and public opinions. We adopt the definition by Entman (1993: 52), where he says: <quote> To frame is to <hi rend="italic">select some aspects of a perceived reality and make them more salient in a communicating text, in such a way as to promote a particular problem definition, causal interpretation, moral evaluation, and/or treatment recommendation</hi> for the item described. [...] Frames, then, <hi rend="italic">define problems</hi> --- determine what a causal agent is doing with what costs and benefits, usually measured in terms of common cultural values; <lb /> <hi rend="italic">diagnose causes</hi> --- identify the forces creating the problem; <lb /> <hi rend="italic">make moral judgments</hi> --- evaluate causal agents and their effects; and <lb /> <hi rend="italic">suggest remedies</hi> --- offer and justify treatments for the problems and predict their likely effects. </quote>
+      </p>
+      <p xml:lang="ja"> フレーム分析は，報道テキストに潜むナラティブ構造やバイアスで，読者や輿論に影響を与えうるものを明らかにするテキスト／メディア分析です。 ここでは，Entman (1993: 52) にしたがって，フレームの要素を定義します。<quote xml:lang="en"> To frame is to <hi rend="italic">select some aspects of a perceived reality and make them more salient in a communicating text, in such a way as to promote a particular problem definition, causal interpretation, moral evaluation, and/or treatment recommendation</hi> for the item described. [...] Frames, then, <hi rend="italic">define problems</hi> --- determine what a causal agent is doing with what costs and benefits, usually measured in terms of common cultural values; <lb /> <hi rend="italic">diagnose causes</hi> --- identify the forces creating the problem; <lb /> <hi rend="italic">make moral judgments</hi> --- evaluate causal agents and their effects; and <lb /> <hi rend="italic">suggest remedies</hi> --- offer and justify treatments for the problems and predict their likely effects. </quote>
+      </p>
+
+      <p xml:lang="en">Following this we offer the following elements that demarcate part of a text that bears some role in a frame: <list>
           <item>
-            <gi>teiHeader</gi> from the header module to store required metadata </item>
+            <gi>point</gi>: a point of issue in a narrative. This corresponds to the <hi rend="italic">problem definition</hi> in Entman's definition. </item>
           <item>
-            <gi>fileDesc</gi> from the header module to record information about this file </item>
+            <gi>subPoint</gi>: a sub-point of a point, which is a sub-problem that the text addresses. </item>
           <item>
-            <gi>titleStmt</gi> from the header module to record information about the title </item>
+            <gi>blame</gi>: an attribution of responsibility for the problem. This corresponds to the <hi rend="italic">moral evaluation</hi> in Entman's definition. </item>
           <item>
-            <gi>publicationStmt</gi> from the header module to detail how it is published </item>
+            <gi>cause</gi>: an attribution of causation or explanation for the problem. This corresponds to the <hi rend="italic">causal interpretation</hi> in Entman's definition. </item>
           <item>
-            <gi>sourceDesc</gi> from the header module to record where it is from </item>
+            <gi>conseq</gi>: an expectation of the development of the problem. This is in the opposite direction of the cause. </item>
           <item>
-            <gi>p</gi> from the core module for use in the header and the body </item>
-          <item>
-            <gi>title</gi> from the core module for use in the titleStmt </item>
-          <item>
-            <gi>TEI</gi> from the textstructure module because what is a TEI file without that? </item>
-          <item>
-            <gi>text</gi> from the textstructure module to hold some text </item>
-          <item>
-            <gi>body</gi> from the textstructure module as a place to put that text </item>
+            <gi>treatment</gi>: a proposal to solve the problem. This corresponds to the <hi rend="italic">treatment recommendation</hi> in Entman's definition. </item>
         </list>
       </p>
+      <p xml:lang="ja"> Entmanの定義にしたがって，フレームの一部を成すテキストの部分を囲んでアノテーションするための要素を以下に挙げます。<list>
+          <item>
+            <gi>point</gi>：ナラティブにおける問題点です。Entmanの定義における <hi rend="italic" xml:lang="en">problem definition</hi> に相当します。</item>
+          <item>
+            <gi>subPoint</gi>：pointのサブポイントで，テキストが扱うサブ問題です。</item>
+          <item>
+            <gi>blame</gi>：問題に対する責任の帰着です。Entmanの定義における <hi rend="italic" xml:lang="en">moral evaluation</hi> に相当します。</item>
+          <item>
+            <gi>cause</gi>：問題の原因や説明です。Entmanの定義における <hi rend="italic" xml:lang="en">causal interpretation</hi> に相当します。</item>
+          <item>
+            <gi>conseq</gi>：問題の発展の見込みです。<gi>cause</gi>とは逆方向になります。</item>
+          <item>
+            <gi>treatment</gi>：問題を解決するための提案です。Entmanの定義における <hi rend="italic" xml:lang="en">treatment recommendation</hi> に相当します。</item>
+        </list>
+      </p>
+
+      <p xml:lang="en">As Entman (1993: 52) notes, <quote>framing essentially involves <hi rend="italic">selection</hi> and <hi rend="italic">salience</hi>.</quote> This means that not every discourse segment is qualified as a frame; it is a frame only if it delivers a particular aspect of a matter in the real world in a salient way that this aspect is mentioned more than, emphasized more than, or totally overriding, other competing alternatives. The process of the scrutiny is up to annotators, but for the sake of explication of such a process, we offer the <gi>category</gi> attribute and the <gi>kw</gi> element to mark such an aspect with the category/categories that that aspect should belong to. </p>
+
+      <p xml:lang="ja"> Entman (1993: 52) が指摘するように，フレームは本質的に <hi>選択（selection）</hi> と <hi>顕著性（salience）</hi> を伴います。 したがって，すべての談話がセグメントがフレームとして適格だというわけではありません。 特定の事象の側面に言及する談話のセグメントが，他のありうる側面よりも多く言及されたり，強調されたり，あるいは他の側面を完全に覆い隠すような場合にのみ，フレームたりえます。 フレームの選定のプロセスはアノテーターに委ねられますが，そのプロセスをアノテータ―が明示できるように，<gi>category</gi>属性と<gi>kw</gi>要素をここでは提供します。 </p>
+
+      <p xml:lang="en"> In addition to frames, we assume that <term>attitudes</term> (in terms of linguistics) are also important axis to analyze a text. An attitude is a linguistic expression that expresses a stance towards a proposition and/or an entity. In this regard, all frame roles (and in fact, all the text) is an expression of an <term>attitude holder</term> (in most cases, the article correspondent(s)) towards the event at issue. This is why we offer the <gi>from</gi> attribute and the <gi>from</gi> element to specify <term>attitude holders</term>. Besides, some attitudes are (also) directed to an actor, which can be specified with the <gi>to</gi> attribute or the <gi>to</gi> element. </p>
+
+      <p xml:lang="ja"> フレームに加えて，（言語学的な意味での）<term>態度</term>もテキストを分析する上で重要な軸であると考えます。態度とは，命題や事物に対する立場を表す言語表現です。この点で，全てのフレーム役割（そして，そもそもあらゆるテキスト）は，問題となる事象に対する<term>態度保持者</term>（多くの場合は記事の記者）の態度の表現です。<gi>from</gi>属性と<gi>from</gi>要素が提供されているのはこのためです。さらに，一部の態度は事物だけでなく人物にも向けられることがあり，その場合は<gi>to</gi>属性や<gi>to</gi>要素で指定できます。</p>
+
+      <p xml:lang="en">Attitudes may be related to a frame but independent of its roles. In such a case, the <gi>att</gi> element can be used to mark an attitude expression.</p>
+      <p xml:lang="ja">態度はフレームに関連するもののフレームの役割とは独立していることもあります。その場合は，<gi>att</gi>要素を用いて態度表現をマークできます。</p>
+
       <schemaSpec ident="frame" start="TEI" prefix="tei_" targetLang="en" docLang="en">
         <constraintDecl scheme="schematron" queryBinding="xslt3">
           <sch:ns prefix="tei" uri="http://www.tei-c.org/ns/1.0" />
@@ -93,7 +121,7 @@
         <moduleSpec ident="frame" mode="add" />
         <elementSpec ident="attitude" ns="http://github.com/projekt-UA/TEI-frame" mode="add" module="frame">
           <altIdent>att</altIdent>
-          <desc versionDate="2025-05-24" xml:lang="en">specify expressions that express attitudes.</desc>
+          <desc versionDate="2025-05-24" xml:lang="en">specifies expressions that express attitudes.</desc>
           <desc versionDate="2025-05-24" xml:lang="ja">態度表現をマークします。</desc>
           <classes>
             <memberOf key="att.global" />
@@ -107,6 +135,9 @@
           </content>
           <attList>
             <attDef ident="pol" usage="opt" ns="http://github.com/projekt-UA/TEI-frame">
+              <desc versionDate="2025-05-24" xml:lang="en">The polarity of the attitude.
+              </desc>
+              <desc versionDate="2025-05-24" xml:lang="ja">態度の極性です。</desc>
               <datatype>
                 <dataRef key="teidata.enumerated" />
               </datatype>
@@ -119,15 +150,41 @@
               </valList>
             </attDef>
             <attDef ident="frame" usage="opt" ns="http://github.com/projekt-UA/TEI-frame">
-              <desc versionDate="2025-05-24" xml:lang="en">The frame role that this attitude belongs to. Omittable if it is contained in a frame role annotation.
+              <desc versionDate="2025-05-24" xml:lang="en">The frame role that this attitude belongs to. Omittable if it is contained in a frame role tag.
               </desc>
-              <desc versionDate="2025-05-24" xml:lang="ja">この態度表現が結び付けられる先のフレーム役割です。フレーム役割の注釈内に含まれる場合，指定の必要はありません。</desc>
+              <desc versionDate="2025-05-24" xml:lang="ja">この態度表現が属するフレーム役割です。フレーム役割の要素の中に含まれる場合，指定の必要はありません。</desc>
               <datatype>
                 <dataRef name="string" />
               </datatype>
               <valList />
             </attDef>
           </attList>
+          <exemplum xml:lang="en">
+            <p>An example of an attitude expression:</p>
+            <eg:egXML xmlns:f="http://github.com/projekt-UA/TEI-frame">
+              <p>This accident was so <f:att f:frame="accident_1" f:from="writer" f:to="injured" pol="-">unfortunate</f:att>.</p>
+            </eg:egXML>
+          </exemplum>
+          <exemplum xml:lang="en">
+            <p>Another example of an attitude expression. The expression is neutral in this case.</p>
+            <eg:egXML xmlns:f="http://github.com/projekt-UA/TEI-frame">
+              <p>
+                <f:from>John</f:from>
+                <f:att f:frame="a1" f:pol="0">regarded</f:att>
+                <f:to>Mary</f:to> as a foreigner. </p>
+            </eg:egXML>
+          </exemplum>
+          <exemplum xml:lang="en">
+            <p>An example where the attitude expression occurs in a blaming frame role: </p>
+            <eg:egXML xmlns:f="http://github.com/projekt-UA/TEI-frame">
+              <p>
+                <f:blame frame="bribe_3">
+                  <f:from>The prime minister</f:from>
+                  <f:att pol="-">strongly accused</f:att>
+                  <f:to>the opposition party</f:to> of bribing the public servants. </f:blame>
+              </p>
+            </eg:egXML>
+          </exemplum>
         </elementSpec>
         <elementSpec ident="point" ns="http://github.com/projekt-UA/TEI-frame" mode="add" module="frame">
           <desc versionDate="2025-05-24" xml:lang="en">specifies one of the points of a frame.</desc>
@@ -142,6 +199,18 @@
           <content>
             <macroRef key="macro.paraContent" />
           </content>
+          <exemplum xml:lang="en">
+            <p>A first example:</p>
+            <eg:egXML xmlns:f="http://github.com/projekt-UA/TEI-frame">
+              <p>A huge buffer zone has been created behind the border. [...] However, <f:point f:name="slowness">movement to the distribution points is slow.</f:point> (Deutsche Welle 2025-05-25)</p>
+            </eg:egXML>
+          </exemplum>
+          <exemplum xml:lang="en">
+            <p>Another example with a specific attitude holder:</p>
+            <eg:egXML xmlns:f="http://github.com/projekt-UA/TEI-frame">
+              <p><f:point f:name="looting"><f:from>Israel</f:from> justified its complete blockade from March 2 by saying that Hamas, the militant Islamist group that rules Gaza and is classified as a terrorist organization by many states, was looting supplies.</f:point> (Deutsche Welle 2025-05-25)</p>
+            </eg:egXML>
+          </exemplum>
         </elementSpec>
         <elementSpec ident="subPoint" ns="http://github.com/projekt-UA/TEI-frame" mode="add" module="frame">
           <desc versionDate="2025-05-24" xml:lang="en">specifies one of the sub-points of a frame.</desc>
@@ -231,6 +300,15 @@
               <macroRef key="macro.paraContent" />
             </sequence>
           </content>
+          <exemplum xml:lang="en">
+            <eg:egXML xmlns:f="http://github.com/projekt-UA/TEI-frame">
+              <p>
+                <f:frameSet>
+                  <f:point f:name="blockade" />
+                  <f:blame f:name="looting" />
+                  <f:from>Israel</f:from> justified its complete blockade from March 2 by saying that Hamas, the militant Islamist group that rules Gaza and is classified as a terrorist organization by many states, was looting supplies. </f:frameSet> (Deutsche Welle 2025-05-25) </p>
+            </eg:egXML>
+          </exemplum>
         </elementSpec>
         <elementSpec ident="kw" ns="http://github.com/projekt-UA/TEI-frame" mode="add" module="frame">
           <desc versionDate="2025-05-24" xml:lang="en">
@@ -248,6 +326,11 @@
           <content>
             <macroRef key="macro.paraContent" />
           </content>
+          <exemplum xml:lang="en">
+            <eg:egXML xmlns:f="http://github.com/projekt-UA/TEI-frame">
+              <p>A huge buffer zone has been created behind the border. [...] However, <f:point f:name="slowness">movement to the <f:kw f:category="humanitarianism">distribution</f:kw> points is slow.</f:point> (Deutsche Welle 2025-05-25)</p>
+            </eg:egXML>
+          </exemplum>
         </elementSpec>
         <elementSpec ident="from" ns="http://github.com/projekt-UA/TEI-frame" mode="add" module="frame">
           <desc versionDate="2025-05-24" xml:lang="en">
