@@ -338,7 +338,8 @@
           <desc versionDate="2025-05-24" xml:lang="ja">参照を表す要素に共通の属性を定義します。</desc>
           <classes />
           <attList>
-            <attDef ident="ref" usage="opt" ns="http://github.com/projekt-UA/TEI-frame">> <desc versionDate="2025-05-24" xml:lang="en">The referrent</desc>
+            <attDef ident="ref" usage="opt" ns="http://github.com/projekt-UA/TEI-frame">
+              <desc versionDate="2025-05-24" xml:lang="en">The referrent</desc>
               <desc versionDate="2025-05-24" xml:lang="ja">指示対象です。</desc>
               <datatype>
                 <dataRef name="string" />
