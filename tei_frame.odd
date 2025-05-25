@@ -161,28 +161,27 @@
           </attList>
           <exemplum xml:lang="en">
             <p>An example of an attitude expression:</p>
-            <eg:egXML xmlns:f="http://github.com/projekt-UA/TEI-frame">
-              <p>This accident was so <f:att f:frame="accident_1" f:from="writer" f:to="injured" pol="-">unfortunate</f:att>.</p>
+            <eg:egXML xml:space="preserve" xmlns:f="http://github.com/projekt-UA/TEI-frame">
+<p>This accident was so <f:att f:frame="accident_1" f:from="writer" f:to="injured" pol="-">unfortunate</f:att>.</p>
             </eg:egXML>
           </exemplum>
           <exemplum xml:lang="en">
             <p>Another example of an attitude expression. The expression is neutral in this case.</p>
-            <eg:egXML xmlns:f="http://github.com/projekt-UA/TEI-frame">
-              <p>
-                <f:from>John</f:from>
-                <f:att f:frame="a1" f:pol="0">regarded</f:att>
-                <f:to>Mary</f:to> as a foreigner. </p>
+            <eg:egXML xml:space="preserve" xmlns:f="http://github.com/projekt-UA/TEI-frame">
+<p>
+  <f:from>John</f:from> <f:att f:frame="a1" f:pol="0">regarded</f:att>
+  <f:to>Mary</f:to> as a foreigner. 
+</p>
             </eg:egXML>
           </exemplum>
           <exemplum xml:lang="en">
             <p>An example where the attitude expression occurs in a blaming frame role: </p>
-            <eg:egXML xmlns:f="http://github.com/projekt-UA/TEI-frame">
-              <p>
-                <f:blame frame="bribe_3">
-                  <f:from>The prime minister</f:from>
-                  <f:att pol="-">strongly accused</f:att>
-                  <f:to>the opposition party</f:to> of bribing the public servants. </f:blame>
-              </p>
+            <eg:egXML xml:space="preserve" xmlns:f="http://github.com/projekt-UA/TEI-frame">
+<p>
+  <f:blame frame="bribe_3">
+    <f:from>The prime minister</f:from> <f:att pol="-">strongly accused</f:att>
+    <f:to>the opposition party</f:to> of bribing the public servants. </f:blame>
+</p>
             </eg:egXML>
           </exemplum>
         </elementSpec>
@@ -201,14 +200,25 @@
           </content>
           <exemplum xml:lang="en">
             <p>A first example:</p>
-            <eg:egXML xmlns:f="http://github.com/projekt-UA/TEI-frame">
-              <p>A huge buffer zone has been created behind the border. [...] However, <f:point f:name="slowness">movement to the distribution points is slow.</f:point> (Deutsche Welle 2025-05-25)</p>
+            <eg:egXML xml:space="preserve" xmlns:f="http://github.com/projekt-UA/TEI-frame">
+<p>
+  A huge buffer zone has been created behind the border. [...] 
+  However, <f:point f:name="slowness">movement to the distribution 
+  points is slow.</f:point>
+  (Deutsche Welle 2025-05-25)
+</p>
             </eg:egXML>
           </exemplum>
           <exemplum xml:lang="en">
             <p>Another example with a specific attitude holder:</p>
-            <eg:egXML xmlns:f="http://github.com/projekt-UA/TEI-frame">
-              <p><f:point f:name="looting"><f:from>Israel</f:from> justified its complete blockade from March 2 by saying that Hamas, the militant Islamist group that rules Gaza and is classified as a terrorist organization by many states, was looting supplies.</f:point> (Deutsche Welle 2025-05-25)</p>
+            <eg:egXML xml:space="preserve" xmlns:f="http://github.com/projekt-UA/TEI-frame">
+<p>
+  <f:point f:name="looting"><f:from>Israel</f:from> justified its complete blockade
+  from March 2 by saying that Hamas, the militant Islamist group that rules Gaza 
+  and is classified as a terrorist organization by many states,
+  was looting supplies.</f:point>
+  (Deutsche Welle 2025-05-25)
+</p>
             </eg:egXML>
           </exemplum>
         </elementSpec>
@@ -301,16 +311,22 @@
             </sequence>
           </content>
           <exemplum xml:lang="en">
-            <eg:egXML xmlns:f="http://github.com/projekt-UA/TEI-frame">
-              <p>
-                <f:frameSet>
-                  <f:point f:name="blockade" />
-                  <f:blame f:name="looting" />
-                  <f:from>Israel</f:from> justified its complete blockade from March 2 by saying that Hamas, the militant Islamist group that rules Gaza and is classified as a terrorist organization by many states, was looting supplies. </f:frameSet> (Deutsche Welle 2025-05-25) </p>
+            <eg:egXML xml:space="preserve" xmlns:f="http://github.com/projekt-UA/TEI-frame">
+<p>
+  <f:frameSet>
+    <f:point f:name="blockade" />
+    <f:blame f:name="looting" />
+    <f:from>Israel</f:from> justified its complete blockade from March 2 
+    by saying that Hamas, the militant Islamist group that rules Gaza 
+    and is classified as a terrorist organization by many states, 
+    was looting supplies. 
+  </f:frameSet>
+  (Deutsche Welle 2025-05-25)
+</p>
             </eg:egXML>
           </exemplum>
         </elementSpec>
-        <elementSpec ident="kw" ns="http://github.com/projekt-UA/TEI-frame" mode="add" module="frame">
+        <elementSpec ident="keyword" ns="http://github.com/projekt-UA/TEI-frame" mode="add" module="frame">
           <desc versionDate="2025-05-24" xml:lang="en">
             specifies a keyword that represents a category of a frame (role).
             This can spare the need to explicitly specify the category attribute of a frame role.
@@ -319,6 +335,7 @@
             フレーム（役割）の範疇を表すキーワードを指定します。
             これにより，フレーム役割の`category`属性を明示的に指定する必要がなくなります。
           </desc>
+          <altIdent>kw</altIdent>
           <classes>
             <memberOf key="model.segLike" />
             <memberOf key="att.categorizable" />
@@ -327,8 +344,11 @@
             <macroRef key="macro.paraContent" />
           </content>
           <exemplum xml:lang="en">
-            <eg:egXML xmlns:f="http://github.com/projekt-UA/TEI-frame">
-              <p>A huge buffer zone has been created behind the border. [...] However, <f:point f:name="slowness">movement to the <f:kw f:category="humanitarianism">distribution</f:kw> points is slow.</f:point> (Deutsche Welle 2025-05-25)</p>
+            <eg:egXML xml:space="preserve" xmlns:f="http://github.com/projekt-UA/TEI-frame">
+<p>A huge buffer zone has been created behind the border. 
+[...] 
+However, <f:point f:name="slowness">movement to the <f:kw f:category="humanitarianism">distribution</f:kw> points is slow.</f:point> 
+(Deutsche Welle 2025-05-25)</p>
             </eg:egXML>
           </exemplum>
         </elementSpec>
@@ -436,6 +456,7 @@
           <classes />
           <attList>
             <attDef ident="category" usage="opt" ns="http://github.com/projekt-UA/TEI-frame">
+              <altIdent>cat</altIdent>
               <desc versionDate="2025-05-24" xml:lang="en">The category of the frame role. It may be inferred by keywords within and be spared from explicit specification.</desc>
               <desc versionDate="2025-05-24" xml:lang="ja">フレームが属する範疇です。テキスト内の語句で推定できる場合，指定の必要はありません。</desc>
               <datatype>
