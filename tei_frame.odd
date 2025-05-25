@@ -159,7 +159,7 @@
         </elementSpec>
         <elementSpec ident="blame" ns="http://github.com/projekt-UA/TEI-frame" mode="add" module="frame">
           <desc versionDate="2025-05-24" xml:lang="en">specifies a blame of a frame.</desc>
-          <desc versionDate="2025-05-24" xml:lang="jp">フレームの構成要素として，責任の帰着をマークします。</desc>
+          <desc versionDate="2025-05-24" xml:lang="ja">フレームの構成要素として，責任の帰着をマークします。</desc>
           <classes>
             <memberOf key="att.global" />
             <memberOf key="att.typed" />
@@ -174,7 +174,7 @@
         </elementSpec>
         <elementSpec ident="cause" ns="http://github.com/projekt-UA/TEI-frame" mode="add" module="frame">
           <desc versionDate="2025-05-24" xml:lang="en">specifies a cause of a frame.</desc>
-          <desc versionDate="2025-05-24" xml:lang="jp">フレームの構成要素として，問題の原因をマークします。</desc>
+          <desc versionDate="2025-05-24" xml:lang="ja">フレームの構成要素として，問題の原因をマークします。</desc>
           <classes>
             <memberOf key="att.global" />
             <memberOf key="att.typed" />
@@ -189,7 +189,7 @@
         </elementSpec>
         <elementSpec ident="conseq" ns="http://github.com/projekt-UA/TEI-frame" mode="add" module="frame">
           <desc versionDate="2025-05-24" xml:lang="en">specifies one of the conseqs of a frame.</desc>
-          <desc versionDate="2025-05-24" xml:lang="jp">フレームの構成要素として，問題とする事象の発展の見込みをマークします。</desc>
+          <desc versionDate="2025-05-24" xml:lang="ja">フレームの構成要素として，問題とする事象の発展の見込みをマークします。</desc>
           <classes>
             <memberOf key="att.global" />
             <memberOf key="att.typed" />
@@ -204,7 +204,7 @@
         </elementSpec>
         <elementSpec ident="treatment" ns="http://github.com/projekt-UA/TEI-frame" mode="add" module="frame">
           <desc versionDate="2025-05-24" xml:lang="en">specifies a proposal of treatment of a frame.</desc>
-          <desc versionDate="2025-05-24" xml:lang="jp">フレームの構成要素として，問題に対する解決策をマークします。</desc>
+          <desc versionDate="2025-05-24" xml:lang="ja">フレームの構成要素として，問題に対する解決策をマークします。</desc>
           <classes>
             <memberOf key="att.global" />
             <memberOf key="att.typed" />
@@ -313,7 +313,7 @@
         </classSpec>
         <classSpec ident="att.frameRole" type="atts" mode="add" module="frame">
           <desc versionDate="2025-05-24" xml:lang="en">defines common attributes for frame roles.</desc>
-          <desc versionDate="2025-05-24" xml:lang="en">フレーム役割に共通の属性を定義します。</desc>
+          <desc versionDate="2025-05-24" xml:lang="ja">フレーム役割に共通の属性を定義します。</desc>
           <classes>
             <memberOf key="att.holdable" />
             <memberOf key="att.categorizable" />
@@ -328,7 +328,7 @@
               </datatype>
               <valDesc versionDate="2025-05-24" xml:lang="en">A string that begins with an alphabet and consists of alphabets, numbers, and the underscore.
               </valDesc>
-              <valDesc versionDate="2025-05-24" xml:lang="jp">アルファベットで始まり，アルファベット，数字，アンダースコアからなる文字列です。
+              <valDesc versionDate="2025-05-24" xml:lang="ja">アルファベットで始まり，アルファベット，数字，アンダースコアからなる文字列です。
               </valDesc>
             </attDef>
           </attList>
@@ -360,7 +360,7 @@
               </datatype>
               <valDesc versionDate="2025-05-24" xml:lang="en">Labels delimited by commas.
               </valDesc>
-              <valDesc versionDate="2025-05-24" xml:lang="jp">ラベルの列で，`,`で区切られたものです。
+              <valDesc versionDate="2025-05-24" xml:lang="ja">ラベルの列で，`,`で区切られたものです。
               </valDesc>
             </attDef>
           </attList>
