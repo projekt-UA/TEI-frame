@@ -213,10 +213,12 @@
             <p>Another example with a specific attitude holder:</p>
             <eg:egXML xml:space="preserve" xmlns:f="http://github.com/projekt-UA/TEI-frame">
 <p>
-  <f:point f:name="looting"><f:from>Israel</f:from> justified its complete blockade
-  from March 2 by saying that Hamas, the militant Islamist group that rules Gaza 
-  and is classified as a terrorist organization by many states,
-  was looting supplies.</f:point>
+  <f:point f:name="looting"><f:from>Israel</f:from> justified its complete blockade from March 2 by saying that <f:content>
+      Hamas, the militant Islamist group that rules Gaza 
+      and is classified as a terrorist organization by many states,
+      was looting supplies.
+    </f:content>
+  </f:point>
   (Deutsche Welle 2025-05-25)
 </p>
             </eg:egXML>
@@ -295,6 +297,32 @@
           <content>
             <macroRef key="macro.paraContent" />
           </content>
+        </elementSpec>
+        <elementSpec ident="content" ns="http://github.com/projekt-UA/TEI-frame" mode="add" module="frame">
+          <desc versionDate="2025-05-26" xml:lang="en">specifies the content of a frame role or an attitude, excluding attitude holders and targets.</desc>
+          <desc versionDate="2025-05-26" xml:lang="ja">態度保持者や態度の向け先を除いたフレーム役割や態度の内容を指定します。</desc>
+          <classes>
+            <memberOf key="att.global" />
+            <memberOf key="att.typed" />
+            <memberOf key="model.segLike" />
+          </classes>
+          <content>
+            <macroRef key="macro.paraContent" />
+          </content>
+          <exemplum xml:lang="en">
+            <p>An example:</p>
+            <eg:egXML xml:space="preserve" xmlns:f="http://github.com/projekt-UA/TEI-frame">
+<p>
+  <f:point f:name="looting"><f:from>Israel</f:from> justified its complete blockade from March 2 by saying that <f:content>
+      Hamas, the militant Islamist group that rules Gaza 
+      and is classified as a terrorist organization by many states,
+      was looting supplies.
+    </f:content>
+  </f:point>
+  (Deutsche Welle 2025-05-25)
+</p>
+            </eg:egXML>
+          </exemplum>
         </elementSpec>
         <elementSpec ident="frameSet" ns="http://github.com/projekt-UA/TEI-frame" mode="add" module="frame">
           <desc versionDate="2025-05-24" xml:lang="en">specifies that the text segment belongs to one or more frame roles.</desc>
