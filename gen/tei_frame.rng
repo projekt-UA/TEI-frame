@@ -5,7 +5,7 @@
          xmlns="http://relaxng.org/ns/structure/1.0"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2025-05-25T19:20:34Z. . 
+Schema generated from ODD source 2025-05-26T08:19:09Z. . 
 TEI Edition: P5 Version 4.9.0. Last updated on 24th January 2025, revision f73186978 
 TEI Edition Location: https://www.tei-c.org/Vault/P5/4.9.0/ 
   
@@ -131,7 +131,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5/4.9.0/
          </zeroOrMore>
       </element>
       <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-               id="d62727951e66224-constraint">
+               id="d62895784e66224-constraint">
          <rule context="tei:content">
             <report test="descendant::*[not(namespace-uri(.) =               ('http://relaxng.org/ns/compatibility/annotations/1.0', 'http://relaxng.org/ns/structure/1.0', 'http://www.tei-c.org/ns/1.0'))]">content descendants must be in the
               namespaces
@@ -202,7 +202,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5/4.9.0/
          </zeroOrMore>
       </element>
       <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-               id="d62727951e67823-constraint">
+               id="d62895784e67823-constraint">
          <rule context="tei:datatype">
             <report test="descendant::*[not(namespace-uri(.) =               ('http://relaxng.org/ns/structure/1.0', 'http://www.tei-c.org/ns/1.0'))]">datatype descendants must be in the
               namespaces
@@ -1835,6 +1835,7 @@ Sample values include: 1] duplicate; 2] duplicate-partial; 3] excessStart; 4] ex
          <ref name="tei_cause"/>
          <ref name="tei_conseq"/>
          <ref name="tei_treatment"/>
+         <ref name="tei_content"/>
          <ref name="tei_frameSet"/>
          <ref name="tei_keyword"/>
          <ref name="tei_from"/>
@@ -1851,6 +1852,7 @@ Sample values include: 1] duplicate; 2] duplicate-partial; 3] excessStart; 4] ex
          <ref name="tei_cause"/>
          <ref name="tei_conseq"/>
          <ref name="tei_treatment"/>
+         <ref name="tei_content"/>
          <ref name="tei_frameSet"/>
          <ref name="tei_keyword"/>
          <ref name="tei_from"/>
@@ -1866,6 +1868,7 @@ Sample values include: 1] duplicate; 2] duplicate-partial; 3] excessStart; 4] ex
       <ref name="tei_cause"/>
       <ref name="tei_conseq"/>
       <ref name="tei_treatment"/>
+      <ref name="tei_content"/>
       <ref name="tei_frameSet"/>
       <ref name="tei_keyword"/>
       <ref name="tei_from"/>
@@ -1895,6 +1898,9 @@ Sample values include: 1] duplicate; 2] duplicate-partial; 3] excessStart; 4] ex
       </optional>
       <optional>
          <ref name="tei_treatment"/>
+      </optional>
+      <optional>
+         <ref name="tei_content"/>
       </optional>
       <optional>
          <ref name="tei_frameSet"/>
@@ -1935,6 +1941,9 @@ Sample values include: 1] duplicate; 2] duplicate-partial; 3] excessStart; 4] ex
          <ref name="tei_treatment"/>
       </zeroOrMore>
       <zeroOrMore>
+         <ref name="tei_content"/>
+      </zeroOrMore>
+      <zeroOrMore>
          <ref name="tei_frameSet"/>
       </zeroOrMore>
       <zeroOrMore>
@@ -1971,6 +1980,9 @@ Sample values include: 1] duplicate; 2] duplicate-partial; 3] excessStart; 4] ex
       </oneOrMore>
       <oneOrMore>
          <ref name="tei_treatment"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="tei_content"/>
       </oneOrMore>
       <oneOrMore>
          <ref name="tei_frameSet"/>
@@ -11082,37 +11094,6 @@ Suggested values include: 1] alternate; 2] default; 3] height; 4] id; 5] label; 
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">supplies an XPath expression which when evaluated provides the value for the parameter</a:documentation>
             <text/>
          </attribute>
-         <empty/>
-      </element>
-   </define>
-   <define name="tei_content">
-      <element name="content">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(content model) contains a declaration of the intended content model for the element (or other construct) being specified. [23.5. Element Specifications]</a:documentation>
-         <choice>
-            <ref name="tei_valList"/>
-            <ref name="tei_model.contentPart"/>
-            <ref name="anyElement_content_3"/>
-         </choice>
-         <ref name="tei_att.global.attributes"/>
-         <optional>
-            <attribute xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                       name="autoPrefix"
-                       a:defaultValue="true">
-               <a:documentation>controls whether or not pattern names generated in the corresponding RELAX NG schema source are automatically prefixed to avoid potential nameclashes.</a:documentation>
-               <choice>
-                  <value>true</value>
-                  <a:documentation>Each name referenced in e.g. an <code xmlns="http://www.w3.org/1999/xhtml"
-                           xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;rng:ref&gt;</code> element within a content model is automatically prefixed by the value of the <code xmlns="http://www.w3.org/1999/xhtml"
-                           xmlns:rng="http://relaxng.org/ns/structure/1.0">@prefix</code> attribute on the current <code xmlns="http://www.w3.org/1999/xhtml"
-                           xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;schemaSpec&gt;</code>
-                  </a:documentation>
-                  <value>false</value>
-                  <a:documentation>No prefixes are added: any prefix required by the value of the <code xmlns="http://www.w3.org/1999/xhtml"
-                           xmlns:rng="http://relaxng.org/ns/structure/1.0">@prefix</code> attribute on the current <code xmlns="http://www.w3.org/1999/xhtml"
-                           xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;schemaSpec&gt;</code> must therefore be supplied explicitly, as appropriate.</a:documentation>
-               </choice>
-            </attribute>
-         </optional>
          <empty/>
       </element>
    </define>
