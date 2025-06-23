@@ -298,7 +298,7 @@
             <macroRef key="macro.paraContent" />
           </content>
         </elementSpec>
-        <elementSpec ident="content" ns="http://github.com/projekt-UA/TEI-frame" mode="add" module="frame">
+        <elementSpec ident="attContent" ns="http://github.com/projekt-UA/TEI-frame" mode="add" module="frame">
           <desc versionDate="2025-05-26" xml:lang="en">specifies the content of a frame role or an attitude, excluding attitude holders and targets.</desc>
           <desc versionDate="2025-05-26" xml:lang="ja">態度保持者や態度の向け先を除いたフレーム役割や態度の内容を指定します。</desc>
           <classes>
