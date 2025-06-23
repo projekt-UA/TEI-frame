@@ -141,12 +141,14 @@
               <datatype>
                 <dataRef key="teidata.enumerated" />
               </datatype>
+              <defaultVal>0</defaultVal>
               <valList type="closed">
                 <valItem ident="+" />
                 <valItem ident="-" />
                 <valItem ident="+-" />
                 <valItem ident="-+" />
                 <valItem ident="0" />
+                <valItem ident="scare-quote" />
               </valList>
             </attDef>
             <attDef ident="frame" usage="opt" ns="http://github.com/projekt-UA/TEI-frame">
@@ -313,11 +315,11 @@
             <p>An example:</p>
             <eg:egXML xml:space="preserve" xmlns:f="http://github.com/projekt-UA/TEI-frame">
 <p>
-  <f:point f:name="looting"><f:from>Israel</f:from> justified its complete blockade from March 2 by saying that <f:content>
+  <f:point f:name="looting"><f:from>Israel</f:from> justified its complete blockade from March 2 by saying that <f:attContent>
       Hamas, the militant Islamist group that rules Gaza 
       and is classified as a terrorist organization by many states,
       was looting supplies.
-    </f:content>
+    </f:attContent>
   </f:point>
   (Deutsche Welle 2025-05-25)
 </p>
@@ -419,11 +421,13 @@ However, <f:point f:name="slowness">movement to the <f:kw f:category="humanitari
           <classes />
           <attList>
             <attDef ident="from" usage="opt" ns="http://github.com/projekt-UA/TEI-frame">
-              <desc versionDate="2025-05-24" xml:lang="en">The actor that bears the content of this frame role in mimd. It may be explicitly specified in the text.</desc>
-              <desc versionDate="2025-05-24" xml:lang="ja">内容を思っている主体です。テキスト内の語句で推定できる場合，指定の必要はありません。</desc>
+              <desc versionDate="2025-05-24" xml:lang="en">The actor that bears the content of this frame role in mimd. It may be explicitly specified by `&lt;from&gt;` in the text.</desc>
+              <desc versionDate="2025-05-24" xml:lang="ja">内容を思っている主体です。テキスト内の語句で推定できる場合，`&lt;from&gt;`要素で代わりに指定できます。</desc>
               <datatype>
+                <!-- <dataRef name="string" restriction="[\w-]+(;[\w-])?" /> -->
                 <dataRef name="string" />
               </datatype>
+              <defaultVal>correspondent;correspondent</defaultVal>
               <valDesc versionDate="2025-05-24" xml:lang="en">An entity.</valDesc>
             </attDef>
           </attList>
@@ -433,11 +437,13 @@ However, <f:point f:name="slowness">movement to the <f:kw f:category="humanitari
           <attList>
             <attDef ident="to" usage="opt" ns="http://github.com/projekt-UA/TEI-frame">
               <datatype>
+                <!-- <dataRef name="string" restriction="[\w-]+(;[\w-])?" /> -->
                 <dataRef name="string" />
               </datatype>
-              <valDesc versionDate="2025-05-24" xml:lang="en">The entity that the attitude is directed to. Omittable when specified in text.
+              <defaultVal>reader;reader</defaultVal>
+              <valDesc versionDate="2025-05-24" xml:lang="en">The entity that the attitude is directed to. Omittable when specified in text by `&lt;to&gt;` .
               </valDesc>
-              <valDesc versionDate="2025-05-24" xml:lang="ja">態度の向け先の主体です。テキスト内の語句で推定できる場合，指定の必要はありません。
+              <valDesc versionDate="2025-05-24" xml:lang="ja">態度の向け先（話しかける先，もしくは評価の対象）の主体です。テキスト内の語句で推定できる場合，`&lt;to&gt;`要素で代わりに指定できます。
               </valDesc>
             </attDef>
           </attList>
@@ -446,7 +452,6 @@ However, <f:point f:name="slowness">movement to the <f:kw f:category="humanitari
           <desc versionDate="2025-05-24" xml:lang="en">defines common attributes for frame roles.</desc>
           <desc versionDate="2025-05-24" xml:lang="ja">フレーム役割に共通の属性を定義します。</desc>
           <classes>
-            <memberOf key="att.holdable" />
             <memberOf key="att.categorizable" />
           </classes>
           <attList>
@@ -455,6 +460,7 @@ However, <f:point f:name="slowness">movement to the <f:kw f:category="humanitari
               <desc versionDate="2025-05-24" xml:lang="ja">フレームの名前です。この名前は，ドキュメント内において一義的です。
               </desc>
               <datatype>
+                <!-- <dataRef name="string" restriction="\w+" /> -->
                 <dataRef name="string" />
               </datatype>
               <valDesc versionDate="2025-05-24" xml:lang="en">A string that begins with an alphabet and consists of alphabets, numbers, and the underscore.
@@ -473,6 +479,7 @@ However, <f:point f:name="slowness">movement to the <f:kw f:category="humanitari
               <desc versionDate="2025-05-24" xml:lang="en">The referrent</desc>
               <desc versionDate="2025-05-24" xml:lang="ja">指示対象です。</desc>
               <datatype>
+                <!-- <dataRef name="string" restriction="[\w-](;[\w-])?" /> -->
                 <dataRef name="string" />
               </datatype>
             </attDef>
@@ -488,6 +495,7 @@ However, <f:point f:name="slowness">movement to the <f:kw f:category="humanitari
               <desc versionDate="2025-05-24" xml:lang="en">The category of the frame role. It may be inferred by keywords within and be spared from explicit specification.</desc>
               <desc versionDate="2025-05-24" xml:lang="ja">フレームが属する範疇です。テキスト内の語句で推定できる場合，指定の必要はありません。</desc>
               <datatype>
+                <!-- <dataRef name="string" restriction="\w(,\w)*" /> -->
                 <dataRef name="string" />
               </datatype>
               <valDesc versionDate="2025-05-24" xml:lang="en">Labels delimited by commas.
