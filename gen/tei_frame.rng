@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<grammar xmlns:xlink="http://www.w3.org/1999/xlink"
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
          xmlns:tei="http://www.tei-c.org/ns/1.0"
          xmlns:teix="http://www.tei-c.org/ns/Examples"
-         xmlns="http://relaxng.org/ns/structure/1.0"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2025-05-26T08:19:09Z. . 
+Schema generated from ODD source 2025-06-23T12:44:19Z. . 
 TEI Edition: P5 Version 4.9.0. Last updated on 24th January 2025, revision f73186978 
 TEI Edition Location: https://www.tei-c.org/Vault/P5/4.9.0/ 
   
@@ -131,7 +131,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5/4.9.0/
          </zeroOrMore>
       </element>
       <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-               id="d62895784e66224-constraint">
+               id="d15608881e66178-constraint">
          <rule context="tei:content">
             <report test="descendant::*[not(namespace-uri(.) =               ('http://relaxng.org/ns/compatibility/annotations/1.0', 'http://relaxng.org/ns/structure/1.0', 'http://www.tei-c.org/ns/1.0'))]">content descendants must be in the
               namespaces
@@ -202,7 +202,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5/4.9.0/
          </zeroOrMore>
       </element>
       <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-               id="d62895784e67823-constraint">
+               id="d15608881e67777-constraint">
          <rule context="tei:datatype">
             <report test="descendant::*[not(namespace-uri(.) =               ('http://relaxng.org/ns/structure/1.0', 'http://www.tei-c.org/ns/1.0'))]">datatype descendants must be in the
               namespaces
@@ -390,14 +390,14 @@ Suggested values include: 1] human; 2] template; 3] system; 4] bot; 5] unspecifi
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="frame-att.cmc-generatedBy-CMC_generatedBy_within_post-constraint-rule-1">
-      <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                xmlns:xi="http://www.w3.org/2001/XInclude"
-                xmlns="http://www.tei-c.org/ns/1.0"
+      <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:eg="http://www.tei-c.org/ns/Examples"
+                xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                xmlns:xi="http://www.w3.org/2001/XInclude"
                 context="tei:*[@generatedBy]">
-            <sch:assert test="ancestor-or-self::tei:post">The @generatedBy attribute is for use within a &lt;post&gt; element.</sch:assert>
-          </sch:rule>
+         <sch:assert test="ancestor-or-self::tei:post">The @generatedBy attribute is for use within a &lt;post&gt; element.</sch:assert>
+      </sch:rule>
    </pattern>
    <define name="tei_att.datable.w3c.attributes">
       <ref name="tei_att.datable.w3c.attribute.when"/>
@@ -493,35 +493,35 @@ Suggested values include: 1] human; 2] template; 3] system; 4] bot; 5] unspecifi
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="frame-att.datable.w3c-att-datable-w3c-when-constraint-rule-2">
-      <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                xmlns:xi="http://www.w3.org/2001/XInclude"
-                xmlns="http://www.tei-c.org/ns/1.0"
+      <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:eg="http://www.tei-c.org/ns/Examples"
+                xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                xmlns:xi="http://www.w3.org/2001/XInclude"
                 context="tei:*[@when]">
-        <sch:report role="nonfatal" test="@notBefore|@notAfter|@from|@to">The @when attribute cannot be used with any other att.datable.w3c attributes.</sch:report>
+         <sch:report role="nonfatal" test="@notBefore|@notAfter|@from|@to">The @when attribute cannot be used with any other att.datable.w3c attributes.</sch:report>
       </sch:rule>
    </pattern>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="frame-att.datable.w3c-att-datable-w3c-from-constraint-rule-3">
-      <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                xmlns:xi="http://www.w3.org/2001/XInclude"
-                xmlns="http://www.tei-c.org/ns/1.0"
+      <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:eg="http://www.tei-c.org/ns/Examples"
+                xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                xmlns:xi="http://www.w3.org/2001/XInclude"
                 context="tei:*[@from]">
-        <sch:report role="nonfatal" test="@notBefore">The @from and @notBefore attributes cannot be used together.</sch:report>
+         <sch:report role="nonfatal" test="@notBefore">The @from and @notBefore attributes cannot be used together.</sch:report>
       </sch:rule>
    </pattern>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="frame-att.datable.w3c-att-datable-w3c-to-constraint-rule-4">
-      <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                xmlns:xi="http://www.w3.org/2001/XInclude"
-                xmlns="http://www.tei-c.org/ns/1.0"
+      <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:eg="http://www.tei-c.org/ns/Examples"
+                xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                xmlns:xi="http://www.w3.org/2001/XInclude"
                 context="tei:*[@to]">
-        <sch:report role="nonfatal" test="@notAfter">The @to and @notAfter attributes cannot be used together.</sch:report>
+         <sch:report role="nonfatal" test="@notAfter">The @to and @notAfter attributes cannot be used together.</sch:report>
       </sch:rule>
    </pattern>
    <define name="tei_att.datcat.attributes">
@@ -778,7 +778,7 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</a:documentati
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(certainty) signifies the degree of certainty associated with the intervention or interpretation.</a:documentation>
             <choice>
                <data type="double">
-                  <param name="minInclusive">0</param> 
+                  <param name="minInclusive">0</param>
                   <param name="maxInclusive">1</param>
                </data>
                <choice>
@@ -828,19 +828,19 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</a:documentati
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="frame-att.global.source-source-only_1_ODD_source-constraint-rule-5">
-      <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                xmlns:xi="http://www.w3.org/2001/XInclude"
-                xmlns="http://www.tei-c.org/ns/1.0"
+      <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:eg="http://www.tei-c.org/ns/Examples"
+                xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                xmlns:xi="http://www.w3.org/2001/XInclude"
                 context="tei:*[@source]">
-            <sch:let name="srcs" value="tokenize( normalize-space(@source),' ')"/>
-            <sch:report test="(   self::tei:classRef                                 | self::tei:dataRef                                 | self::tei:elementRef                                 | self::tei:macroRef                                 | self::tei:moduleRef                                 | self::tei:schemaSpec )                                   and                                   $srcs[2]">
+         <sch:let name="srcs" value="tokenize( normalize-space(@source),' ')"/>
+         <sch:report test="(   self::tei:classRef                                 | self::tei:dataRef                                 | self::tei:elementRef                                 | self::tei:macroRef                                 | self::tei:moduleRef                                 | self::tei:schemaSpec )                                   and                                   $srcs[2]">
               When used on a schema description element (like
               <sch:value-of select="name(.)"/>), the @source attribute
               should have only 1 value. (This one has <sch:value-of select="count($srcs)"/>.)
             </sch:report>
-          </sch:rule>
+      </sch:rule>
    </pattern>
    <define name="tei_att.internetMedia.attributes">
       <ref name="tei_att.internetMedia.attribute.mimeType"/>
@@ -958,13 +958,13 @@ Suggested values include: 1] m (metre); 2] kg (kilogram); 3] s (second); 4] Hz (
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="frame-att.measurement-att-measurement-unitRef-constraint-rule-6">
-      <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                xmlns:xi="http://www.w3.org/2001/XInclude"
-                xmlns="http://www.tei-c.org/ns/1.0"
+      <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:eg="http://www.tei-c.org/ns/Examples"
+                xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                xmlns:xi="http://www.w3.org/2001/XInclude"
                 context="tei:*[@unitRef]">
-        <sch:report role="info" test="@unit">The @unit attribute may be unnecessary when @unitRef is present.</sch:report>
+         <sch:report role="info" test="@unit">The @unit attribute may be unnecessary when @unitRef is present.</sch:report>
       </sch:rule>
    </pattern>
    <define name="tei_att.notated.attributes">
@@ -1048,14 +1048,14 @@ Suggested values include: 1] top; 2] bottom; 3] margin; 4] opposite; 5] overleaf
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="frame-att.pointing-targetLang-targetLang-constraint-rule-7">
-      <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                xmlns:xi="http://www.w3.org/2001/XInclude"
-                xmlns="http://www.tei-c.org/ns/1.0"
+      <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:eg="http://www.tei-c.org/ns/Examples"
+                xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                xmlns:xi="http://www.w3.org/2001/XInclude"
                 context="tei:*[not(self::tei:schemaSpec)][@targetLang]">
-            <sch:assert test="@target">@targetLang should only be used on <sch:name/> if @target is specified.</sch:assert>
-          </sch:rule>
+         <sch:assert test="@target">@targetLang should only be used on <sch:name/> if @target is specified.</sch:assert>
+      </sch:rule>
    </pattern>
    <define name="tei_att.pointing.attribute.target">
       <optional>
@@ -1156,7 +1156,7 @@ Suggested values include: 1] top; 2] bottom; 3] margin; 4] opposite; 5] overleaf
                      xmlns:rng="http://relaxng.org/ns/structure/1.0">@min</code> and <code xmlns="http://www.w3.org/1999/xhtml"
                      xmlns:rng="http://relaxng.org/ns/structure/1.0">@max</code>, or the proportion of observed values that fall within that range.</a:documentation>
             <data type="double">
-               <param name="minInclusive">0</param> 
+               <param name="minInclusive">0</param>
                <param name="maxInclusive">1</param>
             </data>
          </attribute>
@@ -1223,16 +1223,16 @@ Suggested values include: 1] sole; 2] major; 3] minor</a:documentation>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="frame-att.spanning-spanTo-spanTo-points-to-following-constraint-rule-8">
-      <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                xmlns:xi="http://www.w3.org/2001/XInclude"
-                xmlns="http://www.tei-c.org/ns/1.0"
+      <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:eg="http://www.tei-c.org/ns/Examples"
+                xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                xmlns:xi="http://www.w3.org/2001/XInclude"
                 context="tei:*[ starts-with( @spanTo, '#') ]">
-            <sch:assert test="id( substring( @spanTo, 2 ) ) &gt;&gt; .">
+         <sch:assert test="id( substring( @spanTo, 2 ) ) &gt;&gt; .">
 	      The element indicated by @spanTo (<sch:value-of select="@spanTo"/>) must follow the current <sch:name/> element 
             </sch:assert>
-          </sch:rule>
+      </sch:rule>
    </pattern>
    <define name="tei_att.styleDef.attributes">
       <ref name="tei_att.styleDef.attribute.scheme"/>
@@ -1268,16 +1268,16 @@ Suggested values include: 1] sole; 2] major; 3] minor</a:documentation>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="frame-att.styleDef-schemeVersion-schemeVersionRequiresScheme-constraint-rule-9">
-      <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                xmlns:xi="http://www.w3.org/2001/XInclude"
-                xmlns="http://www.tei-c.org/ns/1.0"
+      <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:eg="http://www.tei-c.org/ns/Examples"
+                xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                xmlns:xi="http://www.w3.org/2001/XInclude"
                 context="tei:*[@schemeVersion]">
-            <sch:assert test="@scheme and not(@scheme = 'free')">
+         <sch:assert test="@scheme and not(@scheme = 'free')">
               @schemeVersion can only be used if @scheme is specified.
             </sch:assert>
-          </sch:rule>
+      </sch:rule>
    </pattern>
    <define name="tei_att.typed.attributes">
       <ref name="tei_att.typed.attribute.type"/>
@@ -1305,13 +1305,13 @@ Suggested values include: 1] sole; 2] major; 3] minor</a:documentation>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="frame-att.typed-subtypeTyped-constraint-rule-10">
-      <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                xmlns:xi="http://www.w3.org/2001/XInclude"
-                xmlns="http://www.tei-c.org/ns/1.0"
+      <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:eg="http://www.tei-c.org/ns/Examples"
+                xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                xmlns:xi="http://www.w3.org/2001/XInclude"
                 context="tei:*[@subtype]">
-        <sch:assert test="@type">The <sch:name/> element should not be categorized in detail with @subtype unless also categorized in general with @type</sch:assert>
+         <sch:assert test="@type">The <sch:name/> element should not be categorized in detail with @subtype unless also categorized in general with @type</sch:assert>
       </sch:rule>
    </pattern>
    <define name="tei_att.written.attributes">
@@ -1835,7 +1835,7 @@ Sample values include: 1] duplicate; 2] duplicate-partial; 3] excessStart; 4] ex
          <ref name="tei_cause"/>
          <ref name="tei_conseq"/>
          <ref name="tei_treatment"/>
-         <ref name="tei_content"/>
+         <ref name="tei_attContent"/>
          <ref name="tei_frameSet"/>
          <ref name="tei_keyword"/>
          <ref name="tei_from"/>
@@ -1852,7 +1852,7 @@ Sample values include: 1] duplicate; 2] duplicate-partial; 3] excessStart; 4] ex
          <ref name="tei_cause"/>
          <ref name="tei_conseq"/>
          <ref name="tei_treatment"/>
-         <ref name="tei_content"/>
+         <ref name="tei_attContent"/>
          <ref name="tei_frameSet"/>
          <ref name="tei_keyword"/>
          <ref name="tei_from"/>
@@ -1868,7 +1868,7 @@ Sample values include: 1] duplicate; 2] duplicate-partial; 3] excessStart; 4] ex
       <ref name="tei_cause"/>
       <ref name="tei_conseq"/>
       <ref name="tei_treatment"/>
-      <ref name="tei_content"/>
+      <ref name="tei_attContent"/>
       <ref name="tei_frameSet"/>
       <ref name="tei_keyword"/>
       <ref name="tei_from"/>
@@ -1900,7 +1900,7 @@ Sample values include: 1] duplicate; 2] duplicate-partial; 3] excessStart; 4] ex
          <ref name="tei_treatment"/>
       </optional>
       <optional>
-         <ref name="tei_content"/>
+         <ref name="tei_attContent"/>
       </optional>
       <optional>
          <ref name="tei_frameSet"/>
@@ -1941,7 +1941,7 @@ Sample values include: 1] duplicate; 2] duplicate-partial; 3] excessStart; 4] ex
          <ref name="tei_treatment"/>
       </zeroOrMore>
       <zeroOrMore>
-         <ref name="tei_content"/>
+         <ref name="tei_attContent"/>
       </zeroOrMore>
       <zeroOrMore>
          <ref name="tei_frameSet"/>
@@ -1982,7 +1982,7 @@ Sample values include: 1] duplicate; 2] duplicate-partial; 3] excessStart; 4] ex
          <ref name="tei_treatment"/>
       </oneOrMore>
       <oneOrMore>
-         <ref name="tei_content"/>
+         <ref name="tei_attContent"/>
       </oneOrMore>
       <oneOrMore>
          <ref name="tei_frameSet"/>
@@ -4580,16 +4580,16 @@ Sample values include: 1] duplicate; 2] duplicate-partial; 3] excessStart; 4] ex
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="frame-att.calendarSystem-calendar-calendar_attr_on_empty_element-constraint-rule-11">
-      <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                xmlns:xi="http://www.w3.org/2001/XInclude"
-                xmlns="http://www.tei-c.org/ns/1.0"
+      <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:eg="http://www.tei-c.org/ns/Examples"
+                xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                xmlns:xi="http://www.w3.org/2001/XInclude"
                 context="tei:*[@calendar]">
-            <sch:assert test="string-length( normalize-space(.) ) gt 0"> @calendar indicates one or more
+         <sch:assert test="string-length( normalize-space(.) ) gt 0"> @calendar indicates one or more
               systems or calendars to which the date represented by the content of this element belongs,
               but this <sch:name/> element has no textual content.</sch:assert>
-          </sch:rule>
+      </sch:rule>
    </pattern>
    <define name="tei_att.milestoneUnit.attributes">
       <ref name="tei_att.milestoneUnit.attribute.unit"/>
@@ -4836,7 +4836,6 @@ Suggested values include: 1] spoken (spoken); 2] thought (thought); 3] written (
                <ref name="tei_model.graphicLike"/>
                <ref name="tei_model.ptrLike"/>
                <ref name="tei_model.attributable"/>
-        
                <ref name="tei_q"/>
             </choice>
          </oneOrMore>
@@ -4969,7 +4968,7 @@ Suggested values include: 1] deprecationInfo (deprecation information)</a:docume
                   <param name="pattern">\S+</param>
                </data>
             </attribute>
-         </optional> 
+         </optional>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="frame-rt-target-rt-target-not-span-constraint-rule-15">
@@ -4987,7 +4986,7 @@ Suggested values include: 1] deprecationInfo (deprecation information)</a:docume
                   <param name="pattern">\S+</param>
                </data>
             </attribute>
-         </optional> 
+         </optional>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="frame-rt-from-rt-from-constraint-rule-16">
@@ -5005,7 +5004,7 @@ Suggested values include: 1] deprecationInfo (deprecation information)</a:docume
                   <param name="pattern">\S+</param>
                </data>
             </attribute>
-         </optional> 
+         </optional>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="frame-rt-to-rt-to-constraint-rule-17">
@@ -5525,12 +5524,11 @@ Sample values include: 1] suspension (suspension); 2] contraction (contraction);
          <group>
             <zeroOrMore>
                <choice>
-          
                   <ref name="tei_model.divTop"/>
                   <ref name="tei_model.global"/>
                   <zeroOrMore>
                      <ref name="tei_desc"/>
-                  </zeroOrMore>          
+                  </zeroOrMore>
                </choice>
             </zeroOrMore>
             <choice>
@@ -5573,7 +5571,7 @@ Sample values include: 1] suspension (suspension); 2] contraction (contraction);
                       xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:list[@type='gloss']">
-	              <sch:assert test="tei:label">The content of a "gloss" list should include a sequence of one or more pairs of a label element followed by an item element</sch:assert>
+               <sch:assert test="tei:label">The content of a "gloss" list should include a sequence of one or more pairs of a label element followed by an item element</sch:assert>
             </sch:rule>
          </pattern>
          <ref name="tei_att.global.attributes"/>
@@ -6117,14 +6115,8 @@ Sample values include: 1] main; 2] sub (subordinate); 3] alt (alternate); 4] sho
             </zeroOrMore>
             <oneOrMore>
                <choice>
-          
-            
                   <ref name="tei_model.imprintPart"/>
-          
-          
-            
                   <ref name="tei_model.dateLike"/>
-          
                </choice>
                <zeroOrMore>
                   <ref name="tei_respStmt"/>
@@ -6594,21 +6586,17 @@ Sample values include: 1] index; 2] toc; 3] figlist; 4] tablist</a:documentation
       <element name="particDesc">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(participation description) describes the identifiable speakers, voices, or other participants in any kind of text or other persons named or otherwise referred to in a text, edition, or metadata. [16.2. Contextual Information]</a:documentation>
          <choice>
-            
-                <oneOrMore>
+            <oneOrMore>
                <ref name="tei_model.pLike"/>
             </oneOrMore>
-            
-            
-                <oneOrMore>
+            <oneOrMore>
                <choice>
-                    <ref name="tei_model.personLike"/>
-                    <ref name="tei_listPerson"/>
-                    <ref name="tei_listOrg"/>
-                </choice>
+                  <ref name="tei_model.personLike"/>
+                  <ref name="tei_listPerson"/>
+                  <ref name="tei_listOrg"/>
+               </choice>
             </oneOrMore>
-            
-        </choice>
+         </choice>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.declarable.attributes"/>
          <empty/>
@@ -6618,21 +6606,17 @@ Sample values include: 1] index; 2] toc; 3] figlist; 4] tablist</a:documentation
       <element name="settingDesc">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(setting description) describes the setting or settings within which a language interaction takes place, or other places otherwise referred to in a text, edition, or metadata. [16.2. Contextual Information 2.4. The Profile Description]</a:documentation>
          <choice>
-            
-                <oneOrMore>
+            <oneOrMore>
                <ref name="tei_model.pLike"/>
             </oneOrMore>
-            
-            
-                <oneOrMore>
+            <oneOrMore>
                <choice>
-                    <ref name="tei_setting"/>
-                    <ref name="tei_model.placeLike"/>
-                    <ref name="tei_listPlace"/>
-                </choice>
+                  <ref name="tei_setting"/>
+                  <ref name="tei_model.placeLike"/>
+                  <ref name="tei_listPlace"/>
+               </choice>
             </oneOrMore>
-            
-        </choice>
+         </choice>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.declarable.attributes"/>
          <empty/>
@@ -7034,11 +7018,9 @@ Suggested values include: 1] persuade; 2] express; 3] inform; 4] entertain</a:do
       <element name="editionStmt">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(edition statement) groups information relating to one edition of a text. [2.2.2. The Edition Statement 2.2. The File Description]</a:documentation>
          <choice>
-      
             <oneOrMore>
                <ref name="tei_model.pLike"/>
             </oneOrMore>
-      
             <group>
                <ref name="tei_edition"/>
                <zeroOrMore>
@@ -7070,19 +7052,15 @@ Suggested values include: 1] persuade; 2] express; 3] inform; 4] entertain</a:do
       <element name="publicationStmt">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(publication statement) groups information concerning the publication or distribution of an electronic or other text. [2.2.4. Publication, Distribution, Licensing, etc. 2.2. The File Description]</a:documentation>
          <choice>
-      
-	           <oneOrMore>
+            <oneOrMore>
                <ref name="tei_model.publicationStmtPart.agency"/>
                <zeroOrMore>
                   <ref name="tei_model.publicationStmtPart.detail"/>
                </zeroOrMore>
             </oneOrMore>
-      
-      
-	           <oneOrMore>
+            <oneOrMore>
                <ref name="tei_model.pLike"/>
             </oneOrMore>
-      
          </choice>
          <ref name="tei_att.global.attributes"/>
          <empty/>
@@ -7195,11 +7173,9 @@ Suggested values include: 1] ISBN; 2] ISSN; 3] DOI; 4] URI; 5] VIAF; 6] ESTC; 7]
       <element name="seriesStmt">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(series statement) groups information about the series, if any, to which a publication belongs. [2.2.5. The Series Statement 2.2. The File Description]</a:documentation>
          <choice>
-      
             <oneOrMore>
                <ref name="tei_model.pLike"/>
             </oneOrMore>
-      
             <group>
                <oneOrMore>
                   <ref name="tei_title"/>
@@ -7434,10 +7410,10 @@ Suggested values include: 1] ISBN; 2] ISSN; 3] DOI; 4] URI; 5] VIAF; 6] ESTC; 7]
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="frame-quotation-quotationContents-constraint-rule-25">
-            <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
-                      xmlns="http://www.tei-c.org/ns/1.0"
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="tei:quotation">
                <sch:report test="not( @marks )  and  not( tei:p )">
           On <sch:name/>, either the @marks attribute should be used, or a paragraph of description provided
@@ -7720,10 +7696,10 @@ Sample values include: 1] first-line; 2] first-letter; 3] before; 4] after</a:do
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="frame-citeStructure-match-citestructure-outer-match-constraint-rule-26">
-            <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
-                      xmlns="http://www.tei-c.org/ns/1.0"
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="tei:citeStructure[not(parent::tei:citeStructure)]">
                <sch:assert test="starts-with(@match,'/')">An XPath in @match on the outer <sch:name/> must start with '/'.</sch:assert>
             </sch:rule>
@@ -7731,10 +7707,10 @@ Sample values include: 1] first-line; 2] first-letter; 3] before; 4] after</a:do
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="frame-citeStructure-match-citestructure-inner-match-constraint-rule-27">
-            <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
-                      xmlns="http://www.tei-c.org/ns/1.0"
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="tei:citeStructure[parent::tei:citeStructure]">
                <sch:assert test="not(starts-with(@match,'/'))">An XPath in @match must not start with '/' except on the outer <sch:name/>.</sch:assert>
             </sch:rule>
@@ -7849,14 +7825,6 @@ Sample values include: 1] book; 2] chapter; 3] entry; 4] poem; 5] letter; 6] lin
       <element name="taxonomy">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(taxonomy) defines a typology either implicitly, by means of a bibliographic citation, or explicitly by a structured taxonomy. [2.3.7. The Classification Declaration]</a:documentation>
          <choice>
-      
-      
-      
-      
-      
-      
-      
-      
             <choice>
                <oneOrMore>
                   <choice>
@@ -7993,7 +7961,7 @@ Suggested values include: 1] WGS84 (World Geodetic System); 2] MGRS (Military Gr
                </optional>
                <optional>
                   <ref name="tei_unit"/>
-               </optional>     
+               </optional>
             </choice>
          </oneOrMore>
          <ref name="tei_att.global.attributes"/>
@@ -8051,7 +8019,7 @@ Suggested values include: 1] WGS84 (World Geodetic System); 2] MGRS (Military Gr
                </zeroOrMore>
                <zeroOrMore>
                   <ref name="tei_model.pLike"/>
-               </zeroOrMore>        
+               </zeroOrMore>
             </choice>
          </group>
          <ref name="tei_att.global.attributes"/>
@@ -8113,16 +8081,12 @@ Suggested values include: 1] WGS84 (World Geodetic System); 2] MGRS (Military Gr
       <element name="langUsage">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(language usage) describes the languages, sublanguages, registers, dialects, etc. represented within a text. [2.4.2. Language Usage 2.4. The Profile Description 16.3.2. Declarable Elements]</a:documentation>
          <choice>
-        
             <oneOrMore>
                <ref name="tei_model.pLike"/>
             </oneOrMore>
-         
-          
             <oneOrMore>
                <ref name="tei_language"/>
             </oneOrMore>
-        
          </choice>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.declarable.attributes"/>
@@ -8178,7 +8142,7 @@ Suggested values include: 1] WGS84 (World Geodetic System); 2] MGRS (Military Gr
          <choice>
             <oneOrMore>
                <ref name="tei_term"/>
-            </oneOrMore>      
+            </oneOrMore>
             <ref name="tei_list"/>
          </choice>
          <ref name="tei_att.global.attributes"/>
@@ -8253,16 +8217,12 @@ Suggested values include: 1] WGS84 (World Geodetic System); 2] MGRS (Military Gr
       <element name="correspDesc">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(correspondence description) contains a description of the actions related to one act of correspondence. [2.4.6. Correspondence Description]</a:documentation>
          <choice>
-      
             <oneOrMore>
                <ref name="tei_model.correspDescPart"/>
             </oneOrMore>
-      
-      
             <oneOrMore>
                <ref name="tei_model.pLike"/>
             </oneOrMore>
-      
          </choice>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.canonical.attributes"/>
@@ -8491,7 +8451,7 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
                   <rng:ref name="tei_model.divTop"/>
                   <rng:zeroOrMore>
                      <rng:choice>
-                        <rng:ref name="tei_model.global"/> 
+                        <rng:ref name="tei_model.global"/>
                         <rng:ref name="tei_model.divTop"/>
                      </rng:choice>
                   </rng:zeroOrMore>
@@ -8502,14 +8462,13 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
                   <rng:ref name="tei_model.divGenLike"/>
                   <rng:zeroOrMore>
                      <rng:choice>
-                        <rng:ref name="tei_model.global"/> 
+                        <rng:ref name="tei_model.global"/>
                         <rng:ref name="tei_model.divGenLike"/>
                      </rng:choice>
                   </rng:zeroOrMore>
                </rng:group>
             </rng:optional>
             <choice>
-                  
                <oneOrMore>
                   <ref name="tei_model.divLike"/>
                   <zeroOrMore>
@@ -8519,7 +8478,6 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
                      </choice>
                   </zeroOrMore>
                </oneOrMore>
-        
                <oneOrMore>
                   <ref name="tei_model.div1Like"/>
                   <zeroOrMore>
@@ -8529,7 +8487,6 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
                      </choice>
                   </zeroOrMore>
                </oneOrMore>
-        
                <group>
                   <oneOrMore>
                      <choice>
@@ -8542,7 +8499,6 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
                   </oneOrMore>
                   <optional>
                      <choice>
-            
                         <oneOrMore>
                            <ref name="tei_model.divLike"/>
                            <zeroOrMore>
@@ -8552,7 +8508,6 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
                               </choice>
                            </zeroOrMore>
                         </oneOrMore>
-            
                         <oneOrMore>
                            <ref name="tei_model.div1Like"/>
                            <zeroOrMore>
@@ -8656,7 +8611,6 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
             <zeroOrMore>
                <choice>
                   <ref name="tei_model.divTop"/>
-        
                   <ref name="tei_model.global"/>
                </choice>
             </zeroOrMore>
@@ -8665,17 +8619,17 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
                   <rng:choice>
                      <oneOrMore>
                         <rng:choice>
-                           <rng:ref name="tei_model.divLike"/> 
+                           <rng:ref name="tei_model.divLike"/>
                            <rng:ref name="tei_model.divGenLike"/>
                         </rng:choice>
                         <rng:zeroOrMore>
                            <rng:ref name="tei_model.global"/>
                         </rng:zeroOrMore>
-                     </oneOrMore> 
+                     </oneOrMore>
                      <group>
                         <oneOrMore>
                            <rng:choice>
-                              <rng:ref name="tei_schemaSpec"/> 
+                              <rng:ref name="tei_schemaSpec"/>
                               <rng:ref name="tei_model.common"/>
                            </rng:choice>
                            <rng:zeroOrMore>
@@ -8684,7 +8638,7 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
                         </oneOrMore>
                         <rng:zeroOrMore>
                            <rng:choice>
-                              <rng:ref name="tei_model.divLike"/> 
+                              <rng:ref name="tei_model.divLike"/>
                               <rng:ref name="tei_model.divGenLike"/>
                            </rng:choice>
                            <rng:zeroOrMore>
@@ -8750,17 +8704,17 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
                   <rng:choice>
                      <oneOrMore>
                         <rng:choice>
-                           <rng:ref name="tei_model.div2Like"/> 
+                           <rng:ref name="tei_model.div2Like"/>
                            <rng:ref name="tei_model.divGenLike"/>
                         </rng:choice>
                         <rng:zeroOrMore>
                            <rng:ref name="tei_model.global"/>
                         </rng:zeroOrMore>
-                     </oneOrMore> 
+                     </oneOrMore>
                      <group>
                         <oneOrMore>
                            <rng:choice>
-                              <rng:ref name="tei_schemaSpec"/> 
+                              <rng:ref name="tei_schemaSpec"/>
                               <rng:ref name="tei_model.common"/>
                            </rng:choice>
                            <rng:zeroOrMore>
@@ -8769,7 +8723,7 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
                         </oneOrMore>
                         <rng:zeroOrMore>
                            <rng:choice>
-                              <rng:ref name="tei_model.div2Like"/> 
+                              <rng:ref name="tei_model.div2Like"/>
                               <rng:ref name="tei_model.divGenLike"/>
                            </rng:choice>
                            <rng:zeroOrMore>
@@ -8809,17 +8763,17 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
                   <rng:choice>
                      <oneOrMore>
                         <rng:choice>
-                           <rng:ref name="tei_model.div3Like"/> 
+                           <rng:ref name="tei_model.div3Like"/>
                            <rng:ref name="tei_model.divGenLike"/>
                         </rng:choice>
                         <rng:zeroOrMore>
                            <rng:ref name="tei_model.global"/>
                         </rng:zeroOrMore>
-                     </oneOrMore> 
+                     </oneOrMore>
                      <group>
                         <oneOrMore>
                            <rng:choice>
-                              <rng:ref name="tei_schemaSpec"/> 
+                              <rng:ref name="tei_schemaSpec"/>
                               <rng:ref name="tei_model.common"/>
                            </rng:choice>
                            <rng:zeroOrMore>
@@ -8828,7 +8782,7 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
                         </oneOrMore>
                         <rng:zeroOrMore>
                            <rng:choice>
-                              <rng:ref name="tei_model.div3Like"/> 
+                              <rng:ref name="tei_model.div3Like"/>
                               <rng:ref name="tei_model.divGenLike"/>
                            </rng:choice>
                            <rng:zeroOrMore>
@@ -8868,17 +8822,17 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
                   <rng:choice>
                      <oneOrMore>
                         <rng:choice>
-                           <rng:ref name="tei_model.div4Like"/> 
+                           <rng:ref name="tei_model.div4Like"/>
                            <rng:ref name="tei_model.divGenLike"/>
                         </rng:choice>
                         <rng:zeroOrMore>
                            <rng:ref name="tei_model.global"/>
                         </rng:zeroOrMore>
-                     </oneOrMore> 
+                     </oneOrMore>
                      <group>
                         <oneOrMore>
                            <rng:choice>
-                              <rng:ref name="tei_schemaSpec"/> 
+                              <rng:ref name="tei_schemaSpec"/>
                               <rng:ref name="tei_model.common"/>
                            </rng:choice>
                            <rng:zeroOrMore>
@@ -8887,7 +8841,7 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
                         </oneOrMore>
                         <rng:zeroOrMore>
                            <rng:choice>
-                              <rng:ref name="tei_model.div4Like"/> 
+                              <rng:ref name="tei_model.div4Like"/>
                               <rng:ref name="tei_model.divGenLike"/>
                            </rng:choice>
                            <rng:zeroOrMore>
@@ -8927,17 +8881,17 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
                   <rng:choice>
                      <oneOrMore>
                         <rng:choice>
-                           <rng:ref name="tei_model.div5Like"/> 
+                           <rng:ref name="tei_model.div5Like"/>
                            <rng:ref name="tei_model.divGenLike"/>
                         </rng:choice>
                         <rng:zeroOrMore>
                            <rng:ref name="tei_model.global"/>
                         </rng:zeroOrMore>
-                     </oneOrMore> 
+                     </oneOrMore>
                      <group>
                         <oneOrMore>
                            <rng:choice>
-                              <rng:ref name="tei_schemaSpec"/> 
+                              <rng:ref name="tei_schemaSpec"/>
                               <rng:ref name="tei_model.common"/>
                            </rng:choice>
                            <rng:zeroOrMore>
@@ -8946,7 +8900,7 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
                         </oneOrMore>
                         <rng:zeroOrMore>
                            <rng:choice>
-                              <rng:ref name="tei_model.div5Like"/> 
+                              <rng:ref name="tei_model.div5Like"/>
                               <rng:ref name="tei_model.divGenLike"/>
                            </rng:choice>
                            <rng:zeroOrMore>
@@ -8986,17 +8940,17 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
                   <rng:choice>
                      <oneOrMore>
                         <rng:choice>
-                           <rng:ref name="tei_model.div6Like"/> 
+                           <rng:ref name="tei_model.div6Like"/>
                            <rng:ref name="tei_model.divGenLike"/>
                         </rng:choice>
                         <rng:zeroOrMore>
                            <rng:ref name="tei_model.global"/>
                         </rng:zeroOrMore>
-                     </oneOrMore> 
+                     </oneOrMore>
                      <group>
                         <oneOrMore>
                            <rng:choice>
-                              <rng:ref name="tei_schemaSpec"/> 
+                              <rng:ref name="tei_schemaSpec"/>
                               <rng:ref name="tei_model.common"/>
                            </rng:choice>
                            <rng:zeroOrMore>
@@ -9005,7 +8959,7 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
                         </oneOrMore>
                         <rng:zeroOrMore>
                            <rng:choice>
-                              <rng:ref name="tei_model.div6Like"/> 
+                              <rng:ref name="tei_model.div6Like"/>
                               <rng:ref name="tei_model.divGenLike"/>
                            </rng:choice>
                            <rng:zeroOrMore>
@@ -9045,17 +8999,17 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
                   <rng:choice>
                      <oneOrMore>
                         <rng:choice>
-                           <rng:ref name="tei_model.div7Like"/> 
+                           <rng:ref name="tei_model.div7Like"/>
                            <rng:ref name="tei_model.divGenLike"/>
                         </rng:choice>
                         <rng:zeroOrMore>
                            <rng:ref name="tei_model.global"/>
                         </rng:zeroOrMore>
-                     </oneOrMore> 
+                     </oneOrMore>
                      <group>
                         <oneOrMore>
                            <rng:choice>
-                              <rng:ref name="tei_schemaSpec"/> 
+                              <rng:ref name="tei_schemaSpec"/>
                               <rng:ref name="tei_model.common"/>
                            </rng:choice>
                            <rng:zeroOrMore>
@@ -9064,7 +9018,7 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
                         </oneOrMore>
                         <rng:zeroOrMore>
                            <rng:choice>
-                              <rng:ref name="tei_model.div7Like"/> 
+                              <rng:ref name="tei_model.div7Like"/>
                               <rng:ref name="tei_model.divGenLike"/>
                            </rng:choice>
                            <rng:zeroOrMore>
@@ -9103,7 +9057,7 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
                <rng:group>
                   <oneOrMore>
                      <rng:choice>
-                        <rng:ref name="tei_schemaSpec"/> 
+                        <rng:ref name="tei_schemaSpec"/>
                         <rng:ref name="tei_model.common"/>
                      </rng:choice>
                      <rng:zeroOrMore>
@@ -9131,13 +9085,13 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a closing title or footer appearing at the end of a division of a text. [4.2.4. Content of Textual Divisions 4.2. Elements Common to All Divisions]</a:documentation>
          <zeroOrMore>
             <choice>
-	              <text/>
-	              <ref name="tei_lg"/>
-	              <ref name="tei_model.gLike"/>
-	              <ref name="tei_model.phrase"/>
-	              <ref name="tei_model.inter"/>
-	              <ref name="tei_model.lLike"/>
-	              <ref name="tei_model.global"/>
+               <text/>
+               <ref name="tei_lg"/>
+               <ref name="tei_model.gLike"/>
+               <ref name="tei_model.phrase"/>
+               <ref name="tei_model.inter"/>
+               <ref name="tei_model.lLike"/>
+               <ref name="tei_model.global"/>
             </choice>
          </zeroOrMore>
          <ref name="tei_att.global.attributes"/>
@@ -9227,7 +9181,6 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
                <text/>
                <ref name="tei_model.gLike"/>
                <ref name="tei_model.phrase"/>
-        
                <ref name="tei_argument"/>
                <ref name="tei_byline"/>
                <ref name="tei_dateline"/>
@@ -9324,8 +9277,8 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
             <ref name="tei_model.titlepagePart"/>
             <zeroOrMore>
                <choice>
-	                 <ref name="tei_model.titlepagePart"/>
-	                 <ref name="tei_model.global"/>
+                  <ref name="tei_model.titlepagePart"/>
+                  <ref name="tei_model.global"/>
                </choice>
             </zeroOrMore>
          </group>
@@ -9467,18 +9420,18 @@ Suggested values include: 1] main (main); 2] sub (subordinate); 3] alt (alternat
                         <rng:ref name="tei_model.div1Like"/>
                         <rng:zeroOrMore>
                            <rng:choice>
-                              <rng:ref name="tei_model.div1Like"/> 
-                              <rng:ref name="tei_model.frontPart"/> 
+                              <rng:ref name="tei_model.div1Like"/>
+                              <rng:ref name="tei_model.frontPart"/>
                               <rng:ref name="tei_model.global"/>
                            </rng:choice>
                         </rng:zeroOrMore>
-                     </group> 
+                     </group>
                      <group>
                         <rng:ref name="tei_model.divLike"/>
                         <rng:zeroOrMore>
                            <rng:choice>
-                              <rng:ref name="tei_model.divLike"/> 
-                              <rng:ref name="tei_model.frontPart"/> 
+                              <rng:ref name="tei_model.divLike"/>
+                              <rng:ref name="tei_model.frontPart"/>
                               <rng:ref name="tei_model.global"/>
                            </rng:choice>
                         </rng:zeroOrMore>
@@ -9488,7 +9441,7 @@ Suggested values include: 1] main (main); 2] sub (subordinate); 3] alt (alternat
                      <rng:ref name="tei_model.divBottom"/>
                      <rng:zeroOrMore>
                         <rng:choice>
-                           <rng:ref name="tei_model.divBottom"/> 
+                           <rng:ref name="tei_model.divBottom"/>
                            <rng:ref name="tei_model.global"/>
                         </rng:choice>
                      </rng:zeroOrMore>
@@ -9543,7 +9496,7 @@ Suggested values include: 1] main (main); 2] sub (subordinate); 3] alt (alternat
                   <rng:ref name="tei_model.divBottomPart"/>
                   <rng:zeroOrMore>
                      <rng:choice>
-                        <rng:ref name="tei_model.divBottomPart"/> 
+                        <rng:ref name="tei_model.divBottomPart"/>
                         <rng:ref name="tei_model.global"/>
                      </rng:choice>
                   </rng:zeroOrMore>
@@ -9569,7 +9522,6 @@ Suggested values include: 1] main (main); 2] sub (subordinate); 3] alt (alternat
                <data type="dateTime">
                   <param name="pattern">(19[789][0-9]|[2-9][0-9]{3}).*</param>
                </data>
-      
             </choice>
          </attribute>
       </optional>
@@ -9617,24 +9569,24 @@ Suggested values include: 1] main (main); 2] sub (subordinate); 3] alt (alternat
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="frame-att.repeatable-MINandMAXoccurs-constraint-rule-30">
-      <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                xmlns:xi="http://www.w3.org/2001/XInclude"
-                xmlns="http://www.tei-c.org/ns/1.0"
+      <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:eg="http://www.tei-c.org/ns/Examples"
+                xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                xmlns:xi="http://www.w3.org/2001/XInclude"
                 context="tei:*[ @minOccurs and @maxOccurs ]">
-        <sch:let name="min" value="@minOccurs cast as xs:integer"/>
-        <sch:let name="max"
+         <sch:let name="min" value="@minOccurs cast as xs:integer"/>
+         <sch:let name="max"
                   value="if ( normalize-space( @maxOccurs ) eq 'unbounded') then -1 else @maxOccurs cast as xs:integer"/>
-        <sch:assert test="$max eq -1 or $max ge $min">@maxOccurs should be greater than or equal to @minOccurs</sch:assert>
+         <sch:assert test="$max eq -1 or $max ge $min">@maxOccurs should be greater than or equal to @minOccurs</sch:assert>
       </sch:rule>
-      <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                xmlns:xi="http://www.w3.org/2001/XInclude"
-                xmlns="http://www.tei-c.org/ns/1.0"
+      <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:eg="http://www.tei-c.org/ns/Examples"
+                xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                xmlns:xi="http://www.w3.org/2001/XInclude"
                 context="tei:*[ @minOccurs and not( @maxOccurs ) ]">
-        <sch:assert test="@minOccurs cast as xs:integer lt 2">When @maxOccurs is not specified, @minOccurs must be 0 or 1</sch:assert>
+         <sch:assert test="@minOccurs cast as xs:integer lt 2">When @maxOccurs is not specified, @minOccurs must be 0 or 1</sch:assert>
       </sch:rule>
    </pattern>
    <define name="tei_model.contentPart">
@@ -9705,13 +9657,13 @@ Suggested values include: 1] main (main); 2] sub (subordinate); 3] alt (alternat
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="frame-att.identified-spec-in-module-constraint-rule-32">
-      <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                xmlns:xi="http://www.w3.org/2001/XInclude"
-                xmlns="http://www.tei-c.org/ns/1.0"
+      <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:eg="http://www.tei-c.org/ns/Examples"
+                xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                xmlns:xi="http://www.w3.org/2001/XInclude"
                 context="tei:elementSpec[@module]|tei:classSpec[@module]|tei:macroSpec[@module]">
-        <sch:assert test="(not(ancestor::tei:schemaSpec | ancestor::tei:TEI | ancestor::tei:teiCorpus)) or (not(@module) or (not(//tei:moduleSpec) and not(//tei:moduleRef)) or (//tei:moduleSpec[@ident = current()/@module]) or (//tei:moduleRef[@key = current()/@module]))">
+         <sch:assert test="(not(ancestor::tei:schemaSpec | ancestor::tei:TEI | ancestor::tei:teiCorpus)) or (not(@module) or (not(//tei:moduleSpec) and not(//tei:moduleRef)) or (//tei:moduleSpec[@ident = current()/@module]) or (//tei:moduleRef[@key = current()/@module]))">
         Specification <sch:value-of select="@ident"/>: the value of the module attribute ("<sch:value-of select="@module"/>") 
 should correspond to an existing module, via a moduleSpec or
       moduleRef</sch:assert>
@@ -9730,36 +9682,36 @@ should correspond to an existing module, via a moduleSpec or
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="frame-att.deprecated-validUntil-deprecation-two-month-warning-constraint-rule-33">
-      <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                xmlns:xi="http://www.w3.org/2001/XInclude"
-                xmlns="http://www.tei-c.org/ns/1.0"
+      <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:eg="http://www.tei-c.org/ns/Examples"
+                xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                xmlns:xi="http://www.w3.org/2001/XInclude"
                 context="tei:*[@validUntil]">
-            <sch:let name="advance_warning_period"
+         <sch:let name="advance_warning_period"
                   value="current-date() + xs:dayTimeDuration('P60D')"/>
-            <sch:let name="me_phrase"
+         <sch:let name="me_phrase"
                   value="if (@ident) then concat('The ', @ident ) else concat('This ', local-name(.), ' of ', ancestor::tei:*[@ident][1]/@ident )"/>
-            <sch:assert test="@validUntil cast as xs:date ge current-date()">
-              <sch:value-of select="concat( $me_phrase, ' construct is outdated (as of ', @validUntil, '); ODD processors may ignore it, and its use is no longer supported' )"/>
+         <sch:assert test="@validUntil cast as xs:date ge current-date()">
+            <sch:value-of select="concat( $me_phrase, ' construct is outdated (as of ', @validUntil, '); ODD processors may ignore it, and its use is no longer supported' )"/>
          </sch:assert>
-              <sch:assert role="warning"
+         <sch:assert role="warning"
                      test="@validUntil cast as xs:date ge $advance_warning_period">
-                <sch:value-of select="concat( $me_phrase, ' construct becomes outdated on ', @validUntil )"/>
-              </sch:assert>
-          </sch:rule>
+            <sch:value-of select="concat( $me_phrase, ' construct becomes outdated on ', @validUntil )"/>
+         </sch:assert>
+      </sch:rule>
    </pattern>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="frame-att.deprecated-validUntil-deprecation-should-be-explained-constraint-rule-34">
-      <sch:rule xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                xmlns:xi="http://www.w3.org/2001/XInclude"
-                xmlns="http://www.tei-c.org/ns/1.0"
+      <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:eg="http://www.tei-c.org/ns/Examples"
+                xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                xmlns:xi="http://www.w3.org/2001/XInclude"
                 context="tei:*[@validUntil][ not( self::tei:valDesc | self::tei:valList | self::tei:defaultVal | self::tei:remarks )]">
-            <sch:assert test="child::tei:desc[ @type eq 'deprecationInfo']">
+         <sch:assert test="child::tei:desc[ @type eq 'deprecationInfo']">
               A deprecated construct should include, whenever possible, an explanation, but this <sch:value-of select="name(.)"/> does not have a child &lt;desc type="deprecationInfo"&gt;</sch:assert>
-          </sch:rule>
+      </sch:rule>
    </pattern>
    <define name="tei_att.namespaceable.attributes">
       <ref name="tei_att.namespaceable.attribute.ns"/>
@@ -10014,11 +9966,11 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
       <element name="elementRef">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">points to the specification for some element which is to be included in a schema. [23.2. Modules and Schemas]</a:documentation>
          <empty/>
-         <sch:pattern xmlns:xi="http://www.w3.org/2001/XInclude"
-                      xmlns="http://www.tei-c.org/ns/1.0"
+         <sch:pattern xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:eg="http://www.tei-c.org/ns/Examples"
+                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0">
+                      xmlns:xi="http://www.w3.org/2001/XInclude">
             <sch:rule context="tei:elementRef[ parent::tei:schemaSpec | parent::tei:specGrp ]">
                <sch:report role="error" test="@minOccurs | @maxOccurs">An element reference is not repeatable when part of a schema specification (and thus this &lt;elementRef&gt; should not have @minOccurs or @maxOccurs).</sch:report>
             </sch:rule>
@@ -10056,10 +10008,10 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="frame-moduleRef-modref-constraint-rule-37">
-            <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
-                      xmlns="http://www.tei-c.org/ns/1.0"
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="tei:moduleRef">
                <sch:report test="* and @key">
           Child elements of <sch:name/> are only allowed when an external module is being loaded
@@ -10078,10 +10030,10 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="frame-moduleRef-prefix-not-same-prefix-constraint-rule-38">
-            <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
-                      xmlns="http://www.tei-c.org/ns/1.0"
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="tei:moduleRef">
                <sch:report test="//*[ not( generate-id(.) eq generate-id( current() ) ) ]/@prefix = @prefix">The prefix attribute
             of <sch:name/> should not match that of any other
@@ -10091,10 +10043,10 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="frame-moduleRef-prefix-not-except-and-include-constraint-rule-39">
-            <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
-                      xmlns="http://www.tei-c.org/ns/1.0"
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="tei:moduleRef">
                <sch:report test="@except and @include">It is an error to supply both the @include and @except attributes</sch:report>
             </sch:rule>
@@ -10335,17 +10287,17 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="frame-elementSpec-child-constraint-based-on-mode-constraint-rule-40">
-            <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
-                      xmlns="http://www.tei-c.org/ns/1.0"
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="tei:elementSpec[ @mode eq 'delete' ]">
                <sch:report test="child::*">This elementSpec element has a mode= of "delete" even though it has child elements. Change the mode= to "add", "change", or "replace", or remove the child elements.</sch:report>
             </sch:rule>
-            <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
-                      xmlns="http://www.tei-c.org/ns/1.0"
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="tei:elementSpec[ @mode = ('add','change','replace') ]">
                <sch:assert test="child::* | (@* except (@mode, @ident))">This elementSpec element has a mode= of "<sch:value-of select="@mode"/>", but does not have any child elements or schema-changing attributes. Specify child elements, use validUntil=, predeclare=, ns=, or prefix=, or change the mode= to "delete".</sch:assert>
             </sch:rule>
@@ -10495,8 +10447,8 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
             </zeroOrMore>
             <optional>
                <choice>
-                  <ref name="tei_content"/> 
-                  <ref name="tei_valList"/> 
+                  <ref name="tei_content"/>
+                  <ref name="tei_valList"/>
                </choice>
             </optional>
             <zeroOrMore>
@@ -10515,10 +10467,10 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="frame-dataSpec-no_elements_in_data_content-constraint-rule-42">
-            <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
-                      xmlns="http://www.tei-c.org/ns/1.0"
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="tei:dataSpec/tei:content"
                       role="warn">
                <sch:report test=".//tei:anyElement | .//tei:classRef | .//tei:elementRef">
@@ -10597,10 +10549,10 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="frame-listRef-TagDocsNestinglistRef-constraint-rule-43">
-            <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
-                      xmlns="http://www.tei-c.org/ns/1.0"
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="( tei:classSpec | tei:dataSpec | tei:elementSpec | tei:macroSpec | tei:moduleSpec | tei:schemaSpec | tei:specGrp )/tei:listRef">
                <sch:report test="tei:listRef">In the context of tagset documentation, the listRef element must not self-nest.</sch:report>
             </sch:rule>
@@ -10608,10 +10560,10 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="frame-listRef-TagDocslistRefChildren-constraint-rule-44">
-            <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
-                      xmlns="http://www.tei-c.org/ns/1.0"
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="( tei:classSpec | tei:dataSpec | tei:elementSpec | tei:macroSpec | tei:moduleSpec | tei:schemaSpec | tei:specGrp )/tei:listRef/tei:ptr | ( tei:classSpec | tei:dataSpec | tei:elementSpec | tei:macroSpec | tei:moduleSpec | tei:schemaSpec | tei:specGrp )/tei:listRef/tei:ref">
                <sch:assert test="@target and not( matches( @target,'\s') )">In the context of tagset documentation, each ptr or ref element inside a listRef must have a target attribute with only 1 pointer as its value.</sch:assert>
             </sch:rule>
@@ -10777,10 +10729,10 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="frame-model-no_dup_default_models-constraint-rule-45">
-            <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
-                      xmlns="http://www.tei-c.org/ns/1.0"
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="tei:model[ not( parent::tei:modelSequence ) ][ not( @predicate ) ]">
                <sch:let name="output" value="normalize-space( @output )"/>
                <sch:report test="following-sibling::tei:model [ not( @predicate )] [ normalize-space( @output ) eq $output ]">
@@ -10792,10 +10744,10 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="frame-model-no_dup_models-constraint-rule-46">
-            <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
-                      xmlns="http://www.tei-c.org/ns/1.0"
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="tei:model[ not( parent::tei:modelSequence ) ][ @predicate ]">
                <sch:let name="predicate" value="normalize-space( @predicate )"/>
                <sch:let name="output" value="normalize-space( @output )"/>
@@ -10919,10 +10871,10 @@ Sample values include: 1] web; 2] print; 3] plain</a:documentation>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="frame-modelSequence-no_outputs_nor_predicates_4_my_kids-constraint-rule-47">
-            <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
-                      xmlns="http://www.tei-c.org/ns/1.0"
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="tei:modelSequence">
                <sch:report role="warning" test="tei:model[@output]">The 'model' children
         of a 'modelSequence' element inherit the @output attribute of the
@@ -11097,6 +11049,37 @@ Suggested values include: 1] alternate; 2] default; 3] height; 4] id; 5] label; 
          <empty/>
       </element>
    </define>
+   <define name="tei_content">
+      <element name="content">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(content model) contains a declaration of the intended content model for the element (or other construct) being specified. [23.5. Element Specifications]</a:documentation>
+         <choice>
+            <ref name="tei_valList"/>
+            <ref name="tei_model.contentPart"/>
+            <ref name="anyElement_content_3"/>
+         </choice>
+         <ref name="tei_att.global.attributes"/>
+         <optional>
+            <attribute xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                       name="autoPrefix"
+                       a:defaultValue="true">
+               <a:documentation>controls whether or not pattern names generated in the corresponding RELAX NG schema source are automatically prefixed to avoid potential nameclashes.</a:documentation>
+               <choice>
+                  <value>true</value>
+                  <a:documentation>Each name referenced in e.g. an <code xmlns="http://www.w3.org/1999/xhtml"
+                           xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;rng:ref&gt;</code> element within a content model is automatically prefixed by the value of the <code xmlns="http://www.w3.org/1999/xhtml"
+                           xmlns:rng="http://relaxng.org/ns/structure/1.0">@prefix</code> attribute on the current <code xmlns="http://www.w3.org/1999/xhtml"
+                           xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;schemaSpec&gt;</code>
+                  </a:documentation>
+                  <value>false</value>
+                  <a:documentation>No prefixes are added: any prefix required by the value of the <code xmlns="http://www.w3.org/1999/xhtml"
+                           xmlns:rng="http://relaxng.org/ns/structure/1.0">@prefix</code> attribute on the current <code xmlns="http://www.w3.org/1999/xhtml"
+                           xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;schemaSpec&gt;</code> must therefore be supplied explicitly, as appropriate.</a:documentation>
+               </choice>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
    <define name="tei_sequence">
       <element name="sequence">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates that the constructs referenced by its children form a sequence. [23.5.1. Defining Content Models]</a:documentation>
@@ -11106,10 +11089,10 @@ Suggested values include: 1] alternate; 2] default; 3] height; 4] id; 5] label; 
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="frame-sequence-sequencechilden-constraint-rule-48">
-            <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
-                      xmlns="http://www.tei-c.org/ns/1.0"
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="tei:sequence">
                <sch:assert test="count(*) gt 1">The sequence element must have at least two child elements</sch:assert>
             </sch:rule>
@@ -11137,10 +11120,10 @@ Suggested values include: 1] alternate; 2] default; 3] height; 4] id; 5] label; 
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="frame-alternate-alternatechilden-constraint-rule-49">
-            <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
-                      xmlns="http://www.tei-c.org/ns/1.0"
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="tei:alternate">
                <sch:assert test="count(*) gt 1">The alternate element must have at least two child elements</sch:assert>
             </sch:rule>
@@ -11168,10 +11151,10 @@ Suggested values include: 1] alternate; 2] default; 3] height; 4] id; 5] label; 
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="frame-constraintDecl-one-constraintDecl-per-scheme-constraint-rule-50">
-            <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
-                      xmlns="http://www.tei-c.org/ns/1.0"
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="/*[ count( //tei:constraintDecl ) gt 1 ]">
                <sch:let name="schemes"
                         value="//tei:constraintDecl[ not(ancestor::*[local-name(.) eq 'egXML'] ) ]/@scheme"/>
@@ -11263,24 +11246,24 @@ Suggested values include: 1] exslt; 2] stx; 3] xslt; 4] xslt2; 5] xslt3; 6] xpat
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="frame-constraintSpec-empty-based-on-mode-constraint-rule-52">
-            <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
-                      xmlns="http://www.tei-c.org/ns/1.0"
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="tei:constraintSpec[ @mode eq 'delete']">
                <sch:report test="child::*">This constraintSpec element has a mode= of "delete" even though it has child elements. Change the mode= to "add", "change", or "replace", or remove the child elements.</sch:report>
             </sch:rule>
-            <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
-                      xmlns="http://www.tei-c.org/ns/1.0"
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="tei:constraintSpec[ @mode eq 'change']">
                <sch:assert test="child::*">This constraintSpec element has a mode= of "change", but does not have any child elements. Specify child elements, or change the mode= to "delete".</sch:assert>
             </sch:rule>
-            <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
-                      xmlns="http://www.tei-c.org/ns/1.0"
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="tei:constraintSpec[ @mode = ('add','replace') ]">
                <sch:assert test="child::tei:constraint">This constraintSpec element has a mode= of "<sch:value-of select="@mode"/>", but does not have a child 'constraint' element. Use a child 'constraint' element or change the mode= to "delete" or "change".</sch:assert>
             </sch:rule>
@@ -11288,10 +11271,10 @@ Suggested values include: 1] exslt; 2] stx; 3] xslt; 4] xslt2; 5] xslt3; 6] xpat
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="frame-constraintSpec-sch_no_more-constraint-rule-55">
-            <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
-                      xmlns="http://www.tei-c.org/ns/1.0"
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="tei:constraintSpec">
                <sch:report test="tei:constraint/sch1x:* and @scheme = ('isoschematron','schematron')">Rules
         in the Schematron 1.* language must be inside a constraintSpec
@@ -11302,10 +11285,10 @@ Suggested values include: 1] exslt; 2] stx; 3] xslt; 4] xslt2; 5] xslt3; 6] xpat
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="frame-constraintSpec-isosch-constraint-rule-56">
-            <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
-                      xmlns="http://www.tei-c.org/ns/1.0"
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="tei:constraintSpec[ @mode = ('add','replace') or not( @mode ) ]">
                <sch:report test="tei:constraint/sch:* and not( @scheme eq 'schematron')">Rules
           in the ISO Schematron language must be inside a constraintSpec
@@ -11315,10 +11298,10 @@ Suggested values include: 1] exslt; 2] stx; 3] xslt; 4] xslt2; 5] xslt3; 6] xpat
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="frame-constraintSpec-context-required-constraint-rule-57">
-            <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
-                      xmlns="http://www.tei-c.org/ns/1.0"
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="tei:constraintSpec[ @scheme eq 'schematron']/tei:constraint[ .//sch:assert | .//sch:report ]">
                <sch:let name="assertsHaveContext"
                         value="for $a in .//sch:assert return exists( $a/ancestor::sch:rule/@context )"/>
@@ -11331,10 +11314,10 @@ Suggested values include: 1] exslt; 2] stx; 3] xslt; 4] xslt2; 5] xslt3; 6] xpat
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="frame-constraintSpec-unique-constraintSpec-ident-constraint-rule-58">
-            <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
-                      xmlns="http://www.tei-c.org/ns/1.0"
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="tei:constraintSpec[ @mode eq 'add' or not( @mode ) ]">
                <sch:let name="myIdent" value="normalize-space(@ident)"/>
                <sch:report test="preceding::tei:constraintSpec[ normalize-space(@ident) eq $myIdent ]">
@@ -11376,10 +11359,10 @@ Suggested values include: 1] schematron (ISO Schematron)</a:documentation>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="frame-constraintSpec-scheme-usage_based_on_mode-constraint-rule-61">
-            <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
-                      xmlns="http://www.tei-c.org/ns/1.0"
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="tei:constraintSpec[ @mode = ('add','replace')  or  not( @mode ) ]">
                <sch:assert test="@scheme">The @scheme attribute of &lt;constraintSpec&gt; is required when the @mode is <sch:value-of select="if (@mode) then concat('&#34;',@mode,'&#34;') else 'not specified'"/> (here on "<sch:value-of select="@ident"/>")</sch:assert>
             </sch:rule>
@@ -11436,7 +11419,7 @@ Suggested values include: 1] schematron (ISO Schematron)</a:documentation>
             </optional>
             <optional>
                <choice>
-                  <ref name="tei_valList"/>     
+                  <ref name="tei_valList"/>
                   <oneOrMore>
                      <ref name="tei_valDesc"/>
                   </oneOrMore>
@@ -11449,17 +11432,21 @@ Suggested values include: 1] schematron (ISO Schematron)</a:documentation>
                <ref name="tei_remarks"/>
             </zeroOrMore>
          </group>
-         <sch:ns xmlns:xi="http://www.w3.org/2001/XInclude"
-                 xmlns="http://www.tei-c.org/ns/1.0"
+         <sch:ns xmlns="http://www.tei-c.org/ns/1.0"
                  xmlns:eg="http://www.tei-c.org/ns/Examples"
-                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                 xmlns:xi="http://www.w3.org/2001/XInclude"
                  prefix="teix"
                  uri="http://www.tei-c.org/ns/Examples"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="frame-attDef-attDefContents-constraint-rule-62">
-            <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron" context="tei:attDef">
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:eg="http://www.tei-c.org/ns/Examples"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
+                      context="tei:attDef">
                <sch:assert test="ancestor::teix:egXML[ @valid eq 'feasible']                        or @mode eq 'change'                        or @mode eq 'delete'                        or tei:datatype                        or tei:valList[ @type eq 'closed']">
           Attribute: the definition of the @<sch:value-of select="@ident"/> attribute in the
           <sch:value-of select="ancestor::*[@ident][1]/@ident"/>
@@ -11472,7 +11459,10 @@ Suggested values include: 1] schematron (ISO Schematron)</a:documentation>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="frame-attDef-noDefault4Required-constraint-rule-63">
-            <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:eg="http://www.tei-c.org/ns/Examples"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="tei:attDef[@usage eq 'req']">
                <sch:report test="tei:defaultVal">Since the @<sch:value-of select="@ident"/> attribute is required, it will always be specified. Thus the default value (of "<sch:value-of select="normalize-space(tei:defaultVal)"/>") will never be used. Either change the definition of the attribute so it is not required ("rec" or "opt"), or remove the defaultVal element.</sch:report>
             </sch:rule>
@@ -11480,7 +11470,10 @@ Suggested values include: 1] schematron (ISO Schematron)</a:documentation>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="frame-attDef-defaultIsInClosedList-twoOrMore-constraint-rule-64">
-            <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:eg="http://www.tei-c.org/ns/Examples"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="tei:attDef[     tei:defaultVal                                      and tei:valList[ @type eq 'closed']                                      and tei:datatype[ @maxOccurs &gt; 1  or  @minOccurs &gt; 1  or  @maxOccurs eq 'unbounded']                                    ]">
                <sch:assert test="tokenize(normalize-space(tei:defaultVal),' ') = tei:valList/tei:valItem/@ident">In the <sch:value-of select="local-name(ancestor::*[@ident][1])"/> defining
         <sch:value-of select="ancestor::*[@ident][1]/@ident"/> the default value of the
@@ -11491,7 +11484,10 @@ Suggested values include: 1] schematron (ISO Schematron)</a:documentation>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="frame-attDef-defaultIsInClosedList-one-constraint-rule-65">
-            <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:eg="http://www.tei-c.org/ns/Examples"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="tei:attDef[     tei:defaultVal                                      and tei:valList[ @type eq 'closed']                                      and tei:datatype[                                             not(@maxOccurs)                                         or  ( if ( @maxOccurs castable as xs:integer ) then ( @maxOccurs cast as xs:integer eq 1 ) else false() )                                                      ]                                    ]">
                <sch:assert test="string(tei:defaultVal) = tei:valList/tei:valItem/@ident">In the <sch:value-of select="local-name(ancestor::*[@ident][1])"/> defining
         <sch:value-of select="ancestor::*[@ident][1]/@ident"/> the default value of the
@@ -11582,10 +11578,10 @@ Suggested values include: 1] schematron (ISO Schematron)</a:documentation>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="frame-dataRef-restrictDataFacet-constraint-rule-66">
-            <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
-                      xmlns="http://www.tei-c.org/ns/1.0"
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="tei:dataRef[tei:dataFacet]">
                <sch:assert role="nonfatal" test="@name">Data facets can only be specified for references to datatypes specified by
           XML Schema Part 2: Datatypes Second Edition — that is, for there to be a 'dataFacet' child there must be a @name attribute.</sch:assert>
@@ -11595,10 +11591,10 @@ Suggested values include: 1] schematron (ISO Schematron)</a:documentation>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="frame-dataRef-restrictAttResctrictionName-constraint-rule-67">
-            <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
-                      xmlns="http://www.tei-c.org/ns/1.0"
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="tei:dataRef[@restriction]">
                <sch:assert role="nonfatal" test="@name">Restrictions can only be specified for references to datatypes specified by
           XML Schema Part 2: Datatypes Second Edition — that is, for there to be a @restriction attribute there must be a @name attribute, too.</sch:assert>
@@ -12516,8 +12512,6 @@ Sample values include: 1] primary; 2] secondary; 3] undergraduate; 4] graduate; 
                <choice>
                   <ref name="tei_model.noteLike"/>
                   <ref name="tei_model.biblLike"/>
-        
-        
                   <ref name="tei_idno"/>
                   <ref name="tei_ptr"/>
                </choice>
@@ -12628,8 +12622,8 @@ Sample values include: 1] practicing; 2] clandestine; 3] patrilineal; 4] matrili
                   xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;langKnown&gt;</code> elements. [14.3.2.1. Personal Characteristics]</a:documentation>
          <group>
             <choice>
-	              <ref name="tei_model.pLike"/>
-	              <oneOrMore>
+               <ref name="tei_model.pLike"/>
+               <oneOrMore>
                   <ref name="tei_langKnown"/>
                </oneOrMore>
             </choice>
@@ -12879,7 +12873,6 @@ Sample values include: 1] listening; 2] speaking; 3] reading; 4] writing</a:docu
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(location) defines the location of a place as a set of geographical coordinates, in terms of other named geo-political entities, or as an address. [14.3.4. Places]</a:documentation>
          <zeroOrMore>
             <choice>
-      
                <ref name="tei_model.labelLike"/>
                <ref name="tei_model.placeNamePart"/>
                <ref name="tei_model.offsetLike"/>
@@ -12982,8 +12975,6 @@ Sample values include: 1] primary; 2] other; 3] paid; 4] unpaid</a:documentation
                <choice>
                   <ref name="tei_model.noteLike"/>
                   <ref name="tei_model.biblLike"/>
-        
-        
                   <ref name="tei_ptr"/>
                </choice>
             </zeroOrMore>
@@ -13014,12 +13005,9 @@ Sample values include: 1] primary; 2] other; 3] paid; 4] unpaid</a:documentation
       <element name="person">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(person) provides information about an identifiable individual, for example a participant in a language interaction, or a person referred to in a historical source. [14.3.2. The Person Element 16.2.2. The Participant Description]</a:documentation>
          <choice>
-      
             <oneOrMore>
                <ref name="tei_model.pLike"/>
             </oneOrMore>
-      
-      
             <zeroOrMore>
                <choice>
                   <ref name="tei_model.personPart"/>
@@ -13027,7 +13015,6 @@ Sample values include: 1] primary; 2] other; 3] paid; 4] unpaid</a:documentation
                   <ref name="tei_ptr"/>
                </choice>
             </zeroOrMore>
-      
          </choice>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.editLike.attributes"/>
@@ -13082,10 +13069,10 @@ Sample values include: 1] primary; 2] other; 3] paid; 4] unpaid</a:documentation
    <define name="tei_persona">
       <element name="persona">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">provides information about one of the personalities identified for a given individual, where an individual has multiple personalities. [14.3.2. The Person Element]</a:documentation>
-         <choice>   
+         <choice>
             <oneOrMore>
                <ref name="tei_model.pLike"/>
-            </oneOrMore>      
+            </oneOrMore>
             <zeroOrMore>
                <choice>
                   <ref name="tei_model.personPart"/>
@@ -13147,19 +13134,15 @@ Sample values include: 1] primary; 2] other; 3] paid; 4] unpaid</a:documentation
       <element name="personGrp">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(personal group) describes a group of individuals treated as a single person for analytic purposes. [16.2.2. The Participant Description]</a:documentation>
          <choice>
-      
             <oneOrMore>
                <ref name="tei_model.pLike"/>
             </oneOrMore>
-      
-      
             <zeroOrMore>
                <choice>
                   <ref name="tei_model.personPart"/>
                   <ref name="tei_model.global"/>
                </choice>
             </zeroOrMore>
-      
          </choice>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.sortable.attributes"/>
@@ -13267,14 +13250,9 @@ Sample values include: 1] e (e); 2] he (he); 3] she (she); 4] they (they)</a:doc
                <ref name="tei_model.headLike"/>
             </zeroOrMore>
             <choice>
-        
-          
                <zeroOrMore>
                   <ref name="tei_model.pLike"/>
                </zeroOrMore>
-          
-        
-        
                <zeroOrMore>
                   <choice>
                      <ref name="tei_model.labelLike"/>
@@ -13283,7 +13261,6 @@ Sample values include: 1] e (e); 2] he (he); 3] she (she); 4] they (they)</a:doc
                      <ref name="tei_name"/>
                   </choice>
                </zeroOrMore>
-        
             </choice>
             <zeroOrMore>
                <choice>
@@ -13291,8 +13268,6 @@ Sample values include: 1] e (e); 2] he (he); 3] she (she); 4] they (they)</a:doc
                   <ref name="tei_model.biblLike"/>
                   <ref name="tei_idno"/>
                   <ref name="tei_ptr"/>
-          
-          
                </choice>
             </zeroOrMore>
             <zeroOrMore>
@@ -13321,14 +13296,14 @@ Sample values include: 1] e (e); 2] he (he); 3] she (she); 4] they (they)</a:doc
                   <rng:choice>
                      <oneOrMore>
                         <rng:ref name="tei_model.pLike"/>
-                     </oneOrMore> 
+                     </oneOrMore>
                      <oneOrMore>
                         <rng:ref name="tei_model.labelLike"/>
                      </oneOrMore>
                   </rng:choice>
                   <rng:zeroOrMore>
                      <rng:choice>
-                        <rng:ref name="tei_model.noteLike"/> 
+                        <rng:ref name="tei_model.noteLike"/>
                         <rng:ref name="tei_model.biblLike"/>
                      </rng:choice>
                   </rng:zeroOrMore>
@@ -13357,10 +13332,10 @@ Sample values include: 1] e (e); 2] he (he); 3] she (she); 4] they (they)</a:doc
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="frame-relation-ref-or-key-or-name-constraint-rule-68">
-            <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
-                      xmlns="http://www.tei-c.org/ns/1.0"
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="tei:relation">
                <sch:assert test="@ref or @key or @name">One of the attributes @name, @ref or @key must be supplied</sch:assert>
             </sch:rule>
@@ -13368,10 +13343,10 @@ Sample values include: 1] e (e); 2] he (he); 3] she (she); 4] they (they)</a:doc
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="frame-relation-active-mutual-constraint-rule-69">
-            <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
-                      xmlns="http://www.tei-c.org/ns/1.0"
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="tei:relation">
                <sch:report test="@active and @mutual">Only one of the attributes @active and @mutual may be supplied</sch:report>
             </sch:rule>
@@ -13379,10 +13354,10 @@ Sample values include: 1] e (e); 2] he (he); 3] she (she); 4] they (they)</a:doc
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="frame-relation-active-passive-constraint-rule-70">
-            <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
-                      xmlns="http://www.tei-c.org/ns/1.0"
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="tei:relation">
                <sch:report test="@passive and not(@active)">the attribute @passive may be supplied only if the attribute @active is supplied</sch:report>
             </sch:rule>
@@ -13668,7 +13643,6 @@ Sample values include: 1] atBirth; 2] atDeath; 3] dependent; 4] inherited; 5] in
                <oneOrMore>
                   <ref name="tei_model.pLike"/>
                </oneOrMore>
-        
                <zeroOrMore>
                   <empty/>
                </zeroOrMore>
@@ -13677,8 +13651,6 @@ Sample values include: 1] atBirth; 2] atDeath; 3] dependent; 4] inherited; 5] in
                <choice>
                   <ref name="tei_model.noteLike"/>
                   <ref name="tei_model.biblLike"/>
-        
-        
                </choice>
             </zeroOrMore>
             <zeroOrMore>
@@ -13736,13 +13708,8 @@ Sample values include: 1] atBirth; 2] atDeath; 3] dependent; 4] inherited; 5] in
          <oneOrMore>
             <choice>
                <ref name="tei_model.placeNamePart"/>
-      
-      
-      
                <ref name="tei_idno"/>
-      
                <ref name="tei_objectName"/>
-      
                <ref name="tei_address"/>
             </choice>
          </oneOrMore>
@@ -13979,10 +13946,10 @@ Sample values include: 1] atBirth; 2] atDeath; 3] dependent; 4] inherited; 5] in
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="frame-standOff-nested_standOff_should_be_typed-constraint-rule-72">
-            <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
-                      xmlns="http://www.tei-c.org/ns/1.0"
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:eg="http://www.tei-c.org/ns/Examples"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="tei:standOff">
                <sch:assert test="@type or not(ancestor::tei:standOff)">This
         <sch:name/> element must have a @type attribute, since it is
@@ -14005,19 +13972,24 @@ Sample values include: 1] atBirth; 2] atDeath; 3] dependent; 4] inherited; 5] in
          <ref name="tei_att.holdable.attributes"/>
          <ref name="tei_att.targetable.attributes"/>
          <optional>
-            <attribute name="pol" ns="http://github.com/projekt-UA/TEI-frame">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The polarity of the attitude. </a:documentation>
+            <attribute xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                       name="pol"
+                       ns="http://github.com/projekt-UA/TEI-frame"
+                       a:defaultValue="0">
+               <a:documentation>The polarity of the attitude. </a:documentation>
                <choice>
                   <value>+</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation/>
                   <value>-</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation/>
                   <value>+-</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation/>
                   <value>-+</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation/>
                   <value>0</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation/>
+                  <value>scare-quote</value>
+                  <a:documentation/>
                </choice>
             </attribute>
          </optional>
@@ -14094,6 +14066,15 @@ Sample values include: 1] atBirth; 2] atDeath; 3] dependent; 4] inherited; 5] in
          <empty/>
       </element>
    </define>
+   <define name="tei_attContent">
+      <element name="attContent" ns="http://github.com/projekt-UA/TEI-frame">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies the content of a frame role or an attitude, excluding attitude holders and targets.</a:documentation>
+         <ref name="tei_macro.paraContent"/>
+         <ref name="tei_att.global.attributes"/>
+         <ref name="tei_att.typed.attributes"/>
+         <empty/>
+      </element>
+   </define>
    <define name="tei_frameSet">
       <element name="frameSet" ns="http://github.com/projekt-UA/TEI-frame">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies that the text segment belongs to one or more frame roles.</a:documentation>
@@ -14137,8 +14118,11 @@ Sample values include: 1] atBirth; 2] atDeath; 3] dependent; 4] inherited; 5] in
    </define>
    <define name="tei_att.holdable.attribute.from">
       <optional>
-         <attribute name="from" ns="http://github.com/projekt-UA/TEI-frame">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The actor that bears the content of this frame role in mimd. It may be explicitly specified in the text.</a:documentation>
+         <attribute xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                    name="from"
+                    ns="http://github.com/projekt-UA/TEI-frame"
+                    a:defaultValue="correspondent;correspondent">
+            <a:documentation>The actor that bears the content of this frame role in mimd. It may be explicitly specified by `&lt;from&gt;` in the text.</a:documentation>
             <data type="string"/>
          </attribute>
       </optional>
@@ -14148,14 +14132,16 @@ Sample values include: 1] atBirth; 2] atDeath; 3] dependent; 4] inherited; 5] in
    </define>
    <define name="tei_att.targetable.attribute.to">
       <optional>
-         <attribute name="to" ns="http://github.com/projekt-UA/TEI-frame">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <attribute xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                    name="to"
+                    ns="http://github.com/projekt-UA/TEI-frame"
+                    a:defaultValue="reader;reader">
+            <a:documentation/>
             <data type="string"/>
          </attribute>
       </optional>
    </define>
    <define name="tei_att.frameRole.attributes">
-      <ref name="tei_att.holdable.attributes"/>
       <ref name="tei_att.categorizable.attributes"/>
       <ref name="tei_att.frameRole.attribute.name"/>
    </define>
@@ -14218,39 +14204,39 @@ Sample values include: 1] atBirth; 2] atDeath; 3] dependent; 4] inherited; 5] in
            xmlns:sch="http://purl.oclc.org/dsdl/schematron"
            prefix="tei"
            uri="http://www.tei-c.org/ns/1.0"/>
-   <sch:ns xmlns:rng="http://relaxng.org/ns/structure/1.0"
-           xmlns="http://www.tei-c.org/ns/1.0"
+   <sch:ns xmlns="http://www.tei-c.org/ns/1.0"
            xmlns:eg="http://www.tei-c.org/ns/Examples"
+           xmlns:rng="http://relaxng.org/ns/structure/1.0"
            xmlns:sch="http://purl.oclc.org/dsdl/schematron"
            prefix="tei"
            uri="http://www.tei-c.org/ns/1.0"/>
-   <sch:ns xmlns:rng="http://relaxng.org/ns/structure/1.0"
-           xmlns="http://www.tei-c.org/ns/1.0"
+   <sch:ns xmlns="http://www.tei-c.org/ns/1.0"
            xmlns:eg="http://www.tei-c.org/ns/Examples"
+           xmlns:rng="http://relaxng.org/ns/structure/1.0"
            xmlns:sch="http://purl.oclc.org/dsdl/schematron"
            prefix="xs"
            uri="http://www.w3.org/2001/XMLSchema"/>
-   <sch:ns xmlns:rng="http://relaxng.org/ns/structure/1.0"
-           xmlns="http://www.tei-c.org/ns/1.0"
+   <sch:ns xmlns="http://www.tei-c.org/ns/1.0"
            xmlns:eg="http://www.tei-c.org/ns/Examples"
+           xmlns:rng="http://relaxng.org/ns/structure/1.0"
            xmlns:sch="http://purl.oclc.org/dsdl/schematron"
            prefix="rng"
            uri="http://relaxng.org/ns/structure/1.0"/>
-   <sch:ns xmlns:rng="http://relaxng.org/ns/structure/1.0"
-           xmlns="http://www.tei-c.org/ns/1.0"
+   <sch:ns xmlns="http://www.tei-c.org/ns/1.0"
            xmlns:eg="http://www.tei-c.org/ns/Examples"
+           xmlns:rng="http://relaxng.org/ns/structure/1.0"
            xmlns:sch="http://purl.oclc.org/dsdl/schematron"
            prefix="rna"
            uri="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-   <sch:ns xmlns:rng="http://relaxng.org/ns/structure/1.0"
-           xmlns="http://www.tei-c.org/ns/1.0"
+   <sch:ns xmlns="http://www.tei-c.org/ns/1.0"
            xmlns:eg="http://www.tei-c.org/ns/Examples"
+           xmlns:rng="http://relaxng.org/ns/structure/1.0"
            xmlns:sch="http://purl.oclc.org/dsdl/schematron"
            prefix="sch"
            uri="http://purl.oclc.org/dsdl/schematron"/>
-   <sch:ns xmlns:rng="http://relaxng.org/ns/structure/1.0"
-           xmlns="http://www.tei-c.org/ns/1.0"
+   <sch:ns xmlns="http://www.tei-c.org/ns/1.0"
            xmlns:eg="http://www.tei-c.org/ns/Examples"
+           xmlns:rng="http://relaxng.org/ns/structure/1.0"
            xmlns:sch="http://purl.oclc.org/dsdl/schematron"
            prefix="sch1x"
            uri="http://www.ascc.net/xml/schematron"/>
@@ -14260,7 +14246,7 @@ Sample values include: 1] atBirth; 2] atDeath; 3] dependent; 4] inherited; 5] in
                 xmlns:eg="http://www.tei-c.org/ns/Examples"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 context="tei:frameSet/(tei:point | tei:blame | tei:cause | tei:conseq | tei:treatment)">
-              <sch:assert test="not(node())">A frame role in a frameSet should contain nothing.</sch:assert>
-            </sch:rule>
+         <sch:assert test="not(node())">A frame role in a frameSet should contain nothing.</sch:assert>
+      </sch:rule>
    </pattern>
 </grammar>
