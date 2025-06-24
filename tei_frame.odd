@@ -128,29 +128,13 @@
             <memberOf key="att.typed" />
             <memberOf key="att.holdable" />
             <memberOf key="att.targetable" />
+            <memberOf key="att.polarized" />
             <memberOf key="model.segLike" />
           </classes>
           <content>
             <macroRef key="macro.paraContent" />
           </content>
           <attList>
-            <attDef ident="pol" usage="opt" ns="http://github.com/projekt-UA/TEI-frame">
-              <desc versionDate="2025-05-24" xml:lang="en">The polarity of the attitude.
-              </desc>
-              <desc versionDate="2025-05-24" xml:lang="ja">態度の極性です。</desc>
-              <datatype>
-                <dataRef key="teidata.enumerated" />
-              </datatype>
-              <defaultVal>0</defaultVal>
-              <valList type="closed">
-                <valItem ident="+" />
-                <valItem ident="-" />
-                <valItem ident="+-" />
-                <valItem ident="-+" />
-                <valItem ident="0" />
-                <valItem ident="scare-quote" />
-              </valList>
-            </attDef>
             <attDef ident="frame" usage="opt" ns="http://github.com/projekt-UA/TEI-frame">
               <desc versionDate="2025-05-24" xml:lang="en">The frame role that this attitude belongs to. Omittable if it is contained in a frame role tag.
               </desc>
@@ -186,6 +170,34 @@
 </p>
             </eg:egXML>
           </exemplum>
+        </elementSpec>
+        <elementSpec ident="evaluative" ns="http://github.com/projekt-UA/TEI-frame" mode="add" module="frame">
+          <altIdent>eval</altIdent>
+          <desc versionDate="2025-06-24" xml:lang="en">specifies expressions that express evaluation to targets.
+            This is distinct from attitude expressions in that </desc>
+          <desc versionDate="2025-06-24" xml:lang="ja">評価的な表現（形容詞句・副詞句など）をマークします。言表表現とは異なり，命題を項として取りません。</desc>
+          <classes>
+            <memberOf key="att.global" />
+            <memberOf key="att.typed" />
+            <memberOf key="att.holdable" />
+            <memberOf key="att.targetable" />
+            <memberOf key="att.polarized" />
+            <memberOf key="model.segLike" />
+          </classes>
+          <content>
+            <macroRef key="macro.paraContent" />
+          </content>
+          <attList>
+            <attDef ident="frame" usage="opt" ns="http://github.com/projekt-UA/TEI-frame">
+              <desc versionDate="2025-06-24" xml:lang="en">The frame role that this attitude belongs to. Omittable if it is contained in a frame role tag.
+              </desc>
+              <desc versionDate="2025-06-24" xml:lang="ja">この態度表現が属するフレーム役割です。フレーム役割の要素の中に含まれる場合，指定の必要はありません。</desc>
+              <datatype>
+                <dataRef name="string" />
+              </datatype>
+              <valList />
+            </attDef>
+          </attList>
         </elementSpec>
         <elementSpec ident="point" ns="http://github.com/projekt-UA/TEI-frame" mode="add" module="frame">
           <desc versionDate="2025-05-24" xml:lang="en">specifies one of the points of a frame.</desc>
@@ -515,6 +527,29 @@ However, <f:point f:name="slowness">movement to the <f:kw f:category="humanitari
               </datatype>
               <valDesc versionDate="2025-05-24" xml:lang="en">true if the frame is causative. Defaults to true.
               </valDesc>
+            </attDef>
+          </attList>
+        </classSpec>
+        <classSpec ident="att.polarized" type="atts" mode="add" module="frame">
+          <desc versionDate="2025-06-24" xml:lang="en">specifies emotional polarities.</desc>
+          <classes />
+          <attList>
+            <attDef ident="pol" usage="opt" ns="http://github.com/projekt-UA/TEI-frame">
+              <desc versionDate="2025-05-24" xml:lang="en">The polarity of the attitude.
+              </desc>
+              <desc versionDate="2025-05-24" xml:lang="ja">態度の極性です。</desc>
+              <datatype>
+                <dataRef key="teidata.enumerated" />
+              </datatype>
+              <defaultVal>0</defaultVal>
+              <valList type="closed">
+                <valItem ident="+" />
+                <valItem ident="-" />
+                <valItem ident="+-" />
+                <valItem ident="-+" />
+                <valItem ident="0" />
+                <valItem ident="scare-quote" />
+              </valList>
             </attDef>
           </attList>
         </classSpec>
