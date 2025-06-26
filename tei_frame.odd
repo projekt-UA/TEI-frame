@@ -119,8 +119,7 @@
         <moduleRef key="analysis" include="s" />
         <moduleRef key="linking" include="standOff" />
         <moduleSpec ident="frame" mode="add" />
-        <elementSpec ident="attitude" ns="http://github.com/projekt-UA/TEI-frame" mode="add" module="frame">
-          <altIdent>att</altIdent>
+        <elementSpec ident="attrib" ns="http://github.com/projekt-UA/TEI-frame" mode="add" module="frame">
           <desc versionDate="2025-05-24" xml:lang="en">specifies expressions that express attitudes.</desc>
           <desc versionDate="2025-05-24" xml:lang="ja">態度表現をマークします。</desc>
           <classes>
@@ -148,14 +147,14 @@
           <exemplum xml:lang="en">
             <p>An example of an attitude expression:</p>
             <eg:egXML xml:space="preserve" xmlns:f="http://github.com/projekt-UA/TEI-frame">
-<p>This accident was so <f:att f:frame="accident_1" f:from="writer" f:to="injured" pol="-">unfortunate</f:att>.</p>
+<p>This accident was so <f:attrib f:frame="accident_1" f:from="writer" f:to="injured" pol="-">unfortunate</f:attrib>.</p>
             </eg:egXML>
           </exemplum>
           <exemplum xml:lang="en">
             <p>Another example of an attitude expression. The expression is neutral in this case.</p>
             <eg:egXML xml:space="preserve" xmlns:f="http://github.com/projekt-UA/TEI-frame">
 <p>
-  <f:from>John</f:from> <f:att f:frame="a1" f:pol="0">regarded</f:att>
+  <f:from>John</f:from> <f:attrib f:frame="a1" f:pol="0">regarded</f:attrib>
   <f:to>Mary</f:to> as a foreigner. 
 </p>
             </eg:egXML>
@@ -165,14 +164,13 @@
             <eg:egXML xml:space="preserve" xmlns:f="http://github.com/projekt-UA/TEI-frame">
 <p>
   <f:blame frame="bribe_3">
-    <f:from>The prime minister</f:from> <f:att pol="-">strongly accused</f:att>
+    <f:from>The prime minister</f:from> <f:attrib pol="-">strongly accused</f:attrib>
     <f:to>the opposition party</f:to> of bribing the public servants. </f:blame>
 </p>
             </eg:egXML>
           </exemplum>
         </elementSpec>
-        <elementSpec ident="evaluative" ns="http://github.com/projekt-UA/TEI-frame" mode="add" module="frame">
-          <altIdent>eval</altIdent>
+        <elementSpec ident="eval" ns="http://github.com/projekt-UA/TEI-frame" mode="add" module="frame">
           <desc versionDate="2025-06-24" xml:lang="en">specifies expressions that express evaluation to targets.
             This is distinct from attitude expressions in that </desc>
           <desc versionDate="2025-06-24" xml:lang="ja">評価的な表現（形容詞句・副詞句など）をマークします。言表表現とは異なり，命題を項として取りません。</desc>
@@ -312,9 +310,7 @@
             <macroRef key="macro.paraContent" />
           </content>
         </elementSpec>
-        <elementSpec ident="attitudeContent" ns="http://github.com/projekt-UA/TEI-frame" mode="add" module="frame">
-          <altIdent>attContent</altIdent>
-          <altIdent>content</altIdent>
+        <elementSpec ident="attContent" ns="http://github.com/projekt-UA/TEI-frame" mode="add" module="frame">
           <desc versionDate="2025-05-26" xml:lang="en">specifies the content of a frame role or an attitude, excluding attitude holders and targets.</desc>
           <desc versionDate="2025-05-26" xml:lang="ja">態度保持者や態度の向け先を除いたフレーム役割や態度の内容を指定します。</desc>
           <classes>
@@ -329,11 +325,11 @@
             <p>An example:</p>
             <eg:egXML xml:space="preserve" xmlns:f="http://github.com/projekt-UA/TEI-frame">
 <p>
-  <f:point f:name="looting"><f:from>Israel</f:from> justified its complete blockade from March 2 by saying that <f:attContent>
+  <f:point f:name="looting"><f:from>Israel</f:from> justified its complete blockade from March 2 by saying that <Content>
       Hamas, the militant Islamist group that rules Gaza 
       and is classified as a terrorist organization by many states,
       was looting supplies.
-    </f:attContent>
+    </Content>
   </f:point>
   (Deutsche Welle 2025-05-25)
 </p>
@@ -370,7 +366,7 @@
             </eg:egXML>
           </exemplum>
         </elementSpec>
-        <elementSpec ident="keyword" ns="http://github.com/projekt-UA/TEI-frame" mode="add" module="frame">
+        <elementSpec ident="kw" ns="http://github.com/projekt-UA/TEI-frame" mode="add" module="frame">
           <desc versionDate="2025-05-24" xml:lang="en">
             specifies a keyword that represents a category of a frame (role).
             This can spare the need to explicitly specify the category attribute of a frame role.
@@ -379,7 +375,6 @@
             フレーム（役割）の範疇を表すキーワードを指定します。
             これにより，フレーム役割の`category`属性を明示的に指定する必要がなくなります。
           </desc>
-          <altIdent>kw</altIdent>
           <classes>
             <memberOf key="model.segLike" />
             <memberOf key="att.categorizable" />
@@ -504,8 +499,7 @@ However, <f:point f:name="slowness">movement to the <f:kw f:category="humanitari
           <desc versionDate="2025-05-24" xml:lang="ja">カテゴリ化可能な要素に共通の属性を定義します。</desc>
           <classes />
           <attList>
-            <attDef ident="category" usage="opt" ns="http://github.com/projekt-UA/TEI-frame">
-              <altIdent>cat</altIdent>
+            <attDef ident="cat" usage="opt" ns="http://github.com/projekt-UA/TEI-frame">
               <desc versionDate="2025-05-24" xml:lang="en">The category of the frame role. It may be inferred by keywords within and be spared from explicit specification.</desc>
               <desc versionDate="2025-05-24" xml:lang="ja">フレームが属する範疇です。テキスト内の語句で推定できる場合，指定の必要はありません。</desc>
               <datatype>
