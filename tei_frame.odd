@@ -119,7 +119,7 @@
         <moduleRef key="analysis" include="s" />
         <moduleRef key="linking" include="standOff" />
         <moduleSpec ident="frame" mode="add" />
-        <elementSpec ident="attrib" ns="http://github.com/projekt-UA/TEI-frame" mode="add" module="frame">
+        <elementSpec ident="attitude" ns="http://github.com/projekt-UA/TEI-frame" mode="add" module="frame">
           <desc versionDate="2025-05-24" xml:lang="en">specifies expressions that express attitudes.</desc>
           <desc versionDate="2025-05-24" xml:lang="ja">態度表現をマークします。</desc>
           <classes>
@@ -147,14 +147,14 @@
           <exemplum xml:lang="en">
             <p>An example of an attitude expression:</p>
             <eg:egXML xml:space="preserve" xmlns:f="http://github.com/projekt-UA/TEI-frame">
-<p>This accident was so <f:attrib f:frame="accident_1" f:from="writer" f:to="injured" pol="-">unfortunate</f:attrib>.</p>
+<p>This accident was so <f:attitude f:frame="accident_1" f:from="writer" f:to="injured" pol="-">unfortunate</f:attitude>.</p>
             </eg:egXML>
           </exemplum>
           <exemplum xml:lang="en">
             <p>Another example of an attitude expression. The expression is neutral in this case.</p>
             <eg:egXML xml:space="preserve" xmlns:f="http://github.com/projekt-UA/TEI-frame">
 <p>
-  <f:from>John</f:from> <f:attrib f:frame="a1" f:pol="0">regarded</f:attrib>
+  <f:from>John</f:from> <f:attitude f:frame="a1" f:pol="0">regarded</f:attitude>
   <f:to>Mary</f:to> as a foreigner. 
 </p>
             </eg:egXML>
@@ -164,7 +164,7 @@
             <eg:egXML xml:space="preserve" xmlns:f="http://github.com/projekt-UA/TEI-frame">
 <p>
   <f:blame frame="bribe_3">
-    <f:from>The prime minister</f:from> <f:attrib pol="-">strongly accused</f:attrib>
+    <f:from>The prime minister</f:from> <f:attitude pol="-">strongly accused</f:attitude>
     <f:to>the opposition party</f:to> of bribing the public servants. </f:blame>
 </p>
             </eg:egXML>
