@@ -560,6 +560,22 @@ However, <f:point f:name="slowness">movement to the <f:kw f:category="humanitari
             </sch:rule>
           </constraint>
         </constraintSpec>
+        <constraintSpec ident="attContent-has-attitude">
+          <constraint>
+            <sch:rule context="tei:attContent">
+              <sch:assert test="count(parent::*/child::tei:attitude) &gt; 0">
+                The content of an attitude should be accompanied by one or more `attitude` elements as its siblings.</sch:assert>
+            </sch:rule>
+          </constraint>
+        </constraintSpec>
+        <constraintSpec ident="attitude-has-attContent">
+          <constraint>
+            <sch:rule context="tei:attitude">
+              <sch:assert test="count(parent::*/child::tei:attContent) &gt; 0">
+                An `attitude` element should have one or more `attContent` elements as its siblings.</sch:assert>
+            </sch:rule>
+          </constraint>
+        </constraintSpec>
       </schemaSpec>
     </body>
   </text>
