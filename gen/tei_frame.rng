@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2025-06-27T12:51:17Z. . 
+Schema generated from ODD source 2025-06-27T14:09:56Z. . 
 TEI Edition: P5 Version 4.9.0. Last updated on 24th January 2025, revision f73186978 
 TEI Edition Location: https://www.tei-c.org/Vault/P5/4.9.0/ 
   
@@ -130,7 +130,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5/4.9.0/
             </choice>
          </zeroOrMore>
       </element>
-      <pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="d287371e66178-constraint">
+      <pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="d367566e66178-constraint">
          <rule context="tei:content">
             <report test="descendant::*[not(namespace-uri(.) =               ('http://relaxng.org/ns/compatibility/annotations/1.0', 'http://relaxng.org/ns/structure/1.0', 'http://www.tei-c.org/ns/1.0'))]">content descendants must be in the
               namespaces
@@ -200,7 +200,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5/4.9.0/
             </choice>
          </zeroOrMore>
       </element>
-      <pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="d287371e67777-constraint">
+      <pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="d367566e67777-constraint">
          <rule context="tei:datatype">
             <report test="descendant::*[not(namespace-uri(.) =               ('http://relaxng.org/ns/structure/1.0', 'http://www.tei-c.org/ns/1.0'))]">datatype descendants must be in the
               namespaces
@@ -14281,6 +14281,26 @@ Sample values include: 1] atBirth; 2] atDeath; 3] dependent; 4] inherited; 5] in
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 context="tei:frameSet/(tei:point | tei:blame | tei:cause | tei:conseq | tei:treatment)">
          <sch:assert test="not(node())">A frame role in a frameSet should contain nothing.</sch:assert>
+      </sch:rule>
+   </pattern>
+   <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+            id="frame-attContent-has-attitude-constraint-rule-74">
+      <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:eg="http://www.tei-c.org/ns/Examples"
+                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                context="tei:attContent">
+         <sch:assert test="count(parent::*/child::tei:attitude) &gt; 0">
+                The content of an attitude should be accompanied by one or more `attitude` elements as its siblings.</sch:assert>
+      </sch:rule>
+   </pattern>
+   <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+            id="frame-attitude-has-attContent-constraint-rule-75">
+      <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:eg="http://www.tei-c.org/ns/Examples"
+                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                context="tei:attitude">
+         <sch:assert test="count(parent::*/child::tei:attContent) &gt; 0">
+                An `attitude` element should have one or more `attContent` elements as its siblings.</sch:assert>
       </sch:rule>
    </pattern>
 </grammar>
