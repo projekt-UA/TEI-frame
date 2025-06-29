@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2025-06-27T14:09:56Z. . 
+Schema generated from ODD source 2025-06-29T10:41:18Z. . 
 TEI Edition: P5 Version 4.9.0. Last updated on 24th January 2025, revision f73186978 
 TEI Edition Location: https://www.tei-c.org/Vault/P5/4.9.0/ 
   
@@ -130,7 +130,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5/4.9.0/
             </choice>
          </zeroOrMore>
       </element>
-      <pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="d367566e66178-constraint">
+      <pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="d941416e66178-constraint">
          <rule context="tei:content">
             <report test="descendant::*[not(namespace-uri(.) =               ('http://relaxng.org/ns/compatibility/annotations/1.0', 'http://relaxng.org/ns/structure/1.0', 'http://www.tei-c.org/ns/1.0'))]">content descendants must be in the
               namespaces
@@ -200,7 +200,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5/4.9.0/
             </choice>
          </zeroOrMore>
       </element>
-      <pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="d367566e67777-constraint">
+      <pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="d941416e67777-constraint">
          <rule context="tei:datatype">
             <report test="descendant::*[not(namespace-uri(.) =               ('http://relaxng.org/ns/structure/1.0', 'http://www.tei-c.org/ns/1.0'))]">datatype descendants must be in the
               namespaces
@@ -1826,6 +1826,7 @@ Sample values include: 1] duplicate; 2] duplicate-partial; 3] excessStart; 4] ex
    <define name="tei_model.segLike">
       <choice>
          <ref name="tei_s"/>
+         <ref name="tei_seg"/>
          <ref name="tei_attitude"/>
          <ref name="tei_eval"/>
          <ref name="tei_point"/>
@@ -1844,6 +1845,7 @@ Sample values include: 1] duplicate; 2] duplicate-partial; 3] excessStart; 4] ex
    <define name="tei_model.segLike_alternation">
       <choice>
          <ref name="tei_s"/>
+         <ref name="tei_seg"/>
          <ref name="tei_attitude"/>
          <ref name="tei_eval"/>
          <ref name="tei_point"/>
@@ -1861,6 +1863,7 @@ Sample values include: 1] duplicate; 2] duplicate-partial; 3] excessStart; 4] ex
    </define>
    <define name="tei_model.segLike_sequence">
       <ref name="tei_s"/>
+      <ref name="tei_seg"/>
       <ref name="tei_attitude"/>
       <ref name="tei_eval"/>
       <ref name="tei_point"/>
@@ -1878,6 +1881,9 @@ Sample values include: 1] duplicate; 2] duplicate-partial; 3] excessStart; 4] ex
    <define name="tei_model.segLike_sequenceOptional">
       <optional>
          <ref name="tei_s"/>
+      </optional>
+      <optional>
+         <ref name="tei_seg"/>
       </optional>
       <optional>
          <ref name="tei_attitude"/>
@@ -1924,6 +1930,9 @@ Sample values include: 1] duplicate; 2] duplicate-partial; 3] excessStart; 4] ex
          <ref name="tei_s"/>
       </zeroOrMore>
       <zeroOrMore>
+         <ref name="tei_seg"/>
+      </zeroOrMore>
+      <zeroOrMore>
          <ref name="tei_attitude"/>
       </zeroOrMore>
       <zeroOrMore>
@@ -1966,6 +1975,9 @@ Sample values include: 1] duplicate; 2] duplicate-partial; 3] excessStart; 4] ex
    <define name="tei_model.segLike_sequenceRepeatable">
       <oneOrMore>
          <ref name="tei_s"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="tei_seg"/>
       </oneOrMore>
       <oneOrMore>
          <ref name="tei_attitude"/>
@@ -3994,6 +4006,7 @@ Sample values include: 1] duplicate; 2] duplicate-partial; 3] excessStart; 4] ex
          <ref name="tei_unclear"/>
          <ref name="tei_abbr"/>
          <ref name="tei_expan"/>
+         <ref name="tei_seg"/>
       </choice>
    </define>
    <define name="tei_model.imprintPart">
@@ -4461,6 +4474,7 @@ Sample values include: 1] duplicate; 2] duplicate-partial; 3] excessStart; 4] ex
          <ref name="tei_model.annotationLike"/>
          <ref name="tei_xenoData"/>
          <ref name="tei_listChange"/>
+         <ref name="tei_seg"/>
       </choice>
    </define>
    <define name="tei_att.formula.attributes">
@@ -13946,6 +13960,19 @@ Sample values include: 1] atBirth; 2] atDeath; 3] dependent; 4] inherited; 5] in
             </list>
          </attribute>
       </optional>
+   </define>
+   <define name="tei_seg">
+      <element name="seg">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(arbitrary segment) represents any segmentation of text below the chunk level. [17.3. Blocks, Segments, and Anchors 6.2. Components of the Verse Line 7.2.5. Speech Contents]</a:documentation>
+         <ref name="tei_macro.paraContent"/>
+         <ref name="tei_att.global.attributes"/>
+         <ref name="tei_att.cmc.attributes"/>
+         <ref name="tei_att.notated.attributes"/>
+         <ref name="tei_att.segLike.attributes"/>
+         <ref name="tei_att.typed.attributes"/>
+         <ref name="tei_att.written.attributes"/>
+         <empty/>
+      </element>
    </define>
    <define name="tei_standOff">
       <element name="standOff">
