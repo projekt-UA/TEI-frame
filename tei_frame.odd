@@ -117,7 +117,7 @@
         <moduleRef key="tagdocs" />
         <moduleRef key="namesdates" />
         <moduleRef key="analysis" include="s" />
-        <moduleRef key="linking" include="standOff" />
+        <moduleRef key="linking" include="standOff seg" />
         <moduleSpec ident="frame" mode="add" />
         <elementSpec ident="attitude" ns="http://github.com/projekt-UA/TEI-frame" mode="add" module="frame">
           <desc versionDate="2025-05-24" xml:lang="en">specifies expressions that express attitudes.</desc>
